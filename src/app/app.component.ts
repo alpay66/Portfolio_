@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
 import { RouterOutlet } from '@angular/router';
+import { ContactformComponent } from "./contactform/contactform.component";
+import { HeaderBarComponent } from "./hero-section/header-bar/header-bar.component";
+import { HeroSectionComponent } from "./hero-section/hero-section.component";
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, HeroSectionComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

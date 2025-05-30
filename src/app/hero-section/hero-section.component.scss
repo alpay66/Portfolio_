@@ -1,0 +1,163 @@
+.hero-section {
+    background-image: url('/img/header_hero_____.png');
+    height: 100vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.container {
+    padding: 0 20px;
+    margin: 200px 0 0 0;
+}
+
+h1 {
+    font-size: 150px;
+    margin: 0;
+    color: white;
+}
+
+.hero-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+    color: #fff;
+}
+
+.frontend-img-row {
+    display: flex;
+    gap: 90px;
+}
+
+.rotate-img {
+    transform: rotate(7deg);
+}
+
+.hero-right {
+    text-align: right;
+}
+
+.hero-left {
+    text-align: left;
+    margin-right: 215px;
+}
+
+.reveal-button {
+    position: relative;
+    overflow: hidden;
+    border: 2px solid rgb(255, 255, 255);
+    background: transparent;
+    color: white;
+    border-radius: 999px;
+    padding: 12px 32px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background 0.3s ease, color 0.3s ease;
+    min-width: 180px;
+    height: 48px;
+
+    .default-text,
+    .hover-text {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+        transition: transform 0.4s ease, opacity 0.4s ease;
+    }
+
+    .hover-text {
+        opacity: 0;
+        transform: translate(-50%, 150%);
+    }
+
+    &:hover {
+        background: rgb(2, 27, 249);
+        color: black;
+
+        .default-text {
+            opacity: 0;
+            transform: translate(-50%, -150%);
+        }
+
+        .hover-text {
+            opacity: 1;
+            transform: translate(-50%, -50%);
+        }
+    }
+
+    .wave {
+        display: inline-block;
+        animation: waveAnim 2s infinite;
+    }
+}
+
+@keyframes waveAnim {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    10% {
+        transform: rotate(14deg);
+    }
+
+    20% {
+        transform: rotate(-8deg);
+    }
+
+    30% {
+        transform: rotate(14deg);
+    }
+
+    40% {
+        transform: rotate(-4deg);
+    }
+
+    50% {
+        transform: rotate(10deg);
+    }
+
+    60%,
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.get-in-touch-btn {
+    background-color: #111;
+    color: white;
+    border: 2px solid white;
+    border-radius: 999px;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #ccc;
+    transition: all 0.2s ease;
+}
+
+.get-in-touch-btn:hover {
+    background-color: #f47c5c;
+    color: white;
+    box-shadow: none;
+    transform: translateY(2px);
+}
+
+footer {
+    div {
+        display: flex;
+        flex-direction: column;
+        max-width: 1920px;
+        margin: 0 auto;
+        padding: 0 20px;
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+}
