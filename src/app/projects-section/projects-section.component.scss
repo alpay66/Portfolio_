@@ -1,0 +1,40 @@
+section {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    margin: 70px;
+    gap: 80px;
+
+    img {
+        width: 100%;
+    }
+}
+
+.first-box {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+}
+
+.second-box {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+}
+
+.third-box {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+}
+
+.fourt-box {
+    display: flex;
+    flex-direction: column;
+    width: 35%;
+}
+
+.fz-56 {
+    font-size: 56px;
+}
