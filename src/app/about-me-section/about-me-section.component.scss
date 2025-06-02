@@ -1,0 +1,54 @@
+section {
+    height: 56vh;
+    
+
+    div {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+        h2  {
+            font-size: 25px;
+            margin: 0;
+        }
+
+        h1 {
+            font-size: 50px;
+            margin: 10px 0 10px 0;
+        }
+
+        p {
+
+        }
+
+        div {
+            flex-direction: column;
+            max-width: 500px;
+        }
+    }
+}
+
+.gap {
+    gap: 200px;
+    padding: 200px 0 0 0;
+}
+
+.get-in-touch-btn {
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    border: 2px solid rgb(0, 0, 0);
+    border-radius: 999px;
+    padding: 12px 28px;
+    font-size: 16px;
+    font-weight: 600;
+    cursor: pointer;
+    box-shadow: 0 4px 0 #ccc;
+    transition: all 0.2s ease;
+}
+
+.get-in-touch-btn:hover {
+    background-color: #f47c5c;
+    color: white;
+    box-shadow: none;
+    transform: translateY(2px);
+}

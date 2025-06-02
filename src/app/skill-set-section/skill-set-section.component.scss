@@ -1,0 +1,134 @@
+section {
+    background-image: url('/img/skill-set-background.png');
+    height: 115vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    div {
+        gap: 30px;
+
+        div {
+            color: white;
+
+            h3 {
+                font-size: 25px;
+            }
+
+            h1 {
+                font-size: 100px;
+                font-weight: 700;
+                text-align: center;
+                margin: 0;
+                width: 100%;
+            }
+        }
+    }
+}
+
+.first-box {
+    text-align: end;
+}
+
+.circle-hover {
+    position: relative;
+    display: inline-block;
+    z-index: 1;
+
+    &::after {
+        content: "";
+        position: absolute;
+        top: -30px;
+        left: -10px;
+        width: 110%;
+        height: 130%;
+        background: url('/img/skill-set-hover.svg') no-repeat center center;
+        background-size: contain;
+        opacity: 0;
+        transform: scale(0.8);
+        transition: opacity 0.3s ease, transform 0.3s ease;
+        pointer-events: none;
+        z-index: -1;
+    }
+
+    &:hover::after {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+.language-img-box {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+}
+
+.skill-set-img-box {
+    flex: 0 1 calc(20% - 40px);
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    cursor: pointer;
+}
+
+.middle-box-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.flex {
+    display: flex;
+}
+
+
+.skill-sett-img {
+    width: 1000px;
+}
+
+.peel-wrapper {
+    position: relative;
+    width: 150px; // anpassen je nach SVG-Größe
+    height: auto;
+    cursor: pointer;
+}
+
+.peel-img {
+    position: absolute;
+    top: 400px;
+    left: 0;
+    width: 100%;
+    transition: opacity 0.3s ease;
+}
+
+.peel-img.default {
+    opacity: 1;
+    z-index: 1;
+}
+
+.peel-img.mid,
+.peel-img.full {
+    opacity: 0;
+    z-index: 2;
+}
+
+/* Hover Effekt */
+.peel-wrapper:hover .peel-img.default {
+    opacity: 0;
+}
+
+.peel-wrapper:hover .peel-img.mid {
+    opacity: 1;
+    transition-delay: 0.1s;
+}
+
+.peel-wrapper:hover .peel-img.full {
+    opacity: 1;
+    transition-delay: 0.2s;
+}
