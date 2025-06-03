@@ -1,0 +1,68 @@
+section {
+    margin: 150px 50px 50px 50px;
+
+    h1 {
+        font-size: 50px;
+    }
+}
+
+.top-section {
+    display: flex;
+    flex-direction: column;
+    text-align: end;
+    width: 90%;
+}
+
+.orange-cards {
+    display: flex;
+    justify-content: center;
+    margin-top: 60px;
+    position: relative;
+
+    div {
+        position: relative;
+        margin-left: -120px;
+        transition: transform 0.3s ease, z-index 0.3s ease;
+
+        img {
+            width: 100%;
+            border-radius: 12px;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+            transform: rotate(var(--rotate, 0deg));
+            transition: transform 0.3s ease;
+        }
+
+        &:nth-child(1) {
+            margin-left: 0;
+            z-index: 1;
+
+            img {
+                --rotate: -5deg;
+            }
+        }
+
+        &:nth-child(2) {
+            z-index: 3;
+
+            img {
+                --rotate: 0deg;
+            }
+        }
+
+        &:nth-child(3) {
+            z-index: 2;
+
+            img {
+                --rotate: 5deg;
+            }
+        }
+
+        &:hover {
+            z-index: 10;
+
+            img {
+                transform: scale(1.05) rotate(0deg);
+            }
+        }
+    }
+}
