@@ -1,0 +1,36 @@
+section {
+    background-image: url('/img/contact-me-background.png');
+    height: 90vh;
+    width: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+
+    div {
+        color: white;
+
+        h1 {
+            font-size: 56px;
+        }
+    }
+}
+
+.section-all {
+    display: flex;
+    padding-top: 300px;
+    justify-content: center;
+    gap: 250px;
+}
+
+.left-part {
+    width: 30%;
+}
+
+.left-part-logo-sec {
+    display: flex;
+    flex-direction: column;
+    padding-top: 200px;
+}
+
+.right-part {
+    padding-top: 150px;
+}

@@ -1,43 +1,53 @@
-/* Style inputs with type="text", select elements and textareas */
-input[type=text],[type=email],
-select,
-textarea {
-    width: 100%;
-    /* Full width */
-    padding: 12px;
-    /* Some padding */
-    border: 1px solid #ccc;
-    /* Gray border */
-    border-radius: 4px;
-    /* Rounded borders */
-    box-sizing: border-box;
-    /* Make sure that padding and width stays in place */
-    margin-top: 6px;
-    /* Add a top margin */
-    margin-bottom: 16px;
-    /* Bottom margin */
-    resize: vertical
-        /* Allow the user to vertically resize the textarea (not horizontally) */
-}
-
-/* Style the submit button with a specific background color etc */
-input[type=submit] {
-    background-color: #04AA6D;
+.contact-form {
+    max-width: 400px;
     color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 4px;
-    cursor: pointer;
-}
+    font-family: sans-serif;
 
-/* When moving the mouse over the submit button, add a darker green color */
-input[type=submit]:hover {
-    background-color: #45a049;
-}
+    .form-label {
+        display: block;
+        font-weight: bold;
+        margin: 20px 0 5px;
+    }
 
-/* Add a background color and some padding around the form */
-.container {
-    border-radius: 5px;
-    background-color: #f2f2f2;
-    padding: 20px;
+    .form-input {
+        width: 100%;
+        background: transparent;
+        border: none;
+        border-bottom: 2px solid orange;
+        color: white;
+        padding: 8px 4px;
+        font-size: 14px;
+        outline: none;
+
+        &::placeholder {
+            color: #ccc;
+        }
+    }
+
+    .form-error {
+        font-size: 13px;
+        color: red;
+        margin-top: 5px;
+        display: block;
+    }
+
+    .submit-button {
+        margin-top: 30px;
+        width: 100%;
+        background: transparent;
+        border: 2px solid #999;
+        color: #777;
+        padding: 10px;
+        border-radius: 30px;
+        cursor: not-allowed;
+        font-weight: bold;
+        transition: all 0.3s ease;
+
+        &:hover:enabled {
+            background: #f47c5c;
+            border-color: #f47c5c;
+            color: white;
+            cursor: pointer;
+        }
+    }
 }

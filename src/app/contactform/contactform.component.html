@@ -1,4 +1,37 @@
 <div class="container">
+    <form class="contact-form" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
+
+        <label for="name" class="form-label">What's your name?</label>
+        <input class="form-input" [(ngModel)]="contactData.name" type="text" id="name" name="name"
+            placeholder="Your name goes here" required />
+
+        <label for="email" class="form-label">What's your email?</label>
+        <input class="form-input" [(ngModel)]="contactData.email" type="email" id="email" name="email"
+            placeholder="youremail@email.com" required pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" />
+
+        <label for="message" class="form-label">How can I help you?</label>
+        <textarea #message="ngModel" class="form-input" minlength="4" [(ngModel)]="contactData.message" id="message"
+            name="message" placeholder="Hello Alpay, I am interested in…" required style="height: 20px"></textarea>
+
+        @if (!message.valid && message.touched) {
+        <span class="form-error">Please enter a message</span>
+        }
+
+        <label class="privacy-checkbox">
+            <input type="checkbox" name="accepted" required />
+            <span>
+                I've read the <a href="/privacy-policy" target="_blank">privacy policy</a> and agree to the processing
+                of my data.
+            </span>
+        </label>
+
+        <input class="submit-button" type="submit" [disabled]="!contactForm.valid"
+            value="Send" />
+    </form>
+</div>
+
+
+<!-- <div class="container">
     <form (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm">
 
         <label for="name">Name</label>
@@ -16,4 +49,4 @@
         <input type="submit" value="Submit">
 
     </form>
-</div>
+</div> -->
