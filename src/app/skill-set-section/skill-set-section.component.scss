@@ -1,6 +1,6 @@
 section {
     background-image: url('/img/skill-set-background.png');
-    height: 115vh;
+    height: 100vh;
     width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
@@ -27,6 +27,11 @@ section {
             }
         }
     }
+}
+
+.container {
+    display: flex;
+    width: 70%;
 }
 
 .first-box {
@@ -87,13 +92,17 @@ section {
 }
 
 
+
+.width {}
+
+
 .skill-sett-img {
-    width: 1000px;
+    width: 88%;
 }
 
 .peel-wrapper {
     position: relative;
-    width: 150px; // anpassen je nach SVG-Größe
+    width: 150px;
     height: auto;
     cursor: pointer;
 }
@@ -117,7 +126,6 @@ section {
     z-index: 2;
 }
 
-/* Hover Effekt */
 .peel-wrapper:hover .peel-img.default {
     opacity: 0;
 }

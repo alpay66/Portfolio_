@@ -15,6 +15,17 @@ h1 {
     font-size: 150px;
     margin: 0;
     color: white;
+
+    &:hover {
+        color: yellow;
+        text-transform: lowercase;
+        cursor: default;
+
+        // Trick: jede Buchstabe "invertieren"
+        span {
+            text-transform: uppercase;
+        }
+    }
 }
 
 .hero-content {

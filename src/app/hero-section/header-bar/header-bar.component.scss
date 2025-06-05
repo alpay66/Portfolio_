@@ -2,7 +2,6 @@
     max-width: 1920px;
     margin: 0 auto;
     padding: 0 20px;
-    width: 100%;
 }
 
 .header {
@@ -18,8 +17,9 @@
     }
 
     .navigation {
+        width: 100%;
         display: flex;
-        gap: 300px;
+        justify-content: space-around;
 
         a {
             text-decoration: none;
