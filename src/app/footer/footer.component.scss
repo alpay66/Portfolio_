@@ -1,9 +1,9 @@
 footer {
 
     div {
-        
+
         a {
-            color:white;
+            color: white;
             text-decoration: none;
             font-weight: 700;
         }
@@ -14,4 +14,6 @@ footer {
     padding-top: 50px;
     display: flex;
     justify-content: space-evenly;
+    max-width: 1440px;
+    margin: 0 auto;
 }

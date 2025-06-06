@@ -33,6 +33,8 @@ section {
 .container {
     display: flex;
     width: 70%;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .first-box {

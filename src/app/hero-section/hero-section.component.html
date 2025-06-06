@@ -9,24 +9,48 @@
                     <span class="hover-text">I'm Alpay Karacabey <span class="wave">👋</span></span>
                 </button>
                 <div class="frontend-img-row">
-                    <h1>Frontend</h1>
+                    <h1 class="hover-word">
+                        <span *ngFor="let letter of frontend; let i = index" (mouseenter)="hoveredFrontendIndex = i"
+                            (mouseleave)="hoveredFrontendIndex = null" [ngStyle]="{
+    color: hoveredFrontendIndex === i ? 'yellow' : 'white',
+    textTransform: hoveredFrontendIndex === i 
+        ? (i === 0 ? 'lowercase' : 'uppercase') 
+        : (i === 0 ? 'uppercase' : 'lowercase')
+    }">
+                            {{ letter.lower }}
+                        </span>
+                    </h1>
+
+
+
                     <img class="rotate-img" src="/img/hero_alpay_img_filler.png">
                 </div>
             </div>
 
             <div class="hero-right">
-                <h1>Developer</h1>
+                <h1 class="hover-word">
+                    <span *ngFor="let letter of developer; let i = index" (mouseenter)="hoveredDeveloperIndex = i"
+                        (mouseleave)="hoveredDeveloperIndex = null" [ngStyle]="{
+    color: hoveredDeveloperIndex === i ? 'yellow' : 'white',
+    textTransform: hoveredDeveloperIndex === i 
+        ? (i === 0 ? 'lowercase' : 'uppercase') 
+        : (i === 0 ? 'uppercase' : 'lowercase')
+    }">
+                        {{ letter.lower }}
+                    </span>
+                </h1>
+
                 <button class="get-in-touch-btn">Get in Touch</button>
             </div>
         </div>
 
-        <footer>
-            <div>
-                <img src="/img/hero_linked_in.png">
-                <img src="/img/hero_github.png">
-                <img src="/img/hero_mail.png">
+
+            <div class="linked-up-buttons">
+                <img src="/img/hero_linked_in.png" width="50px" height="50px">
+                <img src="/img/hero_github.png" width="50px" height="50px">
+                <img src="/img/hero_mail.png" width="50px" height="50px">
             </div>
-        </footer>
-        
+
+
     </div>
 </section>

@@ -7,8 +7,9 @@
 }
 
 .container {
-    padding: 0 20px;
-    margin: 200px 0 0 0;
+    padding: 250px 20px;
+    margin: 0 auto;
+    max-width: 1440px;
 }
 
 h1 {
@@ -21,10 +22,25 @@ h1 {
         text-transform: lowercase;
         cursor: default;
 
-        // Trick: jede Buchstabe "invertieren"
         span {
             text-transform: uppercase;
         }
+    }
+}
+
+.hover-word {
+    display: flex;
+    gap: 2px;
+    margin: 0;
+    padding: 0;
+
+    span {
+        font-size: 150px;
+        cursor: default;
+        transition: all 0.3s ease;
+        line-height: 1;
+        padding: 0;
+        margin: 0;
     }
 }
 
@@ -35,6 +51,7 @@ h1 {
     align-items: center;
     height: 100%;
     color: #fff;
+    padding-left: 250px;
 }
 
 .frontend-img-row {
@@ -161,11 +178,17 @@ footer {
     div {
         display: flex;
         flex-direction: column;
-        max-width: 1920px;
+        max-width: 1440px;
 
         img {
             width: 50px;
             height: 50px;
         }
     }
+}
+
+.linked-up-buttons {
+    display: flex;
+    flex-direction: column;
+    max-width: 1440px;
 }
