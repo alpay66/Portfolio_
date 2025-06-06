@@ -2,14 +2,16 @@ section {
     height: 56vh;
     max-width: 1440px;
     margin: 0 auto;
-    
+
 
     div {
         display: flex;
         justify-content: center;
         align-items: center;
+        max-width: 1440px;
+        margin: 0 auto;
 
-        h2  {
+        h2 {
             font-size: 25px;
             margin: 0;
         }
@@ -19,9 +21,7 @@ section {
             margin: 10px 0 10px 0;
         }
 
-        p {
-
-        }
+        p {}
 
         div {
             flex-direction: column;
@@ -31,7 +31,6 @@ section {
 }
 
 .gap {
-    gap: 200px;
     padding: 200px 0 0 0;
 }
 
