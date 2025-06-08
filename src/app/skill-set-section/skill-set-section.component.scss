@@ -1,12 +1,12 @@
 section {
-    background-image: url('/img/skill-set-background.png');
-    height: 114vh;
+    background-image: url(/img/skill-set-background.png);
+    height: 74vh;
     width: 100%;
     background-size: cover;
-    background-repeat: no-repeat;
     display: flex;
     justify-content: center;
     align-items: center;
+    background-position: bottom;
 
     div {
         gap: 30px;
@@ -84,6 +84,10 @@ section {
     cursor: pointer;
 }
 
+.skill-sett-img {
+    width: 100%;
+}
+
 .middle-box-content {
     display: flex;
     flex-direction: column;
@@ -94,23 +98,20 @@ section {
     display: flex;
 }
 
-.skill-sett-img {
-    width: 88%;
-}
-
 .peel-wrapper {
     position: relative;
-    width: 150px;
+    width: 40%;
     height: auto;
     cursor: pointer;
 }
 
 .peel-img {
     position: absolute;
-    top: 400px;
+    top: 250px;
     left: 0;
     width: 100%;
     transition: opacity 0.3s ease;
+    transform: rotate(8deg);
 }
 
 .peel-img.default {

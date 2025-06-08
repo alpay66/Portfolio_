@@ -40,3 +40,132 @@ section {
 .fz-56 {
     font-size: 56px;
 }
+
+.image-wrapper {
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+    cursor: pointer;
+
+    img {
+        transition: transform 0.4s ease;
+        display: block;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.4);
+        opacity: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        transition: opacity 0.3s ease;
+
+        button {
+            background-color: white;
+            color: black;
+            border: none;
+            padding: 12px 24px;
+            border-radius: 999px;
+            font-weight: 600;
+            font-size: 14px;
+            cursor: pointer;
+
+            &:hover {
+                background-color: #f47c5c;
+                color: white;
+            }
+        }
+    }
+
+    &:hover img {
+        transform: scale(1.1);
+    }
+
+    &:hover .overlay {
+        opacity: 1;
+    }
+}
+
+.overlay {
+    position: fixed;
+    inset: 0;
+    background: rgb(0, 0, 0);
+    z-index: 9999;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.overlay-content {
+    background-image: url(/img/project-details-overlay.png);
+    background-size: cover;
+    background-position: center;
+    background-color: rgb(29, 29, 29);
+    padding: 40px;
+    border-radius: 20px;
+    max-width: 1500px;
+    width: 100%;
+    position: relative;
+    height: 50%;
+}
+
+.overlay-container {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 40px 0px 0px 0px;
+}
+
+.close-btn {
+    background-color: #111;
+    color: white;
+    border: 2px solid white;
+    border-radius: 999px;
+    padding: 10px 24px;
+    font-size: 14px;
+    font-weight: 600;
+    cursor: pointer;
+    margin-bottom: 20px;
+    transition: all 0.2s ease;
+    position: absolute;
+    left: 85px;
+    top: 150px;
+}
+
+.close-btn:hover {
+    background-color: #f47c5c;
+    color: white;
+    border-color: #f47c5c;
+}
+
+.left-side {
+    width: 40%;
+}
+
+.left-side-skills {
+    display: flex;
+    gap: 10px;
+
+    div {
+        display: flex;
+        align-items: center;
+    }
+}
+
+.right-side {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.right-side-buttons {
+    gap: 10px;
+    display: flex;
+    justify-content: end;
+}
+
+.right-side-image {}
