@@ -1,11 +1,10 @@
 import { NgIf } from '@angular/common';
 import { Component } from '@angular/core';
-import { HeaderBarComponent } from "../hero-section/header-bar/header-bar.component";
 import { ProjectOverlayComponent } from './project-overlay/project-overlay.component';
 
 @Component({
   selector: 'app-projects-section',
-  imports: [NgIf, HeaderBarComponent, ProjectOverlayComponent],
+  imports: [NgIf, ProjectOverlayComponent],
   templateUrl: './projects-section.component.html',
   styleUrl: './projects-section.component.scss'
 })
@@ -16,7 +15,7 @@ export class ProjectsSectionComponent {
   projects = [
     {
       title: 'Join',
-      image: '/img/Laptop.png',
+      image: '/img/join-rounded.png',
       description: 'Task manager with drag and drop features.',
       details: 'Join is a task management application that allows users to create, manage, and organize tasks with a user-friendly drag-and-drop interface. It supports real-time collaboration, enabling teams to work together efficiently.',
       duration: '4 weeks',
@@ -30,7 +29,7 @@ export class ProjectsSectionComponent {
     },
     {
       title: 'Slack Clone',
-      image: '/img/join.png',
+      image: '/img/join-rounded.png',
       description: 'Collaboration app similar to Slack.',
       details: 'This project is a collaboration application that mimics the functionality of Slack, allowing users to communicate in real-time, share files, and manage channels for different teams or projects. It includes features like direct messaging, group chats, and notifications.',
       duration: '5 weeks',
@@ -40,10 +39,12 @@ export class ProjectsSectionComponent {
   openOverlay(index: number) {
     this.currentIndex = index;
     this.showOverlay = true;
+    document.body.style.overflow = 'hidden';
   }
 
   closeOverlay() {
     this.showOverlay = false;
+    document.body.style.overflow = 'auto';
   }
 
   goToNextProject() {

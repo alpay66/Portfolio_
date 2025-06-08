@@ -19,4 +19,9 @@ export class ProjectOverlayComponent {
   next() {
     this.nextProject.emit();
   }
+
+  handleOverlayClick() {
+    this.closeOverlay.emit();
+  }
+
 }

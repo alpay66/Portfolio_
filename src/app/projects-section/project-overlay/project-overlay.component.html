@@ -1,7 +1,9 @@
 <!-- project-overlay.component.html -->
-<div class="overlay">
-    <div class="overlay-content">
-        <button class="close-btn" (click)="close()">Go Back</button>
+<div class="overlay" (click)="handleOverlayClick()">
+    <div class="overlay-content" (click)="$event.stopPropagation()">
+        <p class="close-btn-container">
+            <a class="close-btn" (click)="close()"> <img src="/img/go-back-arrow.png" alt="">Go Back</a>
+        </p>
 
         <app-header-bar></app-header-bar>
 
@@ -47,9 +49,9 @@
                     <button>Live Test</button>
                 </div>
 
-                <div class="right-side-next">
+                <div class="right-side-next-button">
                     <p>
-                        <button (click)="next()">NExttt</button>
+                        <a (click)="next()">Next Project <img src="/img/next-project.png"></a>
                     </p>
                 </div>
             </div>
