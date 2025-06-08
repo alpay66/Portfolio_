@@ -14,15 +14,12 @@
         <div class="image-wrapper">
             <img src="/img/Laptop.png" alt="Laptop-Join">
             <div class="overlay">
-                <button (click)="openOverlay()">Project details</button>
+                <button (click)="openOverlay(0)">Project details</button>
             </div>
         </div>
         <div>
             <h1>Join</h1>
-            <span>
-                Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions,
-                assign users and categories.
-            </span>
+            <span>Task manager inspired by the Kanban System.</span>
         </div>
     </div>
 
@@ -30,105 +27,29 @@
         <div class="image-wrapper">
             <img src="/img/el-pollo-loco.png" alt="El-Pollo-Loco">
             <div class="overlay">
-                <button>Project details</button>
+                <button (click)="openOverlay(1)">Project details</button>
             </div>
         </div>
         <div>
             <h1>El Pollo Loco</h1>
-            <span>
-                Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to
-                fight against the crazy hen.
-            </span>
+            <span>Jump & Run Game.</span>
         </div>
     </div>
 
     <div class="fourt-box">
         <div class="image-wrapper">
-            <img src="/img/join.png" alt="Project">
+            <img src="/img/join.png" alt="Slack Clone">
             <div class="overlay">
-                <button>Project details</button>
+                <button (click)="openOverlay(2)">Project details</button>
             </div>
         </div>
         <div>
-            <h1>Project</h1>
-            <span>
-                This App is a Slack Clone App. It revolutionizes team communication and collaboration with its intuitive
-                interface, real-time messaging, and robust channel organization.
-            </span>
+            <h1>Slack Clone</h1>
+            <span>Slack-style collaboration app.</span>
         </div>
     </div>
 </section>
 
-<div class="overlay" *ngIf="showOverlay">
-    <div class="overlay-content">
-        <button (click)="closeOverlay()" class="close-btn">Go Back</button>
-
-        <app-header-bar></app-header-bar>
-
-        <div class="overlay-container">
-            <div class="left-side">
-                <h1>Join</h1>
-                <h3>Description</h3>
-                <p>
-                    Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions,
-                    assign users and categories.
-                </p>
-                <h3>Implementation Details</h3>
-                <p>
-                    Short text that describes your role or the workflow for this specific project. Let a recruiter know
-                    more
-                    about your knowledge and ability to work independently or collaboratively in a structured way.
-                </p>
-
-                <p>
-                    Duration: 4 weeks
-                </p>
-
-                <div class="left-side-skills">
-                    <div>
-                        <img src="/img/css.png" alt="CSS" width="30px" height="30px">
-                        <p>CSS</p>
-                    </div>
-
-                    <div>
-                        <img src="/img/html.png" alt="HTML" width="30px" height="30px">
-                        <p>HTML</p>
-                    </div>
-
-                    <div>
-                        <img src="/img/firebase.png" alt="FIREBASE" width="30px" height="30px">
-                        <p>FIREBASE</p>
-                    </div>
-
-                    <div>
-                        <img src="/img/angular.png" alt="ANGULAR" width="30px" height="30px">
-                        <p>ANGULAR</p>
-                    </div>
-
-                    <div>
-                        <img src="/img/typescript.png" alt="TypeScript" width="30px" height="30px">
-                        <p>TypeScript</p>
-                    </div>
-                </div>
-            </div>
-
-            <div class="right-side">
-                <div class="right-side-image">
-                    <img class="" src="/img/join.png" alt="Join Project">
-                </div>
-
-                <div class="right-side-buttons">
-                    <button>GitHub</button>
-                    <button>Live Test</button>
-                </div>
-
-                <div class="right-side-next">
-                    <p>
-                        <a>Next Project</a> <img src="" alt="arrow">
-                    </p>
-                </div>
-            </div>
-        </div>
-
-    </div>
-</div>
+<app-project-overlay *ngIf="showOverlay" [project]="projects[currentIndex]" (closeOverlay)="closeOverlay()"
+    (nextProject)="goToNextProject()">
+</app-project-overlay>
