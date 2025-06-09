@@ -16,15 +16,15 @@ export class ProjectsSectionComponent {
     {
       title: 'Join',
       image: '/img/join-rounded.png',
-      description: 'Task manager with drag and drop features.',
-      details: 'Join is a task management application that allows users to create, manage, and organize tasks with a user-friendly drag-and-drop interface. It supports real-time collaboration, enabling teams to work together efficiently.',
+      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
+      details: 'Short text that describes your role or the workflow for this specific project. Let a recruiter know more about your knowledge and ability to work independently or collaboratively in a structured way.',
       duration: '4 weeks',
     },
     {
       title: 'El Pollo Loco',
       image: '/img/el-pollo-loco.png',
-      description: 'Jump & Run Game.',
-      details: 'El Pollo Loco is a fun and engaging jump and run game where players control a character navigating through various levels filled with obstacles and challenges. The game features vibrant graphics and smooth gameplay mechanics.',
+      description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
+      details: 'Short text that describes your role or the workflow for this specific project. Let a recruiter know more about your knowledge and ability to work independently or collaboratively in a structured way.',
       duration: '3 weeks',
     },
     {
