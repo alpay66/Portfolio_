@@ -7,5 +7,4 @@ import { Component, NgModule } from '@angular/core';
   styleUrl: './header-bar.component.scss'
 })
 export class HeaderBarComponent {
-
 }

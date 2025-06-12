@@ -10,6 +10,11 @@ import { Pipe, PipeTransform } from '@angular/core';
   styleUrl: './hero-section.component.scss'
 })
 export class HeroSectionComponent {
+  menuOpen = false;
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
   frontend = [
     { upper: 'F', lower: 'f' },
     { upper: 'R', lower: 'r' },
@@ -36,4 +41,8 @@ export class HeroSectionComponent {
   hoveredFrontendIndex: number | null = null;
   hoveredDeveloperIndex: number | null = null;
 }
+
+
+
+
 

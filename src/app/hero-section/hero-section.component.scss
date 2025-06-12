@@ -37,13 +37,45 @@ h1 {
     line-height: 1;
 
     span {
-        font-size: 150px;
+        /* font-size: 150px; */
         cursor: default;
         transition: all 0.3s ease;
         line-height: 1;
         padding: 0;
         margin: 0;
     }
+}
+
+.letter-0 {
+    width: 95px;
+}
+
+.letter-1 {
+    width: 85px;
+}
+
+.letter-2 {
+    width: 90px;
+}
+
+.letter-3 {
+    width: 90px;
+}
+
+.letter-4 {
+    width: 80px;
+}
+
+.letter-5 {
+    width: 81px;
+}
+
+.letter-6 {
+    width: 81px;
+}
+
+.letter-7 {
+    width: 81px;
 }
 
 .hero-content {
@@ -54,6 +86,22 @@ h1 {
     height: 100%;
     color: #fff;
     padding-left: 250px;
+}
+
+.hover-span {
+    display: inline-flex;
+    justify-content: center;
+    align-items: flex-end; // wichtig für die vertikale Ausrichtung nach unten
+    height: 150px;
+    text-align: center;
+    transition: transform 0.3s ease, color 0.3s ease;
+    transform-origin: bottom; // sorgt dafür, dass die Skalierung von unten ausgeht
+    transform: scaleY(1);
+}
+
+.hover-span:hover {
+    transform: scaleY(1.2);
+    color: orange;
 }
 
 .frontend-img-row {
@@ -197,4 +245,138 @@ footer {
     flex-direction: column;
     max-width: 1440px;
     gap: 10px;
+}
+
+.circle-button {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: 2px solid white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+    position: relative;
+    cursor: default;
+}
+
+.circle-button:hover {
+    background-color: #007bff;
+}
+
+.circle-button img {
+    width: 50px;
+    height: 50px;
+    z-index: 1;
+    pointer-events: none;
+}
+
+.burger-menu {
+    display: none;
+    cursor: pointer;
+
+}
+
+.mobile-overlay {
+    position: fixed;
+    top: -100vh;
+    left: 0;
+    width: 100%;
+    height: 50vh;
+    background-image: url(/img/hero-burger-menu-background.png);
+    background-size: cover;
+    background-repeat: no-repeat;
+    z-index: 999;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px 20px;
+    gap: 32px;
+    transition: top 0.4s ease;
+}
+
+.mobile-overlay.active {
+    top: 0;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1110px) {
+    .container {
+        padding: 250px 15%;
+    }
+
+    .hero-content {
+        padding-left: 0px;
+        align-items: unset;
+
+    }
+
+    .hero-left {
+        margin-right: 0px;
+    }
+
+    .frontend-img {
+        position: relative;
+        height: 0;
+    }
+
+    .rotate-img {
+        position: absolute;
+        bottom: -863px;
+        left: -350px;
+        transform: translateX(-50%) rotate(7deg);
+        pointer-events: none;
+        width: 314px;
+    }
+
+    .linked-up-buttons {
+        display: none;
+    }
+
+    .frontend-img-row {
+        gap: 0px;
+    }
+
+    .get-in-touch-btn {}
+}
+
+@media (max-width: 930px) {
+    .container {
+        padding: 250px 10%;
+    }
+
+
+    .navigation,
+    .language-switch {
+        display: block;
+    }
+
+    .burger-menu {
+        display: block;
+        cursor: pointer;
+        display: flex;
+        justify-content: space-between;
+        padding: 25px;
+    }
+
+    .logo {
+        width: 80px;
+    }
+
+    .header-bar {
+        display: none;
+    }
 }

@@ -1,5 +1,9 @@
 <section class="hero-section">
-    <app-header-bar></app-header-bar>
+    <app-header-bar class="header-bar"></app-header-bar>
+    <div class="burger-menu" (click)="toggleMenu()">
+        <img class="logo" src="/img/AK_logo.png" alt="AK_logo">
+        <img class="burger-menu-img" src="/img/hero-burger-menu-logo.svg" alt="menu" />
+    </div>
 
     <div class="container">
         <div class="hero-content">
@@ -10,8 +14,9 @@
                 </button>
                 <div class="frontend-img-row">
                     <h1 class="hover-word">
-                        <span *ngFor="let letter of frontend; let i = index" (mouseenter)="hoveredFrontendIndex = i"
-                            (mouseleave)="hoveredFrontendIndex = null" [ngStyle]="{
+                        <span class="hover-span letter-{{i}}" *ngFor="let letter of frontend; let i = index"
+                            (mouseenter)="hoveredFrontendIndex = i" (mouseleave)="hoveredFrontendIndex = null"
+                            [ngStyle]="{
     color: hoveredFrontendIndex === i ? 'yellow' : 'white',
     textTransform: hoveredFrontendIndex === i 
         ? (i === 0 ? 'lowercase' : 'uppercase') 
@@ -21,16 +26,16 @@
                         </span>
                     </h1>
 
-
-
-                    <img class="rotate-img" src="/img/hero_alpay_img_filler.png">
+                    <div class="frontend-img">
+                        <img class="rotate-img" src="/img/hero_alpay_img_filler.png">
+                    </div>
                 </div>
             </div>
 
             <div class="hero-right">
                 <h1 class="hover-word">
-                    <span *ngFor="let letter of developer; let i = index" (mouseenter)="hoveredDeveloperIndex = i"
-                        (mouseleave)="hoveredDeveloperIndex = null" [ngStyle]="{
+                    <span class="hover-span" *ngFor="let letter of developer; let i = index"
+                        (mouseenter)="hoveredDeveloperIndex = i" (mouseleave)="hoveredDeveloperIndex = null" [ngStyle]="{
     color: hoveredDeveloperIndex === i ? 'yellow' : 'white',
     textTransform: hoveredDeveloperIndex === i 
         ? (i === 0 ? 'lowercase' : 'uppercase') 
@@ -45,12 +50,54 @@
         </div>
 
 
-            <div class="linked-up-buttons">
-                <img src="/img/hero_linked_in.png" width="50px" height="50px">
-                <img src="/img/hero_github.png" width="50px" height="50px">
-                <img src="/img/hero_mail.png" width="50px" height="50px">
+        <div class="linked-up-buttons">
+            <div class="circle-button">
+                <img src="/img/hero_linked_in.png" alt="LinkedIn">
             </div>
+            <div class="circle-button">
+                <img src="/img/hero_github.png" alt="GitHub">
+            </div>
+            <div class="circle-button">
+                <img src="/img/hero_mail.png" alt="Mail">
+            </div>
+        </div>
+
 
 
     </div>
 </section>
+
+<div class="mobile-overlay" [class.active]="menuOpen">
+    <div class="overlay-header">
+        <img src="/img/AK_logo.png" class="logo" />
+        <div class="close-icon" (click)="toggleMenu()">×</div>
+    </div>
+
+    <nav class="overlay-nav">
+        <a href="#">About me</a>
+        <a href="#">Skills</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
+    </nav>
+
+    <div class="language-switch">
+        <span class="lang">EN</span>
+        <label class="switch">
+            <input type="checkbox" id="langToggle">
+            <span class="slider"></span>
+        </label>
+        <span class="lang">DE</span>
+    </div>
+
+    <div class="linked-up-buttons">
+        <div class="circle-button">
+            <img src="/img/hero_linked_in.png" alt="LinkedIn">
+        </div>
+        <div class="circle-button">
+            <img src="/img/hero_github.png" alt="GitHub">
+        </div>
+        <div class="circle-button">
+            <img src="/img/hero_mail.png" alt="Mail">
+        </div>
+    </div>
+</div>
