@@ -70,7 +70,7 @@
 <div class="mobile-overlay" [class.active]="menuOpen">
     <div class="overlay-header">
         <img src="/img/AK_logo.png" class="logo" />
-        <div class="close-icon" (click)="toggleMenu()">×</div>
+        <img class="close-icon" (click)="toggleMenu()" src="/img/close-overlay.png" alt="close">
     </div>
 
     <nav class="overlay-nav">
@@ -79,6 +79,7 @@
         <a href="#">Projects</a>
         <a href="#">Contact</a>
     </nav>
+
 
     <div class="language-switch">
         <span class="lang">EN</span>
@@ -89,13 +90,15 @@
         <span class="lang">DE</span>
     </div>
 
-    <div class="linked-up-buttons">
+    <div class="linked-up-buttons-overlay">
         <div class="circle-button">
             <img src="/img/hero_linked_in.png" alt="LinkedIn">
         </div>
+
         <div class="circle-button">
             <img src="/img/hero_github.png" alt="GitHub">
         </div>
+
         <div class="circle-button">
             <img src="/img/hero_mail.png" alt="Mail">
         </div>
