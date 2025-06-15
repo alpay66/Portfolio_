@@ -14,7 +14,7 @@
                 </button>
                 <div class="frontend-img-row">
                     <h1 class="hover-word">
-                        <span class="hover-span letter-{{i}}" *ngFor="let letter of frontend; let i = index"
+                        <span class="hover-span letter-frontend-{{i}}" *ngFor="let letter of frontend; let i = index"
                             (mouseenter)="hoveredFrontendIndex = i" (mouseleave)="hoveredFrontendIndex = null"
                             [ngStyle]="{
     color: hoveredFrontendIndex === i ? 'yellow' : 'white',
@@ -34,7 +34,7 @@
 
             <div class="hero-right">
                 <h1 class="hover-word">
-                    <span class="hover-span" *ngFor="let letter of developer; let i = index"
+                    <span class="hover-span letter-developer-{{i}}"  *ngFor="let letter of developer; let i = index"
                         (mouseenter)="hoveredDeveloperIndex = i" (mouseleave)="hoveredDeveloperIndex = null" [ngStyle]="{
     color: hoveredDeveloperIndex === i ? 'yellow' : 'white',
     textTransform: hoveredDeveloperIndex === i 

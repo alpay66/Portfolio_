@@ -37,7 +37,6 @@ h1 {
     line-height: 1;
 
     span {
-        /* font-size: 150px; */
         cursor: default;
         transition: all 0.3s ease;
         line-height: 1;
@@ -46,35 +45,71 @@ h1 {
     }
 }
 
-.letter-0 {
+.letter-frontend-0 {
     width: 95px;
 }
 
-.letter-1 {
+.letter-frontend-1 {
     width: 85px;
 }
 
-.letter-2 {
+.letter-frontend-2 {
     width: 90px;
 }
 
-.letter-3 {
+.letter-frontend-3 {
     width: 90px;
 }
 
-.letter-4 {
+.letter-frontend-4 {
     width: 80px;
 }
 
-.letter-5 {
+.letter-frontend-5 {
     width: 81px;
 }
 
-.letter-6 {
+.letter-frontend-6 {
+    width: 100px;
+}
+
+.letter-frontend-7 {
+    width: 100px;
+}
+
+.letter-developer-0 {
+    width: 123px;
+}
+
+.letter-developer-1 {
+    width: 99px;
+}
+
+.letter-developer-2 {
+    width: 108px;
+}
+
+.letter-developer-3 {
+    width: 76px;
+}
+
+.letter-developer-4 {
+    width: 78px;
+}
+
+.letter-developer-5 {
+    width: 88px;
+}
+
+.letter-developer-6 {
+    width: 112px;
+}
+
+.letter-developer-7 {
     width: 81px;
 }
 
-.letter-7 {
+.letter-developer-8 {
     width: 81px;
 }
 
@@ -393,21 +428,13 @@ nav {
     cursor: pointer;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-@media (max-width: 1110px) {
+@media (max-width: 1180px) {
     .container {
         padding: 250px 15%;
+    }
+
+    h1 {
+        font-size: 117px;
     }
 
     .hero-content {
@@ -434,6 +461,10 @@ nav {
         width: 314px;
     }
 
+    .get-in-touch-btn {
+        margin-top: 50px;
+    }
+
     .linked-up-buttons {
         display: none;
     }
@@ -442,12 +473,46 @@ nav {
         gap: 0px;
     }
 
-    .get-in-touch-btn {}
+    .letter-frontend-0 {
+        width: 70px;
+    }
+
+    .letter-frontend-1 {
+        width: 52px;
+    }
+
+    .letter-frontend-2 {
+        width: 83px;
+    }
+
+    .letter-frontend-3 {
+        width: 79px;
+    }
+
+    .letter-frontend-4 {
+        width: 53px;
+    }
+
+    .letter-frontend-5 {
+        width: 57px;
+    }
+
+    .letter-frontend-6 {
+        width: 81px;
+    }
+
+    .letter-frontend-7 {
+        width: 72px;
+    }
 }
 
 @media (max-width: 930px) {
     .container {
         padding: 250px 10%;
+    }
+
+    .hero-right .hover-span {
+        text-transform: uppercase !important;
     }
 
 
@@ -472,5 +537,120 @@ nav {
 
     .header-bar {
         display: none;
+    }
+
+    .get-in-touch-btn {
+        margin-top: 40px;
+        text-align: center;
+    }
+}
+
+@media (max-width: 675px) {
+    h1 {
+        font-size: 83px;
+    }
+
+    .letter-frontend-0 {
+        width: 33px;
+    }
+
+    .letter-frontend-1 {
+        width: 52px;
+    }
+
+    .letter-frontend-2 {
+        width: 43px;
+    }
+
+    .letter-frontend-3 {
+        width: 59px;
+    }
+
+    .letter-frontend-4 {
+        width: 32px;
+    }
+
+    .letter-frontend-5 {
+        width: 52px;
+    }
+
+    .letter-frontend-6 {
+        width: 50px;
+    }
+
+    .letter-frontend-7 {
+        width: 53px;
+    }
+    
+    .rotate-img {
+        position: absolute;
+        bottom: -868px;
+        left: -126px;
+        transform: translateX(-50%) rotate(7deg);
+        pointer-events: none;
+        width: 314px;
+    }
+
+    .get-in-touch-btn {
+        margin-top: 50px;
+    }
+}
+
+// iphone 14pro max-width
+@media (max-width: 430px) {
+    .container {
+        padding: 20px 10%;
+    }
+    h1 {
+        font-size: 55px;
+    }
+
+    .hover-word {
+        height: 72px;
+    }
+
+    .hover-span {
+        height: 75px;
+    }
+
+    .rotate-img {
+        position: absolute;
+        bottom: -598px;
+        left: -126px;
+        transform: translateX(-50%) rotate(7deg);
+        pointer-events: none;
+        width: 247px;
+    }
+
+    .letter-frontend-0 {
+        width: 30px;
+    }
+
+    .letter-frontend-1 {
+        width: 40px;
+    }
+
+    .letter-frontend-2 {
+        width: 30px;
+    }
+
+    .letter-frontend-3 {
+        width: 40px;
+    }
+
+    .letter-frontend-4 {
+        width: 30px;
+    }
+
+    .letter-frontend-5 {
+        width: 40px;
+    }
+
+    .letter-frontend-6 {
+        width: 40px;
+    }
+
+    .letter-frontend-7 {
+        width: 40px;
     }
 }
