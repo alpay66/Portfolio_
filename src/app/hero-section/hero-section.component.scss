@@ -314,7 +314,7 @@ footer {
 
 .mobile-overlay {
     position: fixed;
-    top: -150vh;
+    top: -230vh;
     left: 0;
     width: 100%;
     height: 50vh;
@@ -426,6 +426,15 @@ nav {
 
 .close-icon {
     cursor: pointer;
+}
+
+// macbook air max-height 
+@media (max-height: 976px) {
+    .container {
+        padding: 0;
+        margin: 0 auto;
+        max-width: 1440px;
+    }
 }
 
 @media (max-width: 1180px) {
@@ -545,6 +554,102 @@ nav {
     }
 }
 
+// ipad air max-width 
+@media (max-width: 821px) {
+    .container {
+        padding: 20px 5%;
+    }
+
+    h1 {
+        font-size: 100px;
+    }
+
+    .hover-word {
+        height: 120px;
+    }
+
+    .hover-span {
+        height: 125px;
+    }
+
+    .rotate-img {
+        position: absolute;
+        bottom: -800px;
+        left: -146px;
+        transform: translateX(-50%) rotate(7deg);
+        pointer-events: none;
+        width: 314px;
+    }
+
+    .letter-frontend-0 {
+        width: 60px;
+    }
+
+    .letter-frontend-1 {
+        width: 70px;
+    }
+
+    .letter-frontend-2 {
+        width: 60px;
+    }
+
+    .letter-frontend-3 {
+        width: 80px;
+    }
+
+    .letter-frontend-4 {
+        width: 50px;
+    }
+
+    .letter-frontend-5 {
+        width: 70px;
+    }
+
+    .letter-frontend-6 {
+        width: 70px;
+    }
+
+    .letter-frontend-7 {
+        width: 70px;
+    }
+
+    .letter-developer-0 {
+        width: 71px;
+    }
+
+    .letter-developer-1 {
+        width: 81px;
+    }
+
+    .letter-developer-2 {
+        width: 77px;
+    }
+
+    .letter-developer-3 {
+        width: 73px;
+    }
+
+    .letter-developer-4 {
+        width: 85px;
+    }
+
+    .letter-developer-5 {
+        width: 70px;
+    }
+
+    .letter-developer-6 {
+        width: 90px;
+    }
+
+    .letter-developer-7 {
+        width: 60px;
+    }
+
+    .letter-developer-8 {
+        width: 103px;
+    }
+}
+
 @media (max-width: 675px) {
     h1 {
         font-size: 83px;
@@ -581,7 +686,7 @@ nav {
     .letter-frontend-7 {
         width: 53px;
     }
-    
+
     .rotate-img {
         position: absolute;
         bottom: -868px;
@@ -596,11 +701,72 @@ nav {
     }
 }
 
+// pixel 7 pro max-width 
+@media (max-width: 500px) {
+    .container {
+        padding: 20px 10%;
+    }
+
+    h1 {
+        font-size: 60px;
+    }
+
+    .hover-word {
+        height: 90px;
+    }
+
+    .hover-span {
+        height: 95px;
+    }
+
+    .rotate-img {
+        position: absolute;
+        bottom: -660px;
+        left: -116px;
+        transform: translateX(-50%) rotate(7deg);
+        pointer-events: none;
+        width: 247px;
+    }
+
+    .letter-frontend-0 {
+        width: 30px;
+    }
+
+    .letter-frontend-1 {
+        width: 40px;
+    }
+
+    .letter-frontend-2 {
+        width: 30px;
+    }
+
+    .letter-frontend-3 {
+        width: 40px;
+    }
+
+    .letter-frontend-4 {
+        width: 30px;
+    }
+
+    .letter-frontend-5 {
+        width: 40px;
+    }
+
+    .letter-frontend-6 {
+        width: 40px;
+    }
+
+    .letter-frontend-7 {
+        width: 40px;
+    }
+}
+
 // iphone 14pro max-width
 @media (max-width: 430px) {
     .container {
         padding: 20px 10%;
     }
+
     h1 {
         font-size: 55px;
     }
@@ -616,6 +782,66 @@ nav {
     .rotate-img {
         position: absolute;
         bottom: -598px;
+        left: -126px;
+        transform: translateX(-50%) rotate(7deg);
+        pointer-events: none;
+        width: 247px;
+    }
+
+    .letter-frontend-0 {
+        width: 30px;
+    }
+
+    .letter-frontend-1 {
+        width: 40px;
+    }
+
+    .letter-frontend-2 {
+        width: 30px;
+    }
+
+    .letter-frontend-3 {
+        width: 40px;
+    }
+
+    .letter-frontend-4 {
+        width: 30px;
+    }
+
+    .letter-frontend-5 {
+        width: 40px;
+    }
+
+    .letter-frontend-6 {
+        width: 40px;
+    }
+
+    .letter-frontend-7 {
+        width: 40px;
+    }
+}
+
+// iphone 14pro MAX max-width
+@media (max-width: 412px) {
+    .container {
+        padding: 20px 10%;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+
+    .hover-word {
+        height: 60px;
+    }
+
+    .hover-span {
+        height: 65px;
+    }
+
+    .rotate-img {
+        position: absolute;
+        bottom: -550px;
         left: -126px;
         transform: translateX(-50%) rotate(7deg);
         pointer-events: none;
