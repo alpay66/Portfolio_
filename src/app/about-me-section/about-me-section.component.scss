@@ -5,11 +5,6 @@ section {
 
 
     div {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        max-width: 1440px;
-        margin: 0 auto;
 
         h2 {
             font-size: 25px;
@@ -28,8 +23,109 @@ section {
     }
 }
 
-.gap {
-    padding: 200px 0 0 0;
+.container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+    gap: 50px;
+}
+
+.left-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.right-container {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.yellow-location {
+    background-image: url('/img/about-me-yellow.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 19%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 1810px;
+    z-index: 3;
+}
+
+.yellow-location-inner {
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+    transform: rotate(-4deg);
+    padding-bottom: 21px;
+}
+
+.blue-location {
+    background-image: url('/img/about-me-blue.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 15%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 1937px;
+    z-index: 2;
+}
+
+.blue-location-inner {
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+    transform: rotate(1deg);
+}
+
+.orange-location {
+    background-image: url('/img/about-me-orange.svg');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    width: 100%;
+    height: 19%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    top: 2010px;
+}
+
+.orange-location-inner {
+    display: flex;
+    flex-direction: row !important;
+    align-items: center;
+    transform: rotate(7deg);
+    padding-bottom: 13px;
+}
+
+.yellow-location span,
+.blue-location span,
+.orange-location span {
+    color: white;
+    font-weight: 600;
+    font-size: 18px;
+    text-align: center;
+    padding: 4px 8px;
+    border-radius: 4px;
 }
 
 .get-in-touch-btn {
