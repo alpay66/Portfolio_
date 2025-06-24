@@ -12,7 +12,7 @@ section {
         }
 
         h1 {
-            font-size: 50px;
+            font-size: clamp(30px, 5vw + 1rem, 50px);
             margin: 10px 0 10px 0;
         }
 
@@ -29,7 +29,9 @@ section {
     display: flex;
     justify-content: center;
     align-items: center;
+    max-width: 1440px;
     padding: 0 20px;
+    box-sizing: border-box;
     gap: 50px;
 }
 
@@ -146,4 +148,103 @@ section {
     color: white;
     box-shadow: none;
     transform: translateY(2px);
+}
+
+@media (max-width: 910px) {
+    section {
+        height: 63vh;
+    }
+    .container {
+        flex-direction: column-reverse;
+        gap: 20px;
+    }
+
+    h1 {
+        font-size: 8vw; 
+    }
+
+    h2 {
+        font-size: 5vw;
+    }
+
+    .get-in-touch-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+
+    .yellow-location {
+        position: absolute;
+        height: clamp(100px, 20vw, 200px);
+        max-width: 500px;
+        top: 1650px;
+    }
+
+    .blue-location {
+        position: absolute;
+        height: clamp(100px, 20vw, 200px);
+        max-width: 500px;
+        top: 1738px;
+    }
+    .orange-location {
+        position: absolute;
+        height: clamp(100px, 20vw, 200px);
+        max-width: 500px;
+        top: 1836px;
+    }
+}
+
+@media (max-width: 750px) {
+    .yellow-location {
+        top: 1700px;
+        height: clamp(100px, 23vw, 200px);
+    } 
+
+    .blue-location {
+        top: 1786px;
+        height: clamp(100px, 23vw, 200px);
+    }
+
+    .orange-location {
+        top: 1882px;
+        height: clamp(100px, 23vw, 200px);
+    }
+}
+
+@media (max-width: 546px) {
+    .yellow-location {
+        top: 1700px;
+        height: clamp(100px, 25vw, 200px);
+    }
+
+    .blue-location {
+        top: 1783px;
+        height: clamp(100px, 25vw, 200px);
+    }
+
+    .orange-location {
+        top: 1870px;
+        height: clamp(100px, 25vw, 200px);
+    }
+}
+
+// iphone 14 pro max 
+
+@media (max-width: 430px) {
+    section {
+        height: 80vh;
+    }
+    .yellow-location {
+        top: 1350px;
+        height: clamp(100px, 30vw, 200px);
+    }
+
+    .blue-location {
+        top: 1425px;
+        height: clamp(100px, 30vw, 200px);
+    }
+
+    .orange-location {
+        top: 1510px;
+        height: clamp(100px, 30vw, 200px);
+    }
 }
