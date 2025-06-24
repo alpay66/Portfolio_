@@ -614,7 +614,7 @@ nav {
 // iphone 14pro MAX max-width
 @media (max-width: 412px) {
     .hero-section {
-        height: 70vh;
+        height: 94vh;
     }
 
     .container {
@@ -680,5 +680,11 @@ nav {
 
     .letter-frontend-0 {
         width: 30px;
+    }
+}
+
+@media (max-width: 375px) {
+    .hero-section {
+        height: 113vh;
     }
 }

@@ -228,7 +228,6 @@ section {
 }
 
 // iphone 14 pro max 
-
 @media (max-width: 430px) {
     section {
         height: 80vh;
@@ -246,5 +245,57 @@ section {
     .orange-location {
         top: 1510px;
         height: clamp(100px, 30vw, 200px);
+    }
+}
+
+// iphone xr 
+@media (max-width: 414px) {
+    section {
+        height: 84vh;
+    }
+}
+
+@media (max-width: 412px) {
+    .yellow-location {
+        top: 1307px;
+        height: clamp(100px, 35vw, 200px);
+    }
+
+    .blue-location {
+        top: 1383px;
+        height: clamp(100px, 35vw, 200px);
+    }
+
+    .orange-location {
+        top: 1466px;
+        height: clamp(100px, 35vw, 200px);
+    }
+}
+
+// iphone 14 pro
+@media (max-width: 390px) {
+    section {
+        height: 86vh;
+    }
+    .yellow-location {
+        top: 1179px;
+        height: clamp(100px, 35vw, 200px);
+    }
+
+    .blue-location {
+        top: 1252px;
+        height: clamp(100px, 35vw, 200px);
+    }
+
+    .orange-location {
+        top: 1330px;
+        height: clamp(100px, 35vw, 200px);
+    }
+}
+
+// iphone se 
+@media (max-width: 375px) {
+    section {
+        height: 110vh;
     }
 }
