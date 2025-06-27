@@ -1,7 +1,5 @@
 section {
     background-image: url('/img/contact-me-background.png');
-    height: 90vh;
-    width: 100%;
     background-size: cover;
     background-repeat: no-repeat;
 
@@ -17,8 +15,7 @@ section {
 .section-all {
     display: flex;
     padding-top: 300px;
-    justify-content: center;
-    gap: 250px;
+    justify-content: space-around;
     max-width: 1440px;
     margin: 0 auto;
 }
@@ -35,4 +32,22 @@ section {
 
 .right-part {
     padding-top: 150px;
+}
+
+@media (max-width: 830x) {
+    .section-all {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+/*     .left-part,
+    .right-part {
+        width: 100%;
+        padding: 0;
+    }
+
+    .left-part-logo-sec {
+        padding-top: 50px;
+    } */
 }

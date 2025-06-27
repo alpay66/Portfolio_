@@ -369,7 +369,8 @@ nav {
     cursor: pointer;
 }
 
-// macbook air max-height 
+//////////// WIDTH ////////////
+/// 
 @media (max-height: 976px) {
     .container {
         padding: 0;
@@ -464,7 +465,6 @@ nav {
     }
 }
 
-// ipad air max-width 
 @media (max-width: 821px) {
     .container {
         padding: 78px 142px 0px 84px;
@@ -546,7 +546,6 @@ nav {
     }
 }
 
-// pixel 7 pro max-width 
 @media (max-width: 500px) {
     .container {
         padding: 20px 10%;
@@ -579,7 +578,6 @@ nav {
     }
 }
 
-// iphone 14pro max-width
 @media (max-width: 430px) {
     .container {
         padding: 20px 10%;
@@ -611,7 +609,6 @@ nav {
     }
 }
 
-// iphone 14pro MAX max-width
 @media (max-width: 412px) {
     .hero-section {
         height: 94vh;
@@ -686,5 +683,150 @@ nav {
 @media (max-width: 375px) {
     .hero-section {
         height: 113vh;
+    }
+}
+
+//////////// HEIGHT //////////////
+
+@media (max-height: 1200px) {
+    .container {
+        padding: 140px 20px;
+        margin: 0 auto;
+        max-width: 1440px;
+    }
+}
+
+@media (max-height: 1180px) {
+    .container {
+        padding: 120px 20px;
+        margin: 0 auto;
+        max-width: 1440px;
+    }
+
+    .hero-content {
+        padding-left: 0px;
+    }
+
+    .rotate-img {
+        position: absolute;
+        bottom: -700px;
+        left: -100px;
+        transform: translateX(-50%) rotate(7deg);
+        pointer-events: none;
+        width: 280px;
+    }
+
+}
+
+@media (max-height: 1050px) {
+    .container {
+        padding: 65px 20px;
+        margin: 0 auto;
+        max-width: 1440px;
+    }
+}
+
+@media (max-height: 1024px) {
+    .container {
+        padding: 20px 20px;
+        margin: 0 auto;
+        max-width: 1440px;
+    }
+
+    .hero-content {
+        padding-left: 0px;
+    }
+
+    .rotate-img {
+        position: absolute;
+        bottom: -700px;
+        left: -80px;
+        transform: translateX(-50%) rotate(7deg);
+        pointer-events: none;
+        width: 247px;
+    }
+}
+
+@media (max-height: 932px) {
+    .container {
+        padding: 20px 20px;
+        margin: 0 auto;
+        max-width: 1440px;
+    }
+
+    .hero-content {
+        padding-left: 0px;
+    }
+
+    .rotate-img {
+        position: absolute;
+        bottom: -600px;
+        left: -80px;
+        transform: translateX(-50%) rotate(7deg);
+        pointer-events: none;
+        width: 247px;
+    }
+}
+
+@media (max-height: 915px) {
+    .container {
+        padding: 20px 20px;
+        margin: 0 auto;
+        max-width: 1440px;
+    }
+
+    .hero-content {
+        padding-left: 0px;
+    }
+
+    .rotate-img {
+        position: absolute;
+        bottom: -530px;
+        left: -90px;
+        transform: translateX(-50%) rotate(7deg);
+        pointer-events: none;
+        width: 230px;
+    }
+}
+
+@media (max-height: 896px) {
+    .container {
+        padding: 20px 20px;
+        margin: 0 auto;
+        max-width: 1440px;
+    }
+
+    .hero-content {
+        padding-left: 0px;
+    }
+
+    .rotate-img {
+        position: absolute;
+        bottom: -575px;
+        left: -80px;
+        transform: translateX(-50%) rotate(7deg);
+        pointer-events: none;
+        width: 247px;
+    }
+}
+
+@media (max-height: 844px) {
+    .container {
+        padding: 20px 20px;
+        margin: 0 auto;
+        max-width: 1440px;
+    }
+
+    .hero-content {
+        padding-left: 0px;
+    }
+
+    .rotate-img {
+        position: absolute;
+        bottom: -450px;
+        left: -115px;
+        transform: translateX(-50%) rotate(7deg);
+        pointer-events: none;
+        width: 190px;
     }
 }
