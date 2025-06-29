@@ -513,6 +513,10 @@ nav {
 }
 
 @media (max-width: 640px) {
+    .hero-section {
+        height: 80vh;
+    }
+
     .container {
         padding: 20px 19%;
     }
