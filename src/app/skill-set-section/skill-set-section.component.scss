@@ -201,3 +201,12 @@ section {
         left: 42px;
     }
 }
+
+@media (max-width: 335px) {
+    section {
+        
+        div {
+            gap: 15px;
+        }
+    }
+}
