@@ -157,3 +157,15 @@ section {
 .right-side-image {
     
 }
+
+///////// width ////////////
+
+@media (max-width: 910px) {
+    section {
+        flex-direction: column;
+    }
+
+    .first-box, .second-box, .third-box, .fourt-box {
+        width: 80%;
+    }
+}
