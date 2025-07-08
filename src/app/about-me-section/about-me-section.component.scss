@@ -146,9 +146,21 @@ section {
     transform: translateY(2px);
 }
 
+
+
+@media (max-width: 985px) {
+    .yellow-location {
+        margin: -75px;
+    }
+
+    .orange-location {
+        margin: -65px;
+    }
+}
+
 @media (max-width: 910px) {
     section {
-        height: 63vh;
+        height: 68vh;
     }
 
     .container {
@@ -156,96 +168,22 @@ section {
         gap: 20px;
     }
 
-    h1 {
-        font-size: 8vw;
+    .yellow-location {
+        margin: -105px;
+        height: 40%;
     }
 
-    h2 {
-        font-size: 5vw;
+    .blue-location {
+        height: 55%;
     }
 
-    .get-in-touch-btn {
-        padding: 10px 20px;
-        font-size: 14px;
-    }
-
-}
-
-@media (max-width: 640px) {
-    section {
-        height: 65vh;
-    }
-}
-
-@media (max-width: 480px) {
-    section {
-        height: 65vh;
-    }
-}
-
-@media (max-width: 454px) {
-    section {
-        height: 63vh;
-    }
-}
-
-@media (max-width: 430px) {
-    section {
-        height: 65vh;
+    .orange-location {
+        height: 46%;
+        margin: -100px;
     }
 }
 
 
-@media (max-width: 396px) {
-    section {
-        height: 65vh;
-    }
-}
-
-@media (max-width: 395px) {
-    section {
-        height: 65vh;
-    }
-}
-
-@media (max-width: 390px) {
-    section {
-        height: 60vh;
-    }
-}
-
-@media (max-width: 375px) {
-    section {
-        height: 60vh;
-    }
-}
-
-@media (max-width: 368px) {
-    section {
-        height: 60vh;
-    }
-}
-
-@media (max-width: 356px) {
-    section {
-        height: 62vh;
-    }
-}
-
-@media (max-width: 324px) {
-    section {
-        height: 62vh;
-    }
-}
-
-@media (max-width: 320px) {
-    section {
-        height: 63vh;
-    }
-}
-
-
-/////////// HEIGHT /////////////
 
 @media (max-height: 1180px) {
     section {
@@ -253,62 +191,78 @@ section {
     }
 }
 
-@media (max-height: 1138px) {
-    section {
-        height: 72vh;
-    }
-}
-
 @media (max-height: 1024px) {
     section {
-        height: 80vh;
+        height: 85vh;
     }
 }
 
 @media (max-height: 932px) {
     section {
-        height: 85vh;
+        height: 90vh;
     }
-}
 
-@media (max-height: 915px) {
-    section {
-        height: 85vh;
+    .container {
+        flex-direction: column-reverse;
+        gap: 20px;
     }
 }
 
 @media (max-height: 896px) {
     section {
-        height: 88vh;
+        height: 85vh;
+    }
+
+    .container {
+        gap: 10px;
+    }
+
+    .yellow-location {
+        margin: -85px;
+        height: 50%;
+    }
+
+    .blue-location {
+        height: 60%;
+    }
+
+    .orange-location {
+        height: 50%;
+        margin: -70px;
     }
 }
 
 @media (max-height: 844px) {
     section {
-        height: 91vh;
+        height: 89vh;
     }
-}
 
-@media (max-height: 740px) {
-    section {
-        height: 97vh;
+    .container {
+        gap: 10px;
     }
-}
 
-@media (max-height: 667px) {
-    section {
-        height: 107vh;
+    .yellow-location {
+        margin: -85px;
+        height: 50%;
+    }
+
+    .blue-location {
+        height: 60%;
+    }
+
+    .orange-location {
+        height: 50%;
+        margin: -70px;
     }
 }
 
 @media (max-height: 658px) {
     section {
-        height: 110vh;
+        height: 116vh;
     }
-}
 
-@media (max-height: 640px) {
-    section {
-        height: 115vh;
+    .container {
+        flex-direction: column-reverse;
+        gap: 20px;
     }
 }
