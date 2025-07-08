@@ -58,12 +58,11 @@ section {
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
-    height: 19%;
+    height: 24%;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    top: 1413px;
+    margin: -50px;
     z-index: 3;
 }
 
@@ -81,12 +80,10 @@ section {
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
-    height: 15%;
+    height: 20%;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    top: 1530px;
     z-index: 2;
 }
 
@@ -103,12 +100,11 @@ section {
     background-repeat: no-repeat;
     background-position: center;
     width: 100%;
-    height: 19%;
+    height: 26%;
+    margin: -50px;
     display: flex;
     justify-content: center;
     align-items: center;
-    position: absolute;
-    top: 1600px;
 }
 
 .orange-location-inner {
@@ -173,80 +169,11 @@ section {
         font-size: 14px;
     }
 
-    .yellow-location {
-        position: absolute;
-        height: clamp(100px, 20vw, 200px);
-        max-width: 500px;
-        top: 1700px;
-    }
-
-    .blue-location {
-        position: absolute;
-        height: clamp(100px, 20vw, 200px);
-        max-width: 500px;
-        top: 1788px;
-    }
-
-    .orange-location {
-        position: absolute;
-        height: clamp(100px, 20vw, 200px);
-        max-width: 500px;
-        top: 1886px;
-    }
-}
-
-@media (max-width: 750px) {
-    .yellow-location {
-        top: 1700px;
-        height: clamp(100px, 23vw, 200px);
-    }
-
-    .blue-location {
-        top: 1786px;
-        height: clamp(100px, 23vw, 200px);
-    }
-
-    .orange-location {
-        top: 1882px;
-        height: clamp(100px, 23vw, 200px);
-    }
 }
 
 @media (max-width: 640px) {
     section {
         height: 65vh;
-    }
-
-    .yellow-location {
-        top: 1450px;
-        height: clamp(100px, 26vw, 200px);
-    }
-
-    .blue-location {
-        top: 1540px;
-        height: clamp(100px, 23vw, 200px);
-    }
-
-    .orange-location {
-        top: 1630px;
-        height: clamp(100px, 26vw, 200px);
-    }
-}
-
-@media (max-width: 546px) {
-    .yellow-location {
-        top: 1450px;
-        height: clamp(100px, 28vw, 200px);
-    }
-
-    .blue-location {
-        top: 1540px;
-        height: clamp(100px, 25vw, 200px);
-    }
-
-    .orange-location {
-        top: 1630px;
-        height: clamp(100px, 28vw, 200px);
     }
 }
 
@@ -254,41 +181,11 @@ section {
     section {
         height: 65vh;
     }
-
-    .yellow-location {
-        top: 1450px;
-        height: clamp(100px, 28vw, 200px);
-    }
-
-    .blue-location {
-        top: 1540px;
-        height: clamp(100px, 25vw, 200px);
-    }
-
-    .orange-location {
-        top: 1630px;
-        height: clamp(100px, 28vw, 200px);
-    }
 }
 
 @media (max-width: 454px) {
     section {
         height: 63vh;
-    }
-
-    .yellow-location {
-        top: 1450px;
-        height: clamp(100px, 29vw, 200px);
-    }
-
-    .blue-location {
-        top: 1540px;
-        height: clamp(100px, 25vw, 200px);
-    }
-
-    .orange-location {
-        top: 1620px;
-        height: clamp(100px, 29vw, 200px);
     }
 }
 
@@ -296,58 +193,12 @@ section {
     section {
         height: 65vh;
     }
-
-    .yellow-location {
-        top: 1470px;
-        height: clamp(100px, 33vw, 200px);
-    }
-
-    .blue-location {
-        top: 1550px;
-        height: clamp(100px, 30vw, 200px);
-    }
-
-    .orange-location {
-        top: 1630px;
-        height: clamp(100px, 33vw, 200px);
-    }
 }
 
-@media (max-width: 412px) {
-    .yellow-location {
-        top: 1307px;
-        height: clamp(100px, 35vw, 200px);
-    }
-
-    .blue-location {
-        top: 1383px;
-        height: clamp(100px, 35vw, 200px);
-    }
-
-    .orange-location {
-        top: 1466px;
-        height: clamp(100px, 35vw, 200px);
-    }
-}
 
 @media (max-width: 396px) {
     section {
         height: 65vh;
-    }
-
-    .yellow-location {
-        top: 1320px;
-        height: clamp(100px, 35vw, 200px);
-    }
-
-    .blue-location {
-        top: 1395px;
-        height: clamp(100px, 35vw, 200px);
-    }
-
-    .orange-location {
-        top: 1480px;
-        height: clamp(100px, 35vw, 200px);
     }
 }
 
@@ -355,41 +206,11 @@ section {
     section {
         height: 65vh;
     }
-
-    .yellow-location {
-        top: 1220px;
-        height: clamp(100px, 37vw, 200px);
-    }
-
-    .blue-location {
-        top: 1300px;
-        height: clamp(100px, 35vw, 200px);
-    }
-
-    .orange-location {
-        top: 1380px;
-        height: clamp(100px, 37vw, 200px);
-    }
 }
 
 @media (max-width: 390px) {
     section {
         height: 60vh;
-    }
-
-    .yellow-location {
-        top: 1200px;
-        height: clamp(100px, 37vw, 200px);
-    }
-
-    .blue-location {
-        top: 1270px;
-        height: clamp(100px, 35vw, 200px);
-    }
-
-    .orange-location {
-        top: 1350px;
-        height: clamp(100px, 37vw, 200px);
     }
 }
 
@@ -403,41 +224,11 @@ section {
     section {
         height: 60vh;
     }
-
-    .yellow-location {
-        top: 1220px;
-        height: clamp(100px, 37vw, 200px);
-    }
-
-    .blue-location {
-        top: 1290px;
-        height: clamp(100px, 35vw, 200px);
-    }
-
-    .orange-location {
-        top: 1358px;
-        height: clamp(100px, 37vw, 200px);
-    }
 }
 
 @media (max-width: 356px) {
     section {
         height: 62vh;
-    }
-
-    .yellow-location {
-        top: 1250px;
-        height: clamp(100px, 37vw, 200px);
-    }
-
-    .blue-location {
-        top: 1320px;
-        height: clamp(100px, 35vw, 200px);
-    }
-
-    .orange-location {
-        top: 1390px;
-        height: clamp(100px, 37vw, 200px);
     }
 }
 
@@ -445,45 +236,11 @@ section {
     section {
         height: 62vh;
     }
-
-    .yellow-location {
-        top: 1270px;
-        height: clamp(100px, 37vw, 200px);
-    }
-
-    .blue-location {
-        top: 1340px;
-        height: clamp(100px, 35vw, 200px);
-    }
-
-    .orange-location {
-        top: 1410px;
-        height: clamp(100px, 37vw, 200px);
-    }
 }
 
 @media (max-width: 320px) {
     section {
         height: 63vh;
-    }
-
-    .yellow-location {
-        top: 1310px;
-        height: clamp(100px, 37vw, 200px);
-    }
-
-    .blue-location {
-        top: 1370px;
-        height: clamp(100px, 35vw, 200px);
-    }
-
-    .orange-location {
-        top: 1430px;
-        height: clamp(100px, 37vw, 200px);
-    }
-
-    .yellow-inner-img, blue-inner-img, .orange-inner-img {
-        width: 35px;
     }
 }
 
@@ -500,41 +257,11 @@ section {
     section {
         height: 72vh;
     }
-
-    .yellow-location {
-        top: 1550px;
-        height: clamp(100px, 30vw, 200px);
-    }
-
-    .blue-location {
-        top: 1640px;
-        height: clamp(100px, 30vw, 200px);
-    }
-
-    .orange-location {
-        top: 1740px;
-        height: clamp(100px, 30vw, 200px);
-    }
 }
 
 @media (max-height: 1024px) {
     section {
         height: 80vh;
-    }
-
-    .yellow-location {
-        top: 1450px;
-        height: clamp(100px, 30vw, 200px);
-    }
-
-    .blue-location {
-        top: 1540px;
-        height: clamp(100px, 30vw, 200px);
-    }
-
-    .orange-location {
-        top: 1640px;
-        height: clamp(100px, 30vw, 200px);
     }
 }
 
@@ -542,41 +269,11 @@ section {
     section {
         height: 85vh;
     }
-
-    .yellow-location {
-        top: 1400px;
-        height: clamp(100px, 32vw, 200px);
-    }
-
-    .blue-location {
-        top: 1475px;
-        height: clamp(100px, 32vw, 200px);
-    }
-
-    .orange-location {
-        top: 1550px;
-        height: clamp(100px, 32vw, 200px);
-    }
 }
 
 @media (max-height: 915px) {
     section {
         height: 85vh;
-    }
-
-    .yellow-location {
-        top: 1330px;
-        height: clamp(100px, 32vw, 200px);
-    }
-
-    .blue-location {
-        top: 1405px;
-        height: clamp(100px, 32vw, 200px);
-    }
-
-    .orange-location {
-        top: 1490px;
-        height: clamp(100px, 32vw, 200px);
     }
 }
 
@@ -584,41 +281,11 @@ section {
     section {
         height: 88vh;
     }
-
-    .yellow-location {
-        top: 1350px;
-        height: clamp(100px, 33vw, 200px);
-    }
-
-    .blue-location {
-        top: 1415px;
-        height: clamp(100px, 33vw, 200px);
-    }
-
-    .orange-location {
-        top: 1500px;
-        height: clamp(100px, 33vw, 200px);
-    }
 }
 
 @media (max-height: 844px) {
     section {
         height: 91vh;
-    }
-
-    .yellow-location {
-        top: 1210px;
-        height: clamp(100px, 33vw, 200px);
-    }
-
-    .blue-location {
-        top: 1285px;
-        height: clamp(100px, 33vw, 200px);
-    }
-
-    .orange-location {
-        top: 1365px;
-        height: clamp(100px, 33vw, 200px);
     }
 }
 
@@ -626,41 +293,11 @@ section {
     section {
         height: 97vh;
     }
-
-    .yellow-location {
-        top: 1290px;
-        height: clamp(100px, 33vw, 200px);
-    }
-
-    .blue-location {
-        top: 1350px;
-        height: clamp(100px, 33vw, 200px);
-    }
-
-    .orange-location {
-        top: 1420px;
-        height: clamp(100px, 33vw, 200px);
-    }
 }
 
 @media (max-height: 667px) {
     section {
         height: 107vh;
-    }
-
-    .yellow-location {
-        top: 1200px;
-        height: clamp(100px, 30vw, 200px);
-    }
-
-    .blue-location {
-        top: 1265px;
-        height: clamp(100px, 30vw, 200px);
-    }
-
-    .orange-location {
-        top: 1340px;
-        height: clamp(100px, 30vw, 200px);
     }
 }
 
@@ -668,61 +305,10 @@ section {
     section {
         height: 110vh;
     }
-
-    .yellow-location {
-        top: 1230px;
-        height: clamp(100px, 30vw, 200px);
-    }
-
-    .blue-location {
-        top: 1280px;
-        height: clamp(100px, 30vw, 200px);
-    }
-
-    .orange-location {
-        top: 1350px;
-        height: clamp(100px, 30vw, 200px);
-    }
-
-    .yellow-inner-img {
-        width: 35px
-    }
 }
 
 @media (max-height: 640px) {
     section {
         height: 115vh;
-    }
-
-    .yellow-location {
-        top: 1200px;
-        height: clamp(100px, 30vw, 200px);
-    }
-
-    .blue-location {
-        top: 1260px;
-        height: clamp(100px, 30vw, 200px);
-    }
-
-    .orange-location {
-        top: 1340px;
-        height: clamp(100px, 30vw, 200px);
-    }
-}
-
-@media (max-height: 430px) {
-    .yellow-location {
-        top: 1350px;
-        height: clamp(100px, 30vw, 200px);
-    }
-
-    .blue-location {
-        top: 1425px;
-        height: clamp(100px, 30vw, 200px);
-    }
-
-    .orange-location {
-        top: 1510px;
-        height: clamp(100px, 30vw, 200px);
     }
 }

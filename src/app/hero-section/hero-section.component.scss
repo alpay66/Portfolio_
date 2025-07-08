@@ -508,7 +508,7 @@ nav {
     }
 
     .get-in-touch-btn {
-        margin-top: 50px;
+        margin-top: 25px;
     }
 }
 
@@ -606,7 +606,7 @@ nav {
     }
 }
 
-@media (max-width: 412px) {
+@media (max-width: 414px) {
     .hero-section {
         height: 68vh;
     }
@@ -702,15 +702,53 @@ nav {
 
 @media (max-height: 1200px) {
     .container {
-        padding: 140px 20px;
+        padding: 0px 20px;
         margin: 0 auto;
         max-width: 1440px;
+    }
+
+    .hero-section {
+        height: 65vh;
     }
 }
 
 @media (max-height: 1180px) {
     .container {
-        padding: 120px 20px;
+        padding: 0px 20px;
+        margin: 0 auto;
+        max-width: 1440px;
+    }
+
+    .hero-section {
+        height: 75vh;
+    }
+
+    .hero-content {
+        padding-left: 0px;
+    }
+
+    .rotate-img {
+        position: absolute;
+        bottom: -500px;
+        left: -85px;
+        transform: translateX(-50%) rotate(7deg);
+        pointer-events: none;
+        width: 200px;
+    }
+
+}
+
+@media (max-height: 1050px) {
+    .container {
+        padding: 0px 20px;
+        margin: 0 auto;
+        max-width: 1440px;
+    }
+}
+
+@media (max-height: 1024px) {
+    .container {
+        padding: 0px 20px;
         margin: 0 auto;
         max-width: 1440px;
     }
@@ -721,24 +759,15 @@ nav {
 
     .rotate-img {
         position: absolute;
-        bottom: -700px;
-        left: -100px;
+        bottom: -480px;
+        left: -80px;
         transform: translateX(-50%) rotate(7deg);
         pointer-events: none;
-        width: 280px;
-    }
-
-}
-
-@media (max-height: 1050px) {
-    .container {
-        padding: 65px 20px;
-        margin: 0 auto;
-        max-width: 1440px;
+        width: 200px;
     }
 }
 
-@media (max-height: 1024px) {
+@media (max-height: 970px) {
     .container {
         padding: 20px 20px;
         margin: 0 auto;
@@ -751,11 +780,11 @@ nav {
 
     .rotate-img {
         position: absolute;
-        bottom: -700px;
+        bottom: -440px;
         left: -80px;
         transform: translateX(-50%) rotate(7deg);
         pointer-events: none;
-        width: 247px;
+        width: 180px;
     }
 }
 
@@ -772,17 +801,17 @@ nav {
 
     .rotate-img {
         position: absolute;
-        bottom: -600px;
+        bottom: -430px;
         left: -80px;
         transform: translateX(-50%) rotate(7deg);
         pointer-events: none;
-        width: 247px;
+        width: 170px;
     }
 }
 
 @media (max-height: 915px) {
     .container {
-        padding: 20px 20px;
+        padding: 0px 20px;
         margin: 0 auto;
         max-width: 1440px;
     }
@@ -793,17 +822,17 @@ nav {
 
     .rotate-img {
         position: absolute;
-        bottom: -530px;
+        bottom: -430px;
         left: -90px;
         transform: translateX(-50%) rotate(7deg);
         pointer-events: none;
-        width: 230px;
+        width: 170px;
     }
 }
 
 @media (max-height: 896px) {
     .container {
-        padding: 5px 20px;
+        padding: 0px 20px;
         margin: 0 auto;
         max-width: 1440px;
     }
@@ -814,17 +843,17 @@ nav {
 
     .rotate-img {
         position: absolute;
-        bottom: -575px;
+        bottom: -400px;
         left: -80px;
         transform: translateX(-50%) rotate(7deg);
         pointer-events: none;
-        width: 247px;
+        width: 150px;
     }
 }
 
 @media (max-height: 844px) {
     .container {
-        padding: 20px 20px;
+        padding: 0px 20px;
         margin: 0 auto;
         max-width: 1440px;
     }
@@ -833,12 +862,16 @@ nav {
         padding-left: 0px;
     }
 
+    .hero-section {
+        height: 80vh;
+    }
+
     .rotate-img {
         position: absolute;
-        bottom: -450px;
-        left: -115px;
+        bottom: -400px;
+        left: -80px;
         transform: translateX(-50%) rotate(7deg);
         pointer-events: none;
-        width: 190px;
+        width: 150px;
     }
 }
