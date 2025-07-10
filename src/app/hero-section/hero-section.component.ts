@@ -1,7 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, HostListener } from '@angular/core';
 import { HeaderBarComponent } from "./header-bar/header-bar.component";
 import { NgFor, NgStyle } from '@angular/common';
-import { Pipe, PipeTransform } from '@angular/core';
 
 @Component({
   selector: 'app-hero-section',
@@ -15,6 +14,15 @@ export class HeroSectionComponent {
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
   }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: UIEvent) {
+    const width = (event.target as Window).innerWidth;
+    if (width > 930 && this.menuOpen) {
+      this.menuOpen = false;
+    }
+  }
+
   frontend = [
     { upper: 'F', lower: 'f' },
     { upper: 'R', lower: 'r' },
@@ -41,8 +49,3 @@ export class HeroSectionComponent {
   hoveredFrontendIndex: number | null = null;
   hoveredDeveloperIndex: number | null = null;
 }
-
-
-
-
-
