@@ -729,7 +729,7 @@ nav {
 
     .rotate-img {
         position: absolute;
-        bottom: -500px;
+        bottom: -600px;
         left: -85px;
         transform: translateX(-50%) rotate(7deg);
         pointer-events: none;
@@ -873,5 +873,133 @@ nav {
         transform: translateX(-50%) rotate(7deg);
         pointer-events: none;
         width: 150px;
+    }
+}
+
+@media (max-height: 740px) {
+    .container {
+        padding: 0px 20px;
+        margin: 0 auto;
+        max-width: 1440px;
+    }
+
+    .hero-content {
+        padding-left: 0px;
+    }
+
+    .hero-section {
+        height: 90vh;
+    }
+}
+
+@media (max-height: 667px) {
+    .container {
+        padding: 0px 20px;
+        margin: 0 auto;
+        max-width: 1440px;
+    }
+
+    .hero-content {
+        padding-left: 0px;
+    }
+
+    .hero-section {
+        height: 100vh;
+    }
+
+    .rotate-img {
+        position: absolute;
+        bottom: -400px;
+        left: -80px;
+        transform: translateX(-50%) rotate(7deg);
+        pointer-events: none;
+        width: 150px;
+    }
+}
+
+@media (max-height: 658px) {
+    .container {
+        padding: 0px 20px;
+        margin: 0 auto;
+        max-width: 1440px;
+    }
+
+    .hero-content {
+        padding-left: 0px;
+    }
+
+    .hero-section {
+        height: 100vh;
+    }
+}
+
+@media (max-height: 430px) {
+    .container {
+        padding: 0px 20px;
+        margin: 0 auto;
+        max-width: 1440px;
+    }
+
+    .hero-content {
+        padding-left: 0px;
+    }
+
+    .hero-section {
+        height: 210vh;
+    }
+
+    .rotate-img {
+        position: absolute;
+        bottom: -550px;
+        left: -80px;
+        transform: translateX(-50%) rotate(7deg);
+        pointer-events: none;
+        width: 200px;
+    }
+}
+
+@media (max-height: 414px) {
+    .container {
+        padding: 0px 20px;
+        margin: 0 auto;
+        max-width: 1440px;
+    }
+
+    .hero-content {
+        padding-left: 0px;
+    }
+
+    .hero-section {
+        height: 210vh;
+    }
+
+    .rotate-img {
+        position: absolute;
+        bottom: -550px;
+        left: -80px;
+        transform: translateX(-50%) rotate(7deg);
+        pointer-events: none;
+        width: 200px;
+    }
+}
+
+@media (max-height: 375px) {
+    .container {
+        padding: 0px 20px;
+        margin: 0 auto;
+        max-width: 1440px;
+    }
+
+    .hero-section {
+        height: 220vh;
+    }
+
+    .rotate-img {
+        position: absolute;
+        bottom: -550px;
+        left: -80px;
+        transform: translateX(-50%) rotate(7deg);
+        pointer-events: none;
+        width: 200px;
     }
 }

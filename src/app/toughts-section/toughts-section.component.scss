@@ -68,3 +68,136 @@ section {
         }
     }
 }
+
+
+
+@media (max-height: 1200px) {
+    section {
+        margin: 100px 30px 50px 30px;
+
+        h1 {
+            font-size: clamp(30px, 5vw + 1rem, 50px);
+        }
+    }
+
+    .top-section {
+        text-align: center;
+    }
+
+    .orange-cards {
+        flex-direction: column;
+        align-items: center;
+
+        div {
+            margin-left: 0;
+            margin-bottom: 20px;
+
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3) {
+                margin-left: 0;
+                z-index: auto;
+            }
+        }
+    }
+}
+
+@media (max-width: 910px) {
+    section {
+        margin: 80px 20px 50px 20px;
+
+        h1 {
+            font-size: clamp(30px, 5vw + 1rem, 50px);
+        }
+    }
+
+    .top-section {
+        text-align: center;
+    }
+
+    .orange-cards {
+        flex-direction: column;
+        align-items: center;
+
+        div {
+            margin-left: 0;
+            margin-bottom: 20px;
+
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3) {
+                margin-left: 0;
+                z-index: auto;
+            }
+        }
+    }
+}
+
+@media (max-height: 667px) {
+    section {
+        margin: 50px 20px;
+
+        h1 {
+            font-size: clamp(30px, 5vw + 1rem, 50px);
+        }
+
+        img {
+            width: 20%;
+        }
+
+    }
+
+    .top-section {
+        text-align: end;
+    }
+
+    .orange-cards {
+        flex-direction: column;
+        align-items: center;
+
+        div {
+            margin-left: 0;
+            margin-bottom: 20px;
+            width: 70%;
+
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3) {
+                margin-left: 0;
+                z-index: auto;
+            }
+        }
+    }
+}
+
+@media (max-height: 658px) {
+    section {
+        margin: 50px 20px;
+
+        h1 {
+            font-size: 30px;
+        }
+    }
+
+    .top-section {
+        width: 100%;
+        text-align: center;
+    }
+
+    .orange-cards {
+        flex-direction: column;
+        align-items: center;
+
+        div {
+            margin-left: 0;
+            margin-bottom: 20px;
+
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3) {
+                margin-left: 0;
+                z-index: auto;
+            }
+        }
+    }
+}
