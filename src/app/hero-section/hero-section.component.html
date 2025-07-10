@@ -34,7 +34,7 @@
 
             <div class="hero-right">
                 <h1 class="hover-word">
-                    <span class="hover-span letter-developer-{{i}}"  *ngFor="let letter of developer; let i = index"
+                    <span class="hover-span letter-developer-{{i}}" *ngFor="let letter of developer; let i = index"
                         (mouseenter)="hoveredDeveloperIndex = i" (mouseleave)="hoveredDeveloperIndex = null" [ngStyle]="{
     color: hoveredDeveloperIndex === i ? 'yellow' : 'white',
     textTransform: hoveredDeveloperIndex === i 
@@ -73,12 +73,14 @@
         <img class="close-icon" (click)="toggleMenu()" src="/img/close-overlay.png" alt="close">
     </div>
 
-    <nav class="overlay-nav">
-        <a href="#">About me</a>
-        <a href="#">Skills</a>
-        <a href="#">Projects</a>
-        <a href="#">Contact</a>
-    </nav>
+    <div>
+        <nav class="overlay-nav">
+            <a href="#">About me</a>
+            <a href="#">Skills</a>
+            <a href="#">Projects</a>
+            <a href="#">Contact</a>
+        </nav>
+    </div>
 
 
     <div class="language-switch">

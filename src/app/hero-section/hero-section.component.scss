@@ -256,7 +256,7 @@ footer {
 
 .mobile-overlay {
     position: fixed;
-    top: -230vh;
+    top: -530vh;
     left: 0;
     width: 100%;
     height: 50vh;
@@ -736,6 +736,28 @@ nav {
         width: 200px;
     }
 
+    .mobile-overlay {
+        height: 70vh;
+        padding-left: 0px;
+        gap: 50px;
+    }
+
+    nav {
+        a {
+            font-size: 30px;
+            margin-bottom: 50%;
+        }
+    }
+
+    .circle-button {
+        width: 60px;
+        height: 60px;
+
+        img {
+            width: 40px;
+            height: 40px;
+        }
+    }
 }
 
 @media (max-height: 1050px) {
@@ -764,6 +786,29 @@ nav {
         transform: translateX(-50%) rotate(7deg);
         pointer-events: none;
         width: 200px;
+    }
+
+    .mobile-overlay {
+        height: 70vh;
+        padding-left: 0px;
+        gap: 60px;
+    }
+
+    nav {
+        a {
+            font-size: 20px;
+            margin-bottom: 50%;
+        }
+    }
+
+    .circle-button {
+        width: 60px;
+        height: 60px;
+
+        img {
+            width: 40px;
+            height: 40px;
+        }
     }
 }
 
@@ -807,6 +852,29 @@ nav {
         pointer-events: none;
         width: 170px;
     }
+
+    .mobile-overlay {
+        height: 70vh;
+        padding-left: 0px;
+        gap: 40px;
+    }
+
+    nav {
+        a {
+            font-size: 20px;
+            margin-bottom: 50%;
+        }
+    }
+
+    .circle-button {
+        width: 40px;
+        height: 40px;
+
+        img {
+            width: 30px;
+            height: 30px;
+        }
+    }
 }
 
 @media (max-height: 915px) {
@@ -849,6 +917,29 @@ nav {
         pointer-events: none;
         width: 150px;
     }
+
+    .mobile-overlay {
+        height: 70vh;
+        padding-left: 0px;
+        gap: 40px;
+    }
+
+    nav {
+        a {
+            font-size: 20px;
+            margin-bottom: 50%;
+        }
+    }
+
+    .circle-button {
+        width: 40px;
+        height: 40px;
+
+        img {
+            width: 30px;
+            height: 30px;
+        }
+    }
 }
 
 @media (max-height: 844px) {
@@ -890,6 +981,29 @@ nav {
     .hero-section {
         height: 90vh;
     }
+
+    .mobile-overlay {
+        height: 70vh;
+        padding-left: 0px;
+        gap: 35px;
+    }
+
+    nav {
+        a {
+            font-size: 20px;
+            margin-bottom: 30%;
+        }
+    }
+
+    .circle-button {
+        width: 40px;
+        height: 40px;
+
+        img {
+            width: 30px;
+            height: 30px;
+        }
+    }
 }
 
 @media (max-height: 667px) {
@@ -914,6 +1028,29 @@ nav {
         transform: translateX(-50%) rotate(7deg);
         pointer-events: none;
         width: 150px;
+    }
+
+    .mobile-overlay {
+        height: 70vh;
+        padding-left: 0px;
+        gap: 30px;
+    }
+
+    nav {
+        a {
+            font-size: 20px;
+            margin-bottom: 30%;
+        }
+    }
+
+    .circle-button {
+        width: 40px;
+        height: 40px;
+
+        img {
+            width: 30px;
+            height: 30px;
+        }
     }
 }
 
