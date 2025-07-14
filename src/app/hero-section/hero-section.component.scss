@@ -370,6 +370,14 @@ nav {
     cursor: pointer;
 }
 
+.desktop-only {
+    display: block;
+}
+
+.mobile-only {
+    display: none;
+}
+
 //////////// WIDTH ////////////
 /// 
 @media (max-width: 1180px) {
@@ -380,7 +388,6 @@ nav {
     .hero-content {
         padding-left: 0px;
         align-items: unset;
-
     }
 
     .hero-left {
@@ -393,12 +400,11 @@ nav {
     }
 
     .rotate-img {
-        position: absolute;
-        bottom: -635px;
-        left: -315px;
-        transform: translateX(-50%) rotate(7deg);
-        pointer-events: none;
-        width: 257px;
+        position: static;
+        transform: rotate(11deg);
+        width: 50%;
+        margin-top: 30px;
+        display: flex;
     }
 
     .get-in-touch-btn {
@@ -417,7 +423,15 @@ nav {
         width: 70px;
     }
 
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
+    }
 }
+
 
 @media (max-width: 930px) {
     .container {
@@ -471,15 +485,6 @@ nav {
         height: 125px;
     }
 
-    .rotate-img {
-        position: absolute;
-        bottom: -800px;
-        left: -146px;
-        transform: translateX(-50%) rotate(7deg);
-        pointer-events: none;
-        width: 314px;
-    }
-
     .letter-frontend-0 {
         width: 60px;
     }
@@ -498,15 +503,6 @@ nav {
         width: 33px;
     }
 
-    .rotate-img {
-        position: absolute;
-        bottom: -745px;
-        left: -175px;
-        transform: translateX(-50%) rotate(7deg);
-        pointer-events: none;
-        width: 292px;
-    }
-
     .get-in-touch-btn {
         margin-top: 25px;
     }
@@ -523,15 +519,6 @@ nav {
 
     .hover-span {
         font-size: clamp(60px, calc(3vw + 0.5rem), 40px);
-    }
-
-    .rotate-img {
-        position: absolute;
-        bottom: -700px;
-        left: -150px;
-        transform: translateX(-50%) rotate(7deg);
-        pointer-events: none;
-        width: 247px;
     }
 
     .letter-frontend-0 {
@@ -561,15 +548,6 @@ nav {
         font-size: clamp(51px, calc(3vw + 0.5rem), 32px);
     }
 
-    .rotate-img {
-        position: absolute;
-        bottom: -660px;
-        left: -116px;
-        transform: translateX(-50%) rotate(7deg);
-        pointer-events: none;
-        width: 247px;
-    }
-
     .letter-frontend-0 {
         width: 30px;
     }
@@ -590,15 +568,6 @@ nav {
 
     .hover-span {
         height: 75px;
-    }
-
-    .rotate-img {
-        position: absolute;
-        bottom: -598px;
-        left: -126px;
-        transform: translateX(-50%) rotate(7deg);
-        pointer-events: none;
-        width: 247px;
     }
 
     .letter-frontend-0 {
@@ -627,15 +596,6 @@ nav {
         height: 65px;
     }
 
-    .rotate-img {
-        position: absolute;
-        bottom: -550px;
-        left: -80px;
-        transform: translateX(-50%) rotate(7deg);
-        pointer-events: none;
-        width: 247px;
-    }
-
     .letter-frontend-0 {
         width: 30px;
     }
@@ -660,16 +620,6 @@ nav {
 
     .hover-span {
         font-size: clamp(47px, calc(3vw + 0.5rem), 32px);
-    }
-
-
-    .rotate-img {
-        position: absolute;
-        bottom: -450px;
-        left: -80px;
-        transform: translateX(-50%) rotate(7deg);
-        pointer-events: none;
-        width: 190px;
     }
 
     .letter-frontend-0 {
@@ -702,13 +652,33 @@ nav {
 
 @media (max-height: 1200px) {
     .container {
-        padding: 0px 20px;
+        padding: 0px 100px;
         margin: 0 auto;
         max-width: 1440px;
     }
 
     .hero-section {
-        height: 65vh;
+        height: 100vh;
+    }
+
+    .hero-content {
+        padding-left: 0px;
+    }
+
+    .desktop-only {
+        display: none;
+    }
+
+    .mobile-only {
+        display: block;
+    }
+
+    .rotate-img {
+        position: static;
+        transform: rotate(11deg);
+        width: 100%;
+        margin-top: 30px;
+        display: flex;
     }
 }
 
@@ -719,21 +689,8 @@ nav {
         max-width: 1440px;
     }
 
-    .hero-section {
-        height: 75vh;
-    }
-
     .hero-content {
         padding-left: 0px;
-    }
-
-    .rotate-img {
-        position: absolute;
-        bottom: -600px;
-        left: -85px;
-        transform: translateX(-50%) rotate(7deg);
-        pointer-events: none;
-        width: 200px;
     }
 
     .mobile-overlay {
@@ -760,6 +717,33 @@ nav {
     }
 }
 
+@media (max-height: 1138px) {
+    .container {
+        padding: 0px 20px;
+        margin: 0 auto;
+        max-width: 1440px;
+    }
+
+    .hero-content {
+        padding-left: 0px;
+    }
+
+    .mobile-overlay {
+        height: 70vh;
+        padding-left: 0px;
+        gap: 50px;
+    }
+
+    .rotate-img {
+        position: static;
+        transform: rotate(11deg);
+        width: 50%;
+        margin-top: 30px;
+        padding-left: 50px;
+        display: flex;
+    }
+}
+
 @media (max-height: 1050px) {
     .container {
         padding: 0px 20px;
@@ -779,19 +763,19 @@ nav {
         padding-left: 0px;
     }
 
-    .rotate-img {
-        position: absolute;
-        bottom: -480px;
-        left: -80px;
-        transform: translateX(-50%) rotate(7deg);
-        pointer-events: none;
-        width: 200px;
-    }
-
     .mobile-overlay {
         height: 70vh;
         padding-left: 0px;
         gap: 60px;
+    }
+
+    .rotate-img {
+        position: static;
+        transform: rotate(11deg);
+        width: 40%;
+        margin-top: 30px;
+        padding-left: 20%;
+        display: flex;
     }
 
     nav {
@@ -822,15 +806,6 @@ nav {
     .hero-content {
         padding-left: 0px;
     }
-
-    .rotate-img {
-        position: absolute;
-        bottom: -440px;
-        left: -80px;
-        transform: translateX(-50%) rotate(7deg);
-        pointer-events: none;
-        width: 180px;
-    }
 }
 
 @media (max-height: 932px) {
@@ -844,19 +819,19 @@ nav {
         padding-left: 0px;
     }
 
-    .rotate-img {
-        position: absolute;
-        bottom: -430px;
-        left: -80px;
-        transform: translateX(-50%) rotate(7deg);
-        pointer-events: none;
-        width: 170px;
-    }
-
     .mobile-overlay {
         height: 70vh;
         padding-left: 0px;
         gap: 40px;
+    }
+
+    .rotate-img {
+        position: static;
+        transform: rotate(11deg);
+        width: 60%;
+        margin-top: 30px;
+        padding-left: 30px;
+        display: flex;
     }
 
     nav {
@@ -887,15 +862,6 @@ nav {
     .hero-content {
         padding-left: 0px;
     }
-
-    .rotate-img {
-        position: absolute;
-        bottom: -430px;
-        left: -90px;
-        transform: translateX(-50%) rotate(7deg);
-        pointer-events: none;
-        width: 170px;
-    }
 }
 
 @media (max-height: 896px) {
@@ -909,19 +875,19 @@ nav {
         padding-left: 0px;
     }
 
-    .rotate-img {
-        position: absolute;
-        bottom: -400px;
-        left: -80px;
-        transform: translateX(-50%) rotate(7deg);
-        pointer-events: none;
-        width: 150px;
-    }
-
     .mobile-overlay {
         height: 70vh;
         padding-left: 0px;
         gap: 40px;
+    }
+
+    .rotate-img {
+        position: static;
+        transform: rotate(11deg);
+        width: 60%;
+        margin-top: 30px;
+        padding-left: 40px;
+        display: flex;
     }
 
     nav {
@@ -954,16 +920,29 @@ nav {
     }
 
     .hero-section {
-        height: 80vh;
+        height: 100vh;
+    }
+}
+
+@media (max-height: 820px) {
+    .container {
+        padding: 0px 20px;
+        margin: 0 auto;
+        max-width: 1440px;
     }
 
-    .rotate-img {
-        position: absolute;
-        bottom: -400px;
-        left: -80px;
-        transform: translateX(-50%) rotate(7deg);
-        pointer-events: none;
-        width: 150px;
+    .hero-section {
+        height: 100vh;
+    }
+
+}
+
+@media (max-height: 768px) {
+    .container {
+        padding: 0px 20px;
+        margin: 0 auto;
+        max-width: 1440px;
+        width: 70%;
     }
 }
 
@@ -976,10 +955,6 @@ nav {
 
     .hero-content {
         padding-left: 0px;
-    }
-
-    .hero-section {
-        height: 90vh;
     }
 
     .mobile-overlay {
@@ -1017,17 +992,12 @@ nav {
         padding-left: 0px;
     }
 
-    .hero-section {
-        height: 100vh;
-    }
-
     .rotate-img {
-        position: absolute;
-        bottom: -400px;
-        left: -80px;
-        transform: translateX(-50%) rotate(7deg);
-        pointer-events: none;
-        width: 150px;
+        position: static;
+        transform: rotate(11deg);
+        width: 60%;
+        margin-top: 30px;
+        display: flex;
     }
 
     .mobile-overlay {
@@ -1064,10 +1034,6 @@ nav {
     .hero-content {
         padding-left: 0px;
     }
-
-    .hero-section {
-        height: 100vh;
-    }
 }
 
 @media (max-height: 430px) {
@@ -1075,23 +1041,11 @@ nav {
         padding: 0px 20px;
         margin: 0 auto;
         max-width: 1440px;
+        width: 75%;
     }
 
     .hero-content {
         padding-left: 0px;
-    }
-
-    .hero-section {
-        height: 210vh;
-    }
-
-    .rotate-img {
-        position: absolute;
-        bottom: -550px;
-        left: -80px;
-        transform: translateX(-50%) rotate(7deg);
-        pointer-events: none;
-        width: 200px;
     }
 }
 
@@ -1106,17 +1060,15 @@ nav {
         padding-left: 0px;
     }
 
-    .hero-section {
-        height: 210vh;
+    .mobile-overlay {
+        height: 100vh;
+        padding-left: 0px;
+        gap: 13px;
+        padding-top: 0px;
     }
 
-    .rotate-img {
-        position: absolute;
-        bottom: -550px;
-        left: -80px;
-        transform: translateX(-50%) rotate(7deg);
-        pointer-events: none;
-        width: 200px;
+    .overlay-nav-container {
+        height: 47%;
     }
 }
 
@@ -1127,16 +1079,14 @@ nav {
         max-width: 1440px;
     }
 
-    .hero-section {
-        height: 220vh;
+    .mobile-overlay {
+        height: 100vh;
+        padding-left: 0px;
+        gap: 13px;
+        padding-top: 0px;
     }
 
-    .rotate-img {
-        position: absolute;
-        bottom: -550px;
-        left: -80px;
-        transform: translateX(-50%) rotate(7deg);
-        pointer-events: none;
-        width: 200px;
+    .overlay-nav-container {
+        height: 47%;
     }
 }
