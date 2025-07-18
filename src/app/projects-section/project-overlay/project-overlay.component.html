@@ -39,13 +39,17 @@
             </div>
 
             <div class="right-side">
-                <div class="right-side-image">
-                    <img [src]="project.image" [alt]="project.title">
+                <div class="right-side-image-container">
+                    <img class="right-side-image" [src]="project.image" [alt]="project.title">
                 </div>
 
                 <div class="right-side-buttons">
+
                     <button>GitHub</button>
-                    <button>Live Test</button>
+
+                    <a [href]="'https://alpay-karacabey.de/el-pollo-loco/'" target="_blank">
+                        <button>Live Test</button>
+                    </a>
                 </div>
 
                 <div class="right-side-next-button">

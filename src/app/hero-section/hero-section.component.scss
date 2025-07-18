@@ -432,7 +432,6 @@ nav {
     }
 }
 
-
 @media (max-width: 930px) {
     .container {
         padding: 124px 145px 0px 128px;
@@ -699,6 +698,15 @@ nav {
         gap: 50px;
     }
 
+    .rotate-img {
+        position: static;
+        transform: rotate(11deg);
+        width: 60%;
+        margin-top: 30px;
+        padding-left: 20%;
+        display: flex;
+    }
+
     nav {
         a {
             font-size: 30px;
@@ -759,10 +767,6 @@ nav {
         max-width: 1440px;
     }
 
-    .hero-content {
-        padding-left: 0px;
-    }
-
     .mobile-overlay {
         height: 70vh;
         padding-left: 0px;
@@ -797,80 +801,42 @@ nav {
 }
 
 @media (max-height: 970px) {
-    .container {
-        padding: 20px 20px;
-        margin: 0 auto;
-        max-width: 1440px;
-    }
-
-    .hero-content {
-        padding-left: 0px;
+    .rotate-img {
+        width: 60%;
+        margin-top: 50px;
+        padding-left: 20%;
     }
 }
 
 @media (max-height: 932px) {
-    .container {
-        padding: 20px 20px;
-        margin: 0 auto;
-        max-width: 1440px;
-    }
-
-    .hero-content {
-        padding-left: 0px;
+    .rotate-img {
+        margin-top: 30px;
+        padding-left: 30px;
     }
 
     .mobile-overlay {
         height: 70vh;
-        padding-left: 0px;
-        gap: 40px;
-    }
-
-    .rotate-img {
-        position: static;
-        transform: rotate(11deg);
-        width: 60%;
-        margin-top: 30px;
-        padding-left: 30px;
-        display: flex;
-    }
-
-    nav {
-        a {
-            font-size: 20px;
-            margin-bottom: 50%;
-        }
+        gap: 30px;
     }
 
     .circle-button {
-        width: 40px;
-        height: 40px;
+        width: 50px;
+        height: 50px;
 
         img {
-            width: 30px;
-            height: 30px;
+            width: 40px;
+            height: 40px;
         }
     }
 }
 
 @media (max-height: 915px) {
-    .container {
-        padding: 0px 20px;
-        margin: 0 auto;
-        max-width: 1440px;
-    }
-
     .hero-content {
         padding-left: 0px;
     }
 }
 
 @media (max-height: 896px) {
-    .container {
-        padding: 0px 20px;
-        margin: 0 auto;
-        max-width: 1440px;
-    }
-
     .hero-content {
         padding-left: 0px;
     }
@@ -882,9 +848,6 @@ nav {
     }
 
     .rotate-img {
-        position: static;
-        transform: rotate(11deg);
-        width: 60%;
         margin-top: 30px;
         padding-left: 40px;
         display: flex;
@@ -914,14 +877,6 @@ nav {
         margin: 0 auto;
         max-width: 1440px;
     }
-
-    .hero-content {
-        padding-left: 0px;
-    }
-
-    .hero-section {
-        height: 100vh;
-    }
 }
 
 @media (max-height: 820px) {
@@ -930,11 +885,6 @@ nav {
         margin: 0 auto;
         max-width: 1440px;
     }
-
-    .hero-section {
-        height: 100vh;
-    }
-
 }
 
 @media (max-height: 768px) {
@@ -943,6 +893,16 @@ nav {
         margin: 0 auto;
         max-width: 1440px;
         width: 70%;
+    }
+
+    .hero-section {
+        height: 150vh;
+    }
+
+    .rotate-img {
+        width: 40%;
+        margin-top: 0px;
+        padding-left: 20%;
     }
 }
 
@@ -953,16 +913,6 @@ nav {
         max-width: 1440px;
     }
 
-    .hero-content {
-        padding-left: 0px;
-    }
-
-    .mobile-overlay {
-        height: 70vh;
-        padding-left: 0px;
-        gap: 35px;
-    }
-
     nav {
         a {
             font-size: 20px;
@@ -970,57 +920,31 @@ nav {
         }
     }
 
-    .circle-button {
-        width: 40px;
-        height: 40px;
+    .hero-section {
+        height: 100vh;
+    }
 
-        img {
-            width: 30px;
-            height: 30px;
-        }
+    .hover-word {
+        height: 80px;
+    }
+
+    .rotate-img {
+        width: 60%;
+        margin-top: 30px;
+        padding-left: 20%;
     }
 }
 
 @media (max-height: 667px) {
-    .container {
-        padding: 0px 20px;
-        margin: 0 auto;
-        max-width: 1440px;
-    }
-
-    .hero-content {
-        padding-left: 0px;
-    }
-
     .rotate-img {
-        position: static;
-        transform: rotate(11deg);
-        width: 60%;
+        width: 50%;
         margin-top: 30px;
-        display: flex;
     }
 
     .mobile-overlay {
         height: 70vh;
         padding-left: 0px;
         gap: 30px;
-    }
-
-    nav {
-        a {
-            font-size: 20px;
-            margin-bottom: 30%;
-        }
-    }
-
-    .circle-button {
-        width: 40px;
-        height: 40px;
-
-        img {
-            width: 30px;
-            height: 30px;
-        }
     }
 }
 
@@ -1030,36 +954,48 @@ nav {
         margin: 0 auto;
         max-width: 1440px;
     }
+}
 
-    .hero-content {
-        padding-left: 0px;
+@media (max-height: 640px) {
+    .container {
+        padding: 0px 20px;
+        margin: 0 auto;
+        max-width: 1440px;
+    }
+
+    .hero-section {
+        height: 100vh;
+    }
+
+    .hover-word {
+        height: 80px;
+    }
+
+    .rotate-img {
+        width: 40%;
+        margin-top: 20px;
+        padding-left: 20%;
     }
 }
 
 @media (max-height: 430px) {
-    .container {
-        padding: 0px 20px;
-        margin: 0 auto;
-        max-width: 1440px;
-        width: 75%;
+    .hero-section {
+        height: 200vh;
     }
 
-    .hero-content {
-        padding-left: 0px;
+
+    .hover-word {
+        height: 100px;
+    }
+
+    .rotate-img {
+        width: 30%;
+        margin-top: 0px;
+        padding-left: 20%;
     }
 }
 
 @media (max-height: 414px) {
-    .container {
-        padding: 0px 20px;
-        margin: 0 auto;
-        max-width: 1440px;
-    }
-
-    .hero-content {
-        padding-left: 0px;
-    }
-
     .mobile-overlay {
         height: 100vh;
         padding-left: 0px;
@@ -1067,8 +1003,19 @@ nav {
         padding-top: 0px;
     }
 
+    .hero-section {
+        height: 200vh;
+    }
+
     .overlay-nav-container {
         height: 47%;
+    }
+
+
+    .rotate-img {
+        width: 30%;
+        margin-top: 0px;
+        padding-left: 20%;
     }
 }
 
@@ -1077,6 +1024,7 @@ nav {
         padding: 0px 20px;
         margin: 0 auto;
         max-width: 1440px;
+        width: 80%;
     }
 
     .mobile-overlay {
@@ -1086,7 +1034,12 @@ nav {
         padding-top: 0px;
     }
 
-    .overlay-nav-container {
-        height: 47%;
+    .rotate-img {
+        width: 30%;
+        padding-left: 20%;
+    }
+
+    .burger-menu {
+        padding: 25px 25px 0px 25px;
     }
 }
