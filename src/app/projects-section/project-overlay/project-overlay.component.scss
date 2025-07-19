@@ -9,7 +9,7 @@
 }
 
 .overlay-background {
-    position: fixed;
+    position: relative;
     inset: 0;
     display: flex;
     flex-direction: column;
@@ -189,6 +189,7 @@
         height: 100%;
         border-radius: 0;
         padding: 20px;
+        background-color: transparent;
     }
 
     app-header-bar {
