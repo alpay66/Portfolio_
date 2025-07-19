@@ -251,7 +251,6 @@ footer {
 .burger-menu {
     display: none;
     cursor: pointer;
-
 }
 
 .mobile-overlay {
@@ -701,7 +700,7 @@ nav {
     .rotate-img {
         position: static;
         transform: rotate(11deg);
-        width: 60%;
+        width: 40%;
         margin-top: 30px;
         padding-left: 20%;
         display: flex;
@@ -726,11 +725,6 @@ nav {
 }
 
 @media (max-height: 1138px) {
-    .container {
-        padding: 0px 20px;
-        margin: 0 auto;
-        max-width: 1440px;
-    }
 
     .hero-content {
         padding-left: 0px;
@@ -752,20 +746,7 @@ nav {
     }
 }
 
-@media (max-height: 1050px) {
-    .container {
-        padding: 0px 20px;
-        margin: 0 auto;
-        max-width: 1440px;
-    }
-}
-
 @media (max-height: 1024px) {
-    .container {
-        padding: 0px 20px;
-        margin: 0 auto;
-        max-width: 1440px;
-    }
 
     .mobile-overlay {
         height: 70vh;
@@ -881,9 +862,17 @@ nav {
 
 @media (max-height: 820px) {
     .container {
-        padding: 0px 20px;
-        margin: 0 auto;
-        max-width: 1440px;
+        width: 55%;
+    }
+
+    .hero-section {
+        height: 150vh;
+    }
+
+    .rotate-img {
+        width: 40%;
+        margin-top: 30px;
+        padding-left: 20%;
     }
 }
 

@@ -1,4 +1,4 @@
-import { Component, EventEmitter, Input, Output } from '@angular/core';
+import { Component, EventEmitter, HostListener, Input, Output } from '@angular/core';
 import { HeaderBarComponent } from '../../hero-section/header-bar/header-bar.component';
 
 @Component({
@@ -12,6 +12,28 @@ export class ProjectOverlayComponent {
   @Output() closeOverlay = new EventEmitter<void>();
   @Output() nextProject = new EventEmitter<void>();
 
+  menuOpen = false;
+
+  constructor() {
+    // Initial check in case window is already > 820px
+    if (window.innerWidth > 820) {
+      this.closeOverlay.emit();
+    }
+  }
+
+  @HostListener('window:resize', ['$event'])
+  onResize(event: UIEvent) {
+    const width = (event.target as Window).innerWidth;
+    if (width > 820) {
+      this.menuOpen = false;
+      this.closeOverlay.emit();
+    }
+  }
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+  }
+
   close() {
     this.closeOverlay.emit();
   }
@@ -22,6 +44,9 @@ export class ProjectOverlayComponent {
 
   handleOverlayClick() {
     this.closeOverlay.emit();
+  }
+
+  ngOnDestroy(): void {
   }
 
 }
