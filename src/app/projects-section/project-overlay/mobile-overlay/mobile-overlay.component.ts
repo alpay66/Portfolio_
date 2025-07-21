@@ -1,24 +1,25 @@
-import { Component, EventEmitter, HostListener, Input, Output } from '@angular/core';
-import { HeaderBarComponent } from '../../hero-section/header-bar/header-bar.component';
+import { Component } from '@angular/core';
+import { EventEmitter, HostListener, Input, Output } from '@angular/core';
 
 @Component({
-  selector: 'app-project-overlay',
-  imports: [HeaderBarComponent],
-  templateUrl: './project-overlay.component.html',
-  styleUrl: './project-overlay.component.scss'
+  selector: 'app-mobile-overlay',
+  imports: [],
+  templateUrl: './mobile-overlay.component.html',
+  styleUrl: './mobile-overlay.component.scss'
 })
-export class ProjectOverlayComponent {
+export class MobileOverlayComponent {
   @Input() project: any;
   @Output() closeOverlay = new EventEmitter<void>();
   @Output() nextProject = new EventEmitter<void>();
 
   menuOpen = false;
 
-  constructor() {
+  ngOnInit(): void {
     if (window.innerWidth > 820) {
       this.closeOverlay.emit();
     }
   }
+
 
   @HostListener('window:resize', ['$event'])
   onResize(event: UIEvent) {
@@ -47,5 +48,4 @@ export class ProjectOverlayComponent {
 
   ngOnDestroy(): void {
   }
-
 }

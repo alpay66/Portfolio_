@@ -6,9 +6,9 @@
             </p>
 
             <app-header-bar></app-header-bar>
-            <div class="burger-menu-mobile" (click)="toggleMenu()">
+            <div class="burger-menu-mobile">
                 <img class="logo" src="/img/AK_logo.png" alt="AK_logo">
-                <img class="burger-menu-img" src="/img/hero-burger-menu-logo.svg" alt="menu" />
+                <img class="burger-menu-img" (click)="toggleMenu()" src="/img/hero-burger-menu-logo.svg" alt="menu" />
             </div>
 
             <div class="overlay-container">
@@ -50,11 +50,11 @@
 
                     <div class="right-side-buttons">
 
-                        <a href="https://github.com/alpay66/el_pollo_loco" target="_blank">
+                        <a [href]="project.githubLink" target="_blank">
                             <button>GitHub</button>
                         </a>
 
-                        <a [href]="'https://alpay-karacabey.de/el-pollo-loco/index.html'" target="_blank">
+                        <a [href]="project.liveLink" target="_blank">
                             <button>Live Test</button>
                         </a>
                     </div>
@@ -69,6 +69,45 @@
                     </div>
                 </div>
             </div>
-
+        </div>
     </div>
-</div>
+
+    <div class="mobile-overlay" [class.active]="menuOpen">
+        <div class="overlay-header">
+            <img src="/img/AK_logo.png" class="logo" />
+            <img class="close-icon" (click)="toggleMenu()" src="/img/close-overlay.png" alt="close">
+        </div>
+
+        <div class="overlay-nav-container">
+            <nav class="overlay-nav">
+                <a href="#">About me</a>
+                <a href="#">Skills</a>
+                <a href="#">Projects</a>
+                <a href="#">Contact</a>
+            </nav>
+        </div>
+
+
+        <div class="language-switch">
+            <span class="lang">EN</span>
+            <label class="switch">
+                <input type="checkbox" id="langToggle">
+                <span class="slider"></span>
+            </label>
+            <span class="lang">DE</span>
+        </div>
+
+        <div class="linked-up-buttons-overlay">
+            <div class="circle-button">
+                <img src="/img/hero_linked_in.png" alt="LinkedIn">
+            </div>
+
+            <div class="circle-button">
+                <img src="/img/hero_github.png" alt="GitHub">
+            </div>
+
+            <div class="circle-button">
+                <img src="/img/hero_mail.png" alt="Mail">
+            </div>
+        </div>
+    </div>

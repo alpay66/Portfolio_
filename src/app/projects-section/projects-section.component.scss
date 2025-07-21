@@ -155,7 +155,8 @@ section {
 }
 
 .right-side-image {
-    
+    max-height: 399px;
+    width: 560px;
 }
 
 ///////// width ////////////
@@ -165,7 +166,10 @@ section {
         flex-direction: column;
     }
 
-    .first-box, .second-box, .third-box, .fourt-box {
+    .first-box,
+    .second-box,
+    .third-box,
+    .fourt-box {
         width: 80%;
     }
 }
