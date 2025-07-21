@@ -25,7 +25,16 @@
             </span>
         </label>
 
-        <input class="submit-button" type="submit" [disabled]="!contactForm.valid"
-            value="Send" />
+<!--         <label class="privacy-checkbox">
+            <input type="checkbox" name="accepted" [(ngModel)]="contactData.accepted" required #accepted="ngModel" />
+            <span>
+                I've read the
+                <a href="/privacy-policy" target="_blank">privacy policy</a>
+                and agree to the processing of my data.
+            </span>
+        </label> -->
+
+
+        <input class="submit-button" type="submit" [disabled]="!contactForm.valid" value="Send" />
     </form>
 </div>

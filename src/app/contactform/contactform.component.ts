@@ -15,6 +15,7 @@ export class ContactformComponent {
     name: '',
     email: '',
     message: '',
+    accepted: false
   };
 
 mailTest = true;

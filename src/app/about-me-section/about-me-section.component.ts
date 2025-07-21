@@ -1,11 +1,22 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-about-me-section',
-  imports: [],
   templateUrl: './about-me-section.component.html',
-  styleUrl: './about-me-section.component.scss'
+  styleUrls: ['./about-me-section.component.scss']
 })
-export class AboutMeSectionComponent {
+export class AboutMeSectionComponent implements OnInit {
+  ngOnInit() {
+    const blueLine = document.getElementById('blueLine');
 
+    const observer = new IntersectionObserver((entries) => {
+      if (entries[0].isIntersecting && blueLine) {
+        blueLine.classList.add('animate');
+      }
+    });
+
+    if (blueLine) {
+      observer.observe(blueLine);
+    }
+  }
 }

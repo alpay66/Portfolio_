@@ -137,6 +137,8 @@ section {
     cursor: pointer;
     box-shadow: 0 4px 0 #ccc;
     transition: all 0.2s ease;
+    text-decoration: none;
+    display: inline-block;
 }
 
 .get-in-touch-btn:hover {
@@ -145,6 +147,31 @@ section {
     box-shadow: none;
     transform: translateY(2px);
 }
+
+.about-me-heading {
+    position: relative;
+    display: inline-block;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+.blue-underline {
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    height: 4px;
+    width: 0;
+    background-image: url('/img/about-me-blue-line.svg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: left;
+    transition: width 1.5s ease-out;
+}
+
+.blue-underline.animate {
+    width: 100%;
+}
+
 
 
 
