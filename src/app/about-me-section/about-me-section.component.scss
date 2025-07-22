@@ -156,12 +156,13 @@ section {
 }
 
 .blue-underline {
-    position: absolute;
-    bottom: -10px;
-    left: 0;
-    height: 4px;
+position: absolute;
+    bottom: -251px;
+    right: 110px;
+    /* left: 0; */
+    height: 5px;
     width: 0;
-    background-image: url('/img/about-me-blue-line.svg');
+    background-image: url(/img/about-me-blue-line.svg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: left;
@@ -169,7 +170,7 @@ section {
 }
 
 .blue-underline.animate {
-    width: 100%;
+    width: 30%;
 }
 
 
