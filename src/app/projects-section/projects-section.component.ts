@@ -20,7 +20,8 @@ export class ProjectsSectionComponent {
       details: 'Short text that describes your role or the workflow for this specific project. Let a recruiter know more about your knowledge and ability to work independently or collaboratively in a structured way.',
       duration: '4 weeks',
       githubLink: 'https://github.com/deinGithubName/join',
-      liveLink: 'https://alpay-karacabey.de/Join/index.html'
+      liveLink: 'https://alpay-karacabey.de/Join/index.html',
+      skills: ['html', 'css', 'firebase', 'angular', 'typescript']
     },
     {
       title: 'El Pollo Loco',
@@ -29,7 +30,8 @@ export class ProjectsSectionComponent {
       details: 'Short text that describes your role or the workflow for this specific project. Let a recruiter know more about your knowledge and ability to work independently or collaboratively in a structured way.',
       duration: '3 weeks',
       githubLink: 'https://github.com/alpay66/el_pollo_loco',
-      liveLink: 'https://alpay-karacabey.de/el-pollo-loco/index.html'
+      liveLink: 'https://alpay-karacabey.de/el-pollo-loco/index.html',
+      skills: ['html', 'css', 'javascript',]
     },
     {
       title: 'Pokedex',
@@ -38,7 +40,8 @@ export class ProjectsSectionComponent {
       details: 'This project is a collaboration application that mimics the functionality of Slack, allowing users to communicate in real-time, share files, and manage channels for different teams or projects. It includes features like direct messaging, group chats, and notifications.',
       duration: '5 weeks',
       githubLink: 'https://github.com/deinGithubName/join',
-      liveLink: 'https://alpay-karacabey.de/Pokedex/index.html'
+      liveLink: 'https://alpay-karacabey.de/Pokedex/index.html',
+      skills: ['html', 'css', 'firebase',]
     }
   ];
 

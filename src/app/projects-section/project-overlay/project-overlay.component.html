@@ -25,20 +25,9 @@
                     <p>Dauer: {{project.duration}}</p>
 
                     <div class="left-side-skills">
-                        <div><img src="/img/css.png" alt="CSS" width="30" height="30">
-                            <p>CSS</p>
-                        </div>
-                        <div><img src="/img/html.png" alt="HTML" width="30" height="30">
-                            <p>HTML</p>
-                        </div>
-                        <div><img src="/img/firebase.png" alt="Firebase" width="30" height="30">
-                            <p>FIREBASE</p>
-                        </div>
-                        <div><img src="/img/angular.png" alt="Angular" width="30" height="30">
-                            <p>ANGULAR</p>
-                        </div>
-                        <div><img src="/img/typescript.png" alt="TypeScript" width="30" height="30">
-                            <p>TypeScript</p>
+                        <div *ngFor="let skill of project.skills">
+                            <img [src]="'/img/' + skill.toLowerCase() + '.png'" [alt]="skill" width="30" height="30">
+                            <p>{{ skill.toUpperCase() }}</p>
                         </div>
                     </div>
                 </div>

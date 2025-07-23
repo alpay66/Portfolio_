@@ -1,9 +1,10 @@
 import { Component, EventEmitter, HostListener, Input, Output } from '@angular/core';
 import { HeaderBarComponent } from '../../hero-section/header-bar/header-bar.component';
+import { NgFor } from '@angular/common';
 
 @Component({
   selector: 'app-project-overlay',
-  imports: [HeaderBarComponent],
+  imports: [HeaderBarComponent, NgFor],
   templateUrl: './project-overlay.component.html',
   styleUrl: './project-overlay.component.scss'
 })
