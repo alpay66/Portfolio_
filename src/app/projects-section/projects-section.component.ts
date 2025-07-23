@@ -16,7 +16,7 @@ export class ProjectsSectionComponent {
     {
       title: 'Join',
       image: '/img/join-rounded.png',
-      description: 'Task manager inspired by the Kanban System. Create and organize tasks using drag and drop functions, assign users and categories. ',
+      description: 'Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben per Drag & Drop und weise Nutzern und Kategorien zu. ',
       details: 'Short text that describes your role or the workflow for this specific project. Let a recruiter know more about your knowledge and ability to work independently or collaboratively in a structured way.',
       duration: '4 weeks',
       githubLink: 'https://github.com/deinGithubName/join',
@@ -25,7 +25,7 @@ export class ProjectsSectionComponent {
     {
       title: 'El Pollo Loco',
       image: '/img/el-pollo-loco.png',
-      description: 'Jump, run and throw game based on object-oriented approach. Help Pepe to find coins and tabasco salsa to fight against the crazy hen.',
+      description: 'Jump-n-Run-Spiel basierend auf objektorientierter Programmierung. Hilf Pepe, Münzen und Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen.',
       details: 'Short text that describes your role or the workflow for this specific project. Let a recruiter know more about your knowledge and ability to work independently or collaboratively in a structured way.',
       duration: '3 weeks',
       githubLink: 'https://github.com/alpay66/el_pollo_loco',
