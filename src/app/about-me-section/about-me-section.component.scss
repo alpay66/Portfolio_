@@ -157,9 +157,8 @@ section {
 
 .blue-underline {
 position: absolute;
-    bottom: -251px;
-    right: 110px;
-    /* left: 0; */
+    bottom: -330px;
+    right: 270px;
     height: 5px;
     width: 0;
     background-image: url(/img/about-me-blue-line.svg);
@@ -170,7 +169,7 @@ position: absolute;
 }
 
 .blue-underline.animate {
-    width: 30%;
+    width: 300px;
 }
 
 
