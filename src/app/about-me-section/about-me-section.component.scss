@@ -156,10 +156,11 @@ section {
 }
 
 .blue-underline {
-position: absolute;
-    bottom: -330px;
-    right: 270px;
-    height: 5px;
+    width: 300px;
+    height: 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 0;
     background-image: url(/img/about-me-blue-line.svg);
     background-repeat: no-repeat;
