@@ -1,8 +1,6 @@
 {
-    "NAV": {
-        "ABOUT": "About me",
-        "SKILLS": "Skills",
-        "PROJECTS": "Projects",
-        "CONTACT": "Contact"
-    }
+    "about": "About me",
+    "skills": "Skills",
+    "projects": "Projects",
+    "contact": "Contact"
 }
