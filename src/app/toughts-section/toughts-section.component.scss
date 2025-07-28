@@ -23,19 +23,18 @@ section {
 
     .card-content {
         position: absolute;
-        padding: 10px;
         width: 100%;
         height: 100%;
         color: black;
         max-width: 100%;
-        font-size: clamp(14px, 1.5vw, 17px);
+        font-size: clamp(12px, 1.5vw, 17px);
         display: flex;
         flex-direction: column;
         justify-content: space-between;
 
         img {
             position: absolute;
-            top: -100px;
+            top: -60px;
             left: 70%;
             width: 20%;
             height: auto;
@@ -127,6 +126,7 @@ section {
     font-family: 'Bricolage Grotesque', sans-serif;
     margin-bottom: 20px;
     width: 90%;
+    padding: 10px;
 }
 
 @media (max-height: 1200px) {
@@ -218,6 +218,35 @@ section {
 
 }
 
+@media (max-height: 1024px) {
+
+    .quote {
+        font-size: clamp(12px, 1.5vw, 17px);
+    }
+    .card-content.card-1 {
+        top: -5px;
+        left: 0px !important;
+    }
+
+    .card-content.card-2 {
+        top: -5px;
+        left: 0px !important;
+    }
+
+    .card-content.card-3 {
+        top: -5px;
+        left: 0px !important;
+    }
+
+    .orange-cards {
+        .card-footer {
+            left: 20px;
+            bottom: 20px;
+            text-align: center;
+        }
+    }
+}
+
 @media (max-height: 667px) {
     section {
         margin: 50px 20px;
@@ -250,6 +279,14 @@ section {
             &:nth-child(3) {
                 margin-left: 0;
                 z-index: auto;
+            }
+        }
+        
+        .card-content {
+            div {
+                img {
+                    top : -50px;
+                }
             }
         }
     }
