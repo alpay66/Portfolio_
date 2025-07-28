@@ -25,7 +25,7 @@ export class HeaderBarComponent {
     }
   };
 
-  currentLang: Lang = 'de'; // Startet mit Deutsch
+  currentLang: Lang = 'de';
 
   switchLanguage() {
     this.currentLang = this.currentLang === 'de' ? 'en' : 'de';
