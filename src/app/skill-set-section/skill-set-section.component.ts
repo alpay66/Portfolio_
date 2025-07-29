@@ -1,11 +1,24 @@
-import { Component } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
+import { LanguageService } from '../services/language.service'; // ggf. Pfad anpassen
 
 @Component({
   selector: 'app-skill-set-section',
-  imports: [],
+  standalone: true,
   templateUrl: './skill-set-section.component.html',
-  styleUrl: './skill-set-section.component.scss'
+  styleUrls: ['./skill-set-section.component.scss']
 })
 export class SkillSetSectionComponent {
+  private langService = inject(LanguageService);
+  currentLang = computed(() => this.langService.currentLang());
 
+  texts: Record<'de' | 'en', { stack: string; skills: string }> = {
+    en: {
+      stack: 'MY STACK',
+      skills: 'Skill set'
+    },
+    de: {
+      stack: 'MEIN STACK',
+      skills: 'Fähigkeiten'
+    }
+  };
 }
