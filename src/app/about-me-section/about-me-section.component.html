@@ -4,49 +4,38 @@
             <div class="yellow-location">
                 <div class="yellow-location-inner">
                     <img class="yellow-inner-img" src="/img/about-me-locations-yellow.png">
-                    <span>Lebe in München</span>
+                    <span>{{ texts[currentLang()].yellow }}</span>
                 </div>
             </div>
 
             <div class="blue-location">
                 <div class="blue-location-inner">
                     <img class="blue-inner-img" src="/img/about-me-locations-blue.png">
-                    <span>Bereit für ein Umzug</span>
+                    <span>{{ texts[currentLang()].blue }}</span>
                 </div>
             </div>
 
             <div class="orange-location">
                 <div class="orange-location-inner">
                     <img class="orange-inner-img" src="/img/about-me-locations-orange.png">
-                    <span>Offen für remote</span>
+                    <span>{{ texts[currentLang()].orange }}</span>
                 </div>
             </div>
         </div>
 
         <div class="right-container">
-            <h2>WER IST ALPAY</h2>
+            <h2>{{ texts[currentLang()].who }}</h2>
             <h1 class="ueber-mich-heading">
-                Über mich
+                {{ texts[currentLang()].title }}
                 <span id="blueLine" class="blue-underline"></span>
             </h1>
 
+            <p [innerHTML]="texts[currentLang()].paragraph1"></p>
+            <p [innerHTML]="texts[currentLang()].paragraph2"></p>
 
-            <p>
-                <strong>Servus, ich bin Alpay, angehender Frontend-Entwickler aus München.</strong><br>
-                Ich kombiniere technisches Know-how mit einem Auge für gutes Design. Aktuell mache ich eine
-                Weiterbildung
-                zum Frontend-Entwickler und vertiefe mein Wissen in <strong>HTML, CSS, JavaScript</strong> und
-                <strong>Angular</strong>.<br>
-                Mein Ziel: Fuß in der IT-Welt fassen und als Junior Developer durchstarten.
-            </p>
-
-            <p>
-                In meiner Freizeit zocke ich gern, tüftle am PC und helfe Freunden bei technischen Problemen –
-                <strong>Teamwork</strong> ist für mich nicht nur im Job selbstverständlich.
-            </p>
-
-            <a href="#contact" class="get-in-touch-btn">Lass uns austauschen</a>
+            <a href="#contact" class="get-in-touch-btn">
+                {{ texts[currentLang()].button }}
+            </a>
         </div>
-
     </div>
 </section>
