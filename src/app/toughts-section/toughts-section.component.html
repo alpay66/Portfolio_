@@ -1,35 +1,26 @@
 <section>
     <div class="top-section">
         <div>
-            <img src="/img/blue-arrow-thoughts.svg" alt="Gedanken-Pfeil">
-            <span>IN IHREN WORTEN:</span>
+            <img src="/img/blue-arrow-thoughts.svg" alt="Gedanken-Pfeil" />
+            <span>{{ texts[currentLang()].subtitle }}</span>
         </div>
-
         <div>
-            <h1>Gedanken von Kollegen</h1>
+            <h1>{{ texts[currentLang()].heading }}</h1>
         </div>
-
     </div>
 
     <div class="orange-cards">
         <div class="thought-card">
             <img src="/img/toughts-orange-card-background.png" />
-
             <div class="card-content card-1">
-                <p class="quote">
-                    Alpay war von Anfang an jemand, auf den man sich verlassen konnte. Egal wie chaotisch das Projekt
-                    wurde hat er hat einen klaren Kopf bewahrt und unser Team motiviert. Seine
-                    strukturierte Herangehensweise und sein freundlicher Umgangston haben den Unterschied gemacht.
-                </p>
+                <p class="quote">{{ texts[currentLang()].quotes[0].text }}</p>
                 <div class="card-footer">
-                    <a href="https://www.linkedin.com/in/example" target="_blank">Emil Kilic</a>
-                    <p>Frontend Developer</p>
+                    <a [href]="texts[currentLang()].quotes[0].linkedin" target="_blank">{{
+                        texts[currentLang()].quotes[0].name }}</a>
+                    <p>{{ texts[currentLang()].quotes[0].role }}</p>
                 </div>
-
                 <div>
-                    <a href="" target="_blank">
-                        <img src="/img/linked-in-thoughts.svg" alt="icon" />
-                    </a>
+                    <a href="#" target="_blank"><img src="/img/linked-in-thoughts.svg" alt="icon" /></a>
                 </div>
             </div>
         </div>
@@ -37,19 +28,14 @@
         <div class="thought-card">
             <img src="/img/toughts-orange-card-background.png" />
             <div class="card-content card-2">
-                <p class="quote">
-                    Es war eine echte Bereicherung, mit Alpay zu arbeiten. Er bringt nicht nur technisches Know-how mit,
-                    sondern auch echtes Verständnis für Zusammenarbeit. Seine lösungsorientierte Art hat uns immer
-                    wieder geholfen, schwierige Deadlines entspannt zu meistern.
-                </p>
+                <p class="quote">{{ texts[currentLang()].quotes[1].text }}</p>
                 <div class="card-footer">
-                    <a href="https://www.linkedin.com/in/example2" target="_blank">Gabriela Ströbl</a>
-                    <p>Frontend Developer</p>
+                    <a [href]="texts[currentLang()].quotes[1].linkedin" target="_blank">{{
+                        texts[currentLang()].quotes[1].name }}</a>
+                    <p>{{ texts[currentLang()].quotes[1].role }}</p>
                 </div>
                 <div>
-                    <a href="" target="_blank">
-                        <img src="/img/linked-in-thoughts.svg" alt="icon" />
-                    </a>
+                    <a href="#" target="_blank"><img src="/img/linked-in-thoughts.svg" alt="icon" /></a>
                 </div>
             </div>
         </div>
@@ -57,19 +43,14 @@
         <div class="thought-card">
             <img src="/img/toughts-orange-card-background.png" />
             <div class="card-content card-3">
-                <p class="quote">
-                    Was ich an Alpay besonders schätze, ist sein Blick fürs Detail und gleichzeitig der Fokus aufs große
-                    Ganze. Er denkt mit, bringt kreative Ideen ein und hat ein gutes Gespür für Design und Code. Ich
-                    würde jederzeit wieder mit ihm zusammenarbeiten.
-                </p>
+                <p class="quote">{{ texts[currentLang()].quotes[2].text }}</p>
                 <div class="card-footer">
-                    <a href="https://www.linkedin.com/in/example3" target="_blank">Özgür Taylan</a>
-                    <p>Frontend Developer</p>
+                    <a [href]="texts[currentLang()].quotes[2].linkedin" target="_blank">{{
+                        texts[currentLang()].quotes[2].name }}</a>
+                    <p>{{ texts[currentLang()].quotes[2].role }}</p>
                 </div>
                 <div>
-                    <a href="" target="_blank">
-                        <img src="/img/linked-in-thoughts.svg" alt="icon" />
-                    </a>
+                    <a href="#" target="_blank"><img src="/img/linked-in-thoughts.svg" alt="icon" /></a>
                 </div>
             </div>
         </div>

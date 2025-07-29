@@ -145,8 +145,6 @@ export class ProjectsSectionComponent {
     }
   ];
 
-
-
   openOverlay(index: number) {
     this.currentIndex = index;
     this.showOverlay = true;
