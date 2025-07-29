@@ -10,6 +10,7 @@ import { NgFor, NgStyle } from '@angular/common';
 })
 export class HeroSectionComponent {
   menuOpen = false;
+  currentLang: 'de' | 'en' = 'de';
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
@@ -29,6 +30,31 @@ export class HeroSectionComponent {
     if (width > 930 && this.menuOpen) {
       this.menuOpen = false;
     }
+  }
+
+  texts = {
+    de: {
+      helloWorld: 'Hallo Welt',
+      name: 'Alpay Karacabey',
+      getInTouch: 'Kontakt aufnehmen',
+      about: 'Über mich',
+      skills: 'Fähigkeiten',
+      projects: 'Projekte',
+      contact: 'Kontakt'
+    },
+    en: {
+      helloWorld: 'Hello World',
+      name: 'Alpay Karacabey',
+      getInTouch: 'Get in touch',
+      about: 'About me',
+      skills: 'Skills',
+      projects: 'Projects',
+      contact: 'Contact'
+    }
+  };
+
+    switchLanguage() {
+    this.currentLang = this.currentLang === 'de' ? 'en' : 'de';
   }
 
   frontend = [
