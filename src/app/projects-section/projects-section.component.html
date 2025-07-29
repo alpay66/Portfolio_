@@ -1,63 +1,48 @@
 <section>
     <div class="first-box">
         <div>
-            <h3>MEIN HANDWERK</h3>
-            <h1 class="fz-56">Projekte</h1>
+            <h3>{{ texts[currentLang()].title }}</h3>
+            <h1 class="fz-56">{{ texts[currentLang()].headline }}</h1>
         </div>
-
-        <span>
-            Ermutige Menschen, sich deine Projekte anzusehen und mit ihnen zu interagieren.
-            Hebe hervor, wie du responsive, benutzerfreundliche Projekte mit effizientem Code umsetzt.
-        </span>
-
+        <span>{{ texts[currentLang()].description }}</span>
     </div>
 
     <div class="second-box">
         <div class="image-wrapper">
-            <img src="/img/Laptop.png" alt="Laptop-Join">
+            <img [src]="texts[currentLang()].cards[0].image" alt="Join Project">
             <div class="overlay">
-                <button (click)="openOverlay(0)">Project details</button>
+                <button (click)="openOverlay(0)">{{ texts[currentLang()].button }}</button>
             </div>
         </div>
         <div>
-            <h1>Join</h1>
-            <span>
-                Task-Manager inspiriert vom Kanban-System. Erstelle und organisiere Aufgaben per Drag & Drop und weise
-                Nutzern und Kategorien zu.
-            </span>
-
+            <h1>{{ texts[currentLang()].cards[0].title }}</h1>
+            <span>{{ texts[currentLang()].cards[0].description }}</span>
         </div>
     </div>
 
     <div class="third-box">
         <div class="image-wrapper">
-            <img src="/img/el-pollo-loco.png" alt="El-Pollo-Loco">
+            <img [src]="texts[currentLang()].cards[1].image" alt="El Pollo Loco">
             <div class="overlay">
-                <button (click)="openOverlay(1)">Project details</button>
+                <button (click)="openOverlay(1)">{{ texts[currentLang()].button }}</button>
             </div>
         </div>
         <div>
-            <h1>El Pollo Loco</h1>
-            <span>
-                Jump-'n'-Run-Spiel basierend auf objektorientierter Programmierung. Hilf Pepe, Münzen und
-                Tabasco-Salsa zu finden, um gegen das verrückte Huhn zu kämpfen.
-            </span>
+            <h1>{{ texts[currentLang()].cards[1].title }}</h1>
+            <span>{{ texts[currentLang()].cards[1].description }}</span>
         </div>
     </div>
 
     <div class="fourt-box">
         <div class="image-wrapper">
-            <img src="/img/pokedex-screenshot-overlay.png" alt="Slack Clone">
+            <img [src]="texts[currentLang()].cards[2].image" alt="Pokedex">
             <div class="overlay">
-                <button (click)="openOverlay(2)">Project details</button>
+                <button (click)="openOverlay(2)">{{ texts[currentLang()].button }}</button>
             </div>
         </div>
         <div>
-            <h1>Pokedex</h1>
-            <span>
-                Mein Pokédex ist eine interaktive App, mit der du verschiedene Pokémon entdecken kannst – inklusive
-                Namen, Typ, Fähigkeiten und Bildern.
-            </span>
+            <h1>{{ texts[currentLang()].cards[2].title }}</h1>
+            <span>{{ texts[currentLang()].cards[2].description }}</span>
         </div>
     </div>
 </section>
