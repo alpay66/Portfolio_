@@ -1,35 +1,29 @@
-import { Component, HostListener } from '@angular/core';
+import { Component, computed, inject } from '@angular/core';
+import { LanguageService } from '../services/language.service'; // ggf. Pfad anpassen
 import { HeaderBarComponent } from "./header-bar/header-bar.component";
 import { NgFor, NgStyle } from '@angular/common';
 
 @Component({
   selector: 'app-hero-section',
+  standalone: true,
   imports: [HeaderBarComponent, NgFor, NgStyle],
   templateUrl: './hero-section.component.html',
-  styleUrl: './hero-section.component.scss'
+  styleUrls: ['./hero-section.component.scss']
 })
 export class HeroSectionComponent {
+  private langService = inject(LanguageService);
+  currentLang = computed(() => this.langService.currentLang());
+
   menuOpen = false;
-  currentLang: 'de' | 'en' = 'de';
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
-
-    if (this.menuOpen) {
-      document.body.classList.add('no-scroll');
-      document.documentElement.classList.add('no-scroll');
-    } else {
-      document.body.classList.remove('no-scroll');
-      document.documentElement.classList.remove('no-scroll');
-    }
+    document.body.classList.toggle('no-scroll', this.menuOpen);
+    document.documentElement.classList.toggle('no-scroll', this.menuOpen);
   }
 
-  @HostListener('window:resize', ['$event'])
-  onResize(event: UIEvent) {
-    const width = (event.target as Window).innerWidth;
-    if (width > 930 && this.menuOpen) {
-      this.menuOpen = false;
-    }
+  switchLanguage() {
+    this.langService.switchLanguage();
   }
 
   texts = {
@@ -52,10 +46,6 @@ export class HeroSectionComponent {
       contact: 'Contact'
     }
   };
-
-    switchLanguage() {
-    this.currentLang = this.currentLang === 'de' ? 'en' : 'de';
-  }
 
   frontend = [
     { upper: 'F', lower: 'f' },

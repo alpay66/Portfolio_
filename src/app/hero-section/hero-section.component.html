@@ -9,8 +9,8 @@
         <div class="hero-content">
             <div class="hero-left">
                 <button class="reveal-button">
-                    <span class="default-text">{{ texts[currentLang].helloWorld }}</span>
-                    <span class="hover-text">{{ texts[currentLang].name }} <span class="wave">👋</span></span>
+                    <span class="default-text">{{ texts[currentLang()].helloWorld }}</span>
+                    <span class="hover-text">{{ texts[currentLang()].name }} <span class="wave">👋</span></span>
                 </button>
                 <div class="frontend-img-row">
                     <h1 class="hover-word">
@@ -45,7 +45,7 @@
                     </span>
                 </h1>
 
-                <a href="#contact" class="get-in-touch-btn">{{ texts[currentLang].getInTouch }}</a>
+                <a href="#contact" class="get-in-touch-btn">{{ texts[currentLang()].getInTouch }}</a>
             </div>
             <div class="frontend-img mobile-only">
                 <img class="rotate-img" src="/img/hero_alpay_img_filler.png">
@@ -82,10 +82,10 @@
 
     <div class="overlay-nav-container">
         <nav class="overlay-nav">
-            <a href="#about">{{ texts[currentLang].about }}</a>
-            <a href="#skills">{{ texts[currentLang].skills }}</a>
-            <a href="#projects">{{ texts[currentLang].projects }}</a>
-            <a href="#contact">{{ texts[currentLang].contact }}</a>
+            <a href="#about">{{ texts[currentLang()].about }}</a>
+            <a href="#skills">{{ texts[currentLang()].skills }}</a>
+            <a href="#projects">{{ texts[currentLang()].projects }}</a>
+            <a href="#contact">{{ texts[currentLang()].contact }}</a>
         </nav>
     </div>
 
@@ -93,7 +93,7 @@
     <div class="language-switch">
         <span class="lang">EN</span>
         <label class="switch">
-            <input type="checkbox" (change)="switchLanguage()" [checked]="currentLang === 'en'">
+            <input type="checkbox" (change)="switchLanguage()" [checked]="currentLang() === 'en'" />
             <span class="slider"></span>
         </label>
         <span class="lang">DE</span>
