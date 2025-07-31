@@ -90,8 +90,8 @@ h1 {
     transform: rotate(7deg);
     transition: none !important;
     pointer-events: none;
+    width: 100%;
 }
-
 
 .hero-right {
     text-align: right;
@@ -110,7 +110,7 @@ h1 {
     color: white;
     border-radius: 999px;
     padding: 12px 32px;
-    font-size: 21px;
+    font-size: 16px;
     font-weight: 600;
     cursor: pointer;
     transition: background 0.3s ease, color 0.3s ease;
@@ -197,7 +197,7 @@ h1 {
     transition: all 0.2s ease;
     text-decoration: none;
     display: inline-block;
-    
+
 }
 
 .get-in-touch-btn:hover {
@@ -284,6 +284,17 @@ footer {
     width: 90%;
     justify-content: space-between;
 }
+
+/* .frame {
+    position: absolute;
+    transform: rotate(11deg);
+    transition: none !important;
+    pointer-events: none;
+    top: 15px;
+    right: 80px;
+    width: 240px;
+    z-index: 0;
+} */
 
 .overlay-nav {
     flex-direction: column;
@@ -379,6 +390,7 @@ nav {
 .mobile-only {
     display: none;
 }
+
 
 //////////// WIDTH ////////////
 /// 

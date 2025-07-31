@@ -324,18 +324,6 @@ nav a:hover {
         background-color: transparent;
     }
 
-    .left-side h1 {
-        font-size: clamp(22px, 6vw, 36px);
-    }
-
-    .left-side h3 {
-        font-size: clamp(14px, 3.5vw, 20px);
-    }
-
-    .left-side p {
-        font-size: clamp(12px, 3.2vw, 16px);
-    }
-
     .burger-menu-image {
         cursor: pointer;
     }
@@ -384,15 +372,15 @@ nav a:hover {
         align-items: center;
 
         h1 {
-            font-size: clamp(24px, 5vw, 55px);
+            font-size: clamp(20px, 5vw, 55px);
         }
 
         h3 {
-            font-size: clamp(16px, 2.5vw, 24px);
+            font-size: clamp(12px, 2.5vw, 24px);
         }
 
         p {
-            font-size: clamp(14px, 2.2vw, 18px);
+            font-size: clamp(10px, 2.2vw, 18px);
         }
     }
 
@@ -453,7 +441,7 @@ nav a:hover {
     }
 
     .right-side-image {
-        width: 60%;
+        width: 40%;
     }
 }
 
@@ -470,7 +458,7 @@ nav a:hover {
 
 @media (max-width: 390px) {
     .right-side-next-button {
-        justify-content: space-around;
+        justify-content: space-between;
     }
 
     .burger-menu-mobile {
