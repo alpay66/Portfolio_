@@ -1,15 +1,17 @@
+import { NgIf } from '@angular/common';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
 
 @Component({
   selector: 'app-contactform',
-  imports: [FormsModule, HttpClientModule],
+  standalone: true,
+  imports: [FormsModule, HttpClientModule, NgIf],
   templateUrl: './contactform.component.html',
   styleUrl: './contactform.component.scss'
 })
 export class ContactformComponent {
-  http = inject(HttpClient); 
+  http = inject(HttpClient);
 
   contactData = {
     name: '',
@@ -18,7 +20,8 @@ export class ContactformComponent {
     accepted: false
   };
 
-mailTest = true;
+  formSubmitted = false;
+  mailTest = true;
 
   post = {
     endPoint: 'https://deineDomain.de/sendMail.php',
@@ -36,7 +39,7 @@ mailTest = true;
       this.http.post(this.post.endPoint, this.post.body(this.contactData))
         .subscribe({
           next: (response) => {
-
+            this.formSubmitted = true;
             ngForm.resetForm();
           },
           error: (error) => {
@@ -45,8 +48,13 @@ mailTest = true;
           complete: () => console.info('send post complete'),
         });
     } else if (ngForm.submitted && ngForm.form.valid && this.mailTest) {
-
+      this.formSubmitted = true;
       ngForm.resetForm();
     }
-  } 
+
+    // Erfolgsmeldung nach 4 Sekunden ausblenden
+    setTimeout(() => {
+      this.formSubmitted = false;
+    }, 4000);
+  }
 }

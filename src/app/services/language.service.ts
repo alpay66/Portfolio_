@@ -2,9 +2,9 @@ import { Injectable, signal } from '@angular/core';
 
 @Injectable({ providedIn: 'root' })
 export class LanguageService {
-    private lang = signal<'de' | 'en'>('de'); // Standardsprache
+    private lang = signal<'de' | 'en'>('de');
 
-    currentLang = this.lang; // Zugriff in Komponenten
+    currentLang = this.lang;
 
     switchLanguage() {
         const newLang = this.lang() === 'de' ? 'en' : 'de';

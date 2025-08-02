@@ -30,11 +30,19 @@
     }
 
     .form-error {
-        font-size: 13px;
-        color: red;
-        margin-top: 5px;
+        color: #ff4d4d;
+        font-size: 0.9rem;
+        margin-top: 4px;
         display: block;
     }
+
+    .form-success {
+        color: #4caf50;
+        font-size: 1rem;
+        margin-top: 12px;
+        font-weight: bold;
+    }
+
 
     .submit-button {
         margin-top: 30px;
@@ -57,7 +65,28 @@
     }
 }
 
-///////// width ////////////
+label {
+    span {
+        a {
+            text-decoration: none;
+            position: relative;
+            transition: color 0.3s ease;
+
+            &:hover {
+                color: rgb(255, 165, 0);
+            }
+
+            &:hover::after {
+                width: 100%;
+            }
+
+            &:visited {
+                color: rgb(255, 165, 0);
+            }
+        }
+
+    }
+}
 
 @media (max-width: 910px) {
     .contact-form {
