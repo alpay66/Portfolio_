@@ -3,9 +3,9 @@
     inset: 0;
     background: rgb(0, 0, 0);
     z-index: 9999;
-    display: flex;
+    /*     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: center; */
 }
 
 .overlay-background {
@@ -27,19 +27,17 @@
 .overlay-content {
     background-image: url(/img/project-details-overlay.png);
     background-size: cover;
-    background-position: center;
+    /*     background-position: center; */
     background-color: rgb(29, 29, 29);
-    padding: 40px;
-    border-radius: 20px;
-    max-width: 1500px;
-    width: 90%;
+    width: 100%;
     position: relative;
+    height: 100vh;
 }
 
 .overlay-container {
     display: flex;
     justify-content: space-evenly;
-    padding: 40px 0px 0px 0px;
+    padding: 200px 0px 0px 0px;
 }
 
 .right-side-image {
@@ -183,9 +181,25 @@ nav a:hover {
     flex-direction: column;
 
     h1 {
-        font-size: 55px;
+        font-size: clamp(28px, 6vw, 65px);
+        margin-top: 0px;
+    }
+
+    p {
+        font-size: clamp(16px, 4vw, 20px);
+    }
+
+    h2 {
+        font-size: clamp(24px, 5vw, 35px);
+    }
+    
+    span,
+    li,
+    a {
+        font-size: clamp(14px, 3vw, 18px);
     }
 }
+
 
 .left-side-skills {
     display: flex;
