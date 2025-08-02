@@ -75,11 +75,8 @@ export class ProjectOverlayComponent {
   closeMobileMenu() {
     this.menuOpen = false;
     setTimeout(() => {
-      // Scroll funktioniert trotzdem über href, hier kannst du smooth scroll forcieren
     }, 100);
   }
-
-
 
   next() {
     this.nextProject.emit();

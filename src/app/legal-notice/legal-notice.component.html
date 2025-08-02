@@ -1,0 +1,32 @@
+<div class="legal-body">
+    <app-header-bar></app-header-bar>
+
+    <section class="legal-wrapper">
+        <div class="legal">
+            <h1>{{ texts[currentLang()].title }}</h1>
+
+            <h2>{{ texts[currentLang()].section1 }}</h2>
+            <p>{{ texts[currentLang()].address }}</p>
+
+            <h2>{{ texts[currentLang()].section2 }}</h2>
+            <p>
+                {{ texts[currentLang()].phone }}<br />
+                {{ texts[currentLang()].email }}
+            </p>
+
+            <h2>{{ texts[currentLang()].section3 }}</h2>
+            <p>{{ texts[currentLang()].address }}</p>
+
+            <h2>{{ texts[currentLang()].section4 }}</h2>
+            <p>{{ texts[currentLang()].section4Text }}</p>
+
+            <h2>{{ texts[currentLang()].section5 }}</h2>
+            <p>{{ texts[currentLang()].section5Text }}</p>
+
+            <h2>{{ texts[currentLang()].section6 }}</h2>
+            <p>{{ texts[currentLang()].section6Text }}</p>
+        </div>
+    </section>
+
+    <app-footer></app-footer>
+</div>
