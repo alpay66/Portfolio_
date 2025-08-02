@@ -285,17 +285,6 @@ footer {
     justify-content: space-between;
 }
 
-/* .frame {
-    position: absolute;
-    transform: rotate(11deg);
-    transition: none !important;
-    pointer-events: none;
-    top: 15px;
-    right: 80px;
-    width: 240px;
-    z-index: 0;
-} */
-
 .overlay-nav {
     flex-direction: column;
     display: flex;
@@ -391,9 +380,6 @@ nav {
     display: none;
 }
 
-
-//////////// WIDTH ////////////
-/// 
 @media (max-width: 1180px) {
     .container {
         padding: 124px 146px 0px 235px;
