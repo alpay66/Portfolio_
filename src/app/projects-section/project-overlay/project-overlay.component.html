@@ -6,7 +6,7 @@
                     <img src="/img/go-back-arrow.png"> {{ texts[currentLang()].back }}</a>
             </p>
 
-            <app-header-bar></app-header-bar>
+            <app-header-bar (linkClicked)="close()"></app-header-bar>
             <div class="burger-menu-mobile">
                 <img class="logo" src="/img/AK_logo.png" alt="AK_logo">
                 <img class="burger-menu-img" (click)="toggleMenu()" src="/img/hero-burger-menu-logo.svg" alt="menu" />

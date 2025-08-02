@@ -4,19 +4,19 @@
 
         <nav class="navigation">
             <div class="nav-item">
-                <a href="#about">{{ texts[currentLang()].about }}</a>
+                <a href="#about" (click)="linkClicked.emit()">{{ texts[currentLang()].about }}</a>
                 <img src="/img/about-me-hover.svg" class="hover-svg" alt="about hover" />
             </div>
             <div class="nav-item">
-                <a href="#skills">{{ texts[currentLang()].skills }}</a>
+                <a href="#skills" (click)="linkClicked.emit()">{{ texts[currentLang()].skills }}</a>
                 <img src="/img/skills-hover.svg" class="hover-svg" alt="skills hover" />
             </div>
             <div class="nav-item">
-                <a href="#projects">{{ texts[currentLang()].projects }}</a>
+                <a href="#projects" (click)="linkClicked.emit()">{{ texts[currentLang()].projects }}</a>
                 <img src="/img/contact-hover.svg" class="hover-svg" alt="projects hover" />
             </div>
             <div class="nav-item">
-                <a href="#contact">{{ texts[currentLang()].contact }}</a>
+                <a href="#contact" (click)="linkClicked.emit()">{{ texts[currentLang()].contact }}</a>
                 <img src="/img/projects-hover.svg" class="hover-svg" alt="contact hover" />
             </div>
         </nav>

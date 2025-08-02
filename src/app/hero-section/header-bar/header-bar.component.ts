@@ -1,5 +1,6 @@
 import { Component, computed, inject } from '@angular/core';
 import { LanguageService } from '../../services/language.service'; // Pfad ggf. anpassen
+import { Output, EventEmitter } from '@angular/core';
 
 type Lang = 'de' | 'en';
 
@@ -13,6 +14,8 @@ type Lang = 'de' | 'en';
 export class HeaderBarComponent {
   private languageService = inject(LanguageService);
   currentLang = computed(() => this.languageService.currentLang());
+
+  @Output() linkClicked = new EventEmitter<void>();
 
   texts: Record<Lang, { about: string; skills: string; projects: string; contact: string }> = {
     en: {
