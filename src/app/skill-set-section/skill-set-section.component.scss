@@ -1,12 +1,11 @@
 section {
     background-image: url(/img/skill-set-background.png);
-    /*     width: 100%; */
     background-size: cover;
     background-position: bottom;
 
     div {
 
-        gap: 30px;
+        gap: 25px;
 
         div {
             color: white;
@@ -126,34 +125,30 @@ section {
     transform: rotate(8deg);
 }
 
-.peel-img.default {
-    opacity: 1;
-    z-index: 1;
-}
-
+.peel-img.default { opacity: 1; z-index: 1; }
 .peel-img.mid,
-.peel-img.full {
-    opacity: 0;
-    z-index: 2;
-}
+.peel-img.full { opacity: 0; z-index: 2; }
 
-.peel-wrapper:hover .peel-img.default {
-    opacity: 0;
-}
-
-.peel-wrapper:hover .peel-img.mid {
-    opacity: 1;
-    transition-delay: 0.1s;
-}
-
-.peel-wrapper:hover .peel-img.full {
-    opacity: 1;
-    transition-delay: 0.2s;
-}
+.peel-wrapper.peeled .peel-img.default { opacity: 0; }
+.peel-wrapper.peeled .peel-img.mid     { opacity: 1; transition-delay: 0.1s; }
+.peel-wrapper.peeled .peel-img.full    { opacity: 1; transition-delay: 0.2s; }
 
 .skill-img {
     width: 100%;
     height: auto;
+}
+
+.skill-set-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: black;
+    padding: 16px;
+    border-radius: 8px;
+    text-align: center;
+    width: 80%;
+    font-size: 1rem;
 }
 
 @media (max-width: 1020px) {
@@ -204,7 +199,7 @@ section {
 
 @media (max-width: 335px) {
     section {
-        
+
         div {
             gap: 15px;
         }

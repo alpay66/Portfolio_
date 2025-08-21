@@ -6,7 +6,12 @@
         </div>
 
         <div class="middle-box-content">
-            <img class="skill-sett-img" src="/img/skill-set-span-background.png">
+            <div style="position: relative;">
+                <img class="skill-sett-img" src="/img/skill-set-span-background.png">
+                <span class="skill-set-overlay">
+                    Ich habe Erfahrung mit modernen Frontend-Technologien und lege Wert auf sauberen, responsiven Code. Neue Technologien lerne ich schnell und setze sie offen ein.
+                </span>
+            </div>
 
             <div class="language-img-box">
                 <div class="skill-set-img-box">
@@ -62,7 +67,7 @@
 
         </div>
 
-        <div class="peel-wrapper">
+        <div class="peel-wrapper" (click)="togglePeel()" [class.peeled]="isPeeled">
             <img src="/img/pull-to-peel-1.svg" class="peel-img default">
             <img src="/img/pull-to-peel-2.svg" class="peel-img mid">
             <img src="/img/pull-to-peel-3.svg" class="peel-img full">

@@ -100,7 +100,7 @@ export class ProjectsSectionComponent {
         de: 'Dauer: 4 Wochen',
         en: 'Duration: 4 weeks',
       },
-      githubLink: 'https://github.com/deinGithubName/join',
+      githubLink: 'https://github.com/alpay66/JOIN-PROJEKT',
       liveLink: 'https://alpay-karacabey.de/Join/index.html',
       skills: ['html', 'css', 'firebase', 'angular', 'typescript']
     },

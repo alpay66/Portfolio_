@@ -1,5 +1,5 @@
 import { Component, computed, inject } from '@angular/core';
-import { LanguageService } from '../services/language.service'; // ggf. Pfad anpassen
+import { LanguageService } from '../services/language.service';
 
 @Component({
   selector: 'app-skill-set-section',
@@ -21,4 +21,10 @@ export class SkillSetSectionComponent {
       skills: 'Fähigkeiten'
     }
   };
+
+  isPeeled = false;
+
+  togglePeel() {
+    this.isPeeled = !this.isPeeled;
+  }
 }
