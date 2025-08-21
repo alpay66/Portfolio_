@@ -92,7 +92,7 @@ section {
             z-index: 1;
 
             img {
-                --rotate: 0deg;
+                --rotate: -5deg;
             }
         }
 
@@ -108,7 +108,7 @@ section {
             z-index: 2;
 
             img {
-                --rotate: 0deg;
+                --rotate: 5deg;
             }
         }
 
@@ -127,6 +127,14 @@ section {
     margin-bottom: 20px;
     width: 90%;
     padding: 10px;
+}
+
+.rotated {
+    transform: rotate(-5deg);
+}
+
+.rotated-2 {
+    transform: rotate(5deg);
 }
 
 @media (max-height: 1200px) {
