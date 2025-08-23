@@ -43,6 +43,8 @@ h1 {
         line-height: 1;
         padding: 0;
         margin: 0;
+        height: 150px;
+        width: 90px;
     }
 }
 
@@ -84,13 +86,15 @@ h1 {
 .frontend-img-row {
     display: flex;
     gap: 90px;
+    width: 600px;
 }
 
 .rotate-img {
     transform: rotate(7deg);
     transition: none !important;
     pointer-events: none;
-    width: 100%;
+    position: absolute;
+    width: 150px;
 }
 
 .hero-right {
@@ -103,86 +107,88 @@ h1 {
 }
 
 .reveal-button {
+    --handSize: 28px;
+    --expandRight: 60px;
+
     position: relative;
-    overflow: hidden;
-    border: 2px solid rgb(255, 255, 255);
+    border: 2px solid #fff;
     background: transparent;
-    color: white;
+    color: #fff;
     border-radius: 999px;
     padding: 12px 32px;
+    min-width: 180px;
+    height: 48px;
     font-size: 16px;
     font-weight: 600;
     cursor: pointer;
-    transition: background 0.3s ease, color 0.3s ease;
-    min-width: 180px;
-    height: 48px;
-
-    .default-text,
-    .hover-text {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        white-space: nowrap;
-        transition: transform 0.4s ease, opacity 0.4s ease;
-    }
-
-    .hover-text {
-        opacity: 0;
-        transform: translate(-50%, 150%);
-    }
-
-    &:hover {
-        background: rgb(2, 27, 249);
-        color: black;
-
-        .default-text {
-            opacity: 0;
-            transform: translate(-50%, -150%);
-        }
-
-        .hover-text {
-            opacity: 1;
-            transform: translate(-50%, -50%);
-        }
-    }
-
-    .wave {
-        display: inline-block;
-        animation: waveAnim 2s infinite;
-    }
+    overflow: visible;
+    transition: background .3s, color .3s, padding-right .35s;
 }
 
-@keyframes waveAnim {
+.reveal-button .default-text,
+.reveal-button .hover-text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    white-space: nowrap;
+    transition: transform .4s, opacity .4s;
+}
+
+.reveal-button .hover-text {
+    opacity: 0;
+    transform: translate(-50%, 150%);
+}
+
+.reveal-button:hover {
+    background: rgb(2, 27, 249);
+    color: #000;
+    padding-right: calc(32px + var(--expandRight));
+}
+
+.reveal-button:hover .default-text {
+    opacity: 0;
+    transform: translate(-50%, -150%);
+}
+
+.reveal-button:hover .hover-text {
+    opacity: 1;
+    transform: translate(-50%, -50%);
+}
+
+.reveal-button .hand {
+    position: absolute;
+    top: -45px;
+    left: 55%;
+    width: var(--handSize);
+    height: var(--handSize);
+    opacity: 0;
+    pointer-events: none;
+}
+
+.reveal-button .hand-icon {
+    width: var(--handSize);
+    height: var(--handSize);
+    display: block;
+}
+
+.reveal-button:hover .hand {
+    opacity: 1;
+    animation: hand-roll 1.2s ease-out forwards;
+}
+
+@keyframes hand-roll {
     0% {
+        left: 55%;
         transform: rotate(0deg);
     }
 
-    10% {
-        transform: rotate(14deg);
-    }
-
-    20% {
-        transform: rotate(-8deg);
-    }
-
-    30% {
-        transform: rotate(14deg);
-    }
-
-    40% {
-        transform: rotate(-4deg);
-    }
-
-    50% {
-        transform: rotate(10deg);
-    }
-
-    60%,
     100% {
-        transform: rotate(0deg);
+        left: calc(100% - var(--handSize) - 6px);
+        transform: rotate(360deg);
     }
 }
+
 
 .get-in-touch-btn {
     background-color: #111;
@@ -575,28 +581,15 @@ nav {
 }
 
 @media (max-width: 414px) {
-    .hero-section {
-        height: 68vh;
-    }
-
-    .container {
-        padding: 20px 10%;
-    }
-
-    h1 {
-        font-size: 50px;
-    }
-
     .hover-word {
-        height: 60px;
+        span {
+            width: 45px;
+            height: 60px;
+        }
     }
 
-    .hover-span {
-        height: 65px;
-    }
-
-    .letter-frontend-0 {
-        width: 30px;
+    .frontend-img-row {
+        width: 0px;
     }
 }
 
