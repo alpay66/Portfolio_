@@ -94,7 +94,8 @@ h1 {
     transition: none !important;
     pointer-events: none;
     position: absolute;
-    width: 150px;
+    width: 200px;
+/*     left: 30%; */
 }
 
 .hero-right {
@@ -408,11 +409,12 @@ nav {
     }
 
     .rotate-img {
-        position: static;
+        
         transform: rotate(11deg);
-        width: 50%;
+        width: 35%;
         margin-top: 30px;
         display: flex;
+        left: 25%;
     }
 
     .get-in-touch-btn {
@@ -742,20 +744,7 @@ nav {
     }
 }
 
-@media (max-height: 970px) {
-/*     .rotate-img {
-        width: 60%;
-        margin-top: 50px;
-        padding-left: 20%;
-    } */
-}
-
 @media (max-height: 932px) {
-    .rotate-img {
-        margin-top: 30px;
-        padding-left: 30px;
-    }
-
     .mobile-overlay {
         height: 70vh;
         gap: 30px;
