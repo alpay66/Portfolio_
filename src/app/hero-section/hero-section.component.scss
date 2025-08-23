@@ -64,7 +64,6 @@ h1 {
     align-items: center;
     height: 100%;
     color: #fff;
-    padding-left: 250px;
 }
 
 .hover-span {
@@ -87,6 +86,7 @@ h1 {
     display: flex;
     gap: 90px;
     width: 600px;
+    padding-top: 5%;
 }
 
 .rotate-img {
@@ -95,7 +95,6 @@ h1 {
     pointer-events: none;
     position: absolute;
     width: 200px;
-/*     left: 30%; */
 }
 
 .hero-right {
@@ -389,9 +388,13 @@ nav {
     display: none;
 }
 
+@media (max-width: 1350px) {
+
+}
+
 @media (max-width: 1180px) {
     .container {
-        padding: 124px 146px 0px 235px;
+        padding: 124px 146px 0px 100px;
     }
 
     .hero-content {
@@ -409,7 +412,6 @@ nav {
     }
 
     .rotate-img {
-        
         transform: rotate(11deg);
         width: 35%;
         margin-top: 30px;
@@ -443,14 +445,9 @@ nav {
 }
 
 @media (max-width: 930px) {
-    .container {
-        padding: 124px 145px 0px 128px;
-    }
-
     .hero-right .hover-span {
         text-transform: uppercase !important;
     }
-
 
     .navigation,
     .language-switch {
@@ -481,6 +478,14 @@ nav {
     }
 }
 
+@media (max-width: 850px) {
+    .hover-word {
+        span {
+            width: 65px;
+        }
+    }
+}
+
 @media (max-width: 821px) {
     .container {
         padding: 78px 142px 0px 84px;
@@ -503,6 +508,13 @@ nav {
     }
 }
 
+@media (max-width: 700px) {
+    .frontend-img-row {
+        width: 0px;
+
+    }
+}
+
 @media (max-width: 675px) {
     h1 {
         font-size: 83px;
@@ -520,6 +532,13 @@ nav {
 @media (max-width: 640px) {
     .hero-section {
         height: 80vh;
+    }
+
+    .hover-word {
+        span {
+            width: 40px;
+            height: 100px;
+        }
     }
 
     .container {
@@ -587,13 +606,9 @@ nav {
 @media (max-width: 414px) {
     .hover-word {
         span {
-            width: 45px;
+            width: 40px;
             height: 60px;
         }
-    }
-
-    .frontend-img-row {
-        width: 0px;
     }
 }
 
@@ -602,24 +617,10 @@ nav {
         height: 60vh;
     }
 
-    .container {
-        padding: 20px 10%;
-    }
-
-    h1 {
-        font-size: 45px;
-    }
-
     .hover-word {
-        height: 50px;
-    }
-
-    .hover-span {
-        font-size: clamp(47px, calc(3vw + 0.5rem), 32px);
-    }
-
-    .letter-frontend-0 {
-        width: 30px;
+        span {
+            width: 32px;
+        }
     }
 }
 
