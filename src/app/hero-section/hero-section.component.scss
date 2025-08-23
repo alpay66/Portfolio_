@@ -291,6 +291,8 @@ footer {
     justify-content: space-between;
 }
 
+
+
 .overlay-nav {
     flex-direction: column;
     display: flex;
@@ -664,14 +666,6 @@ nav {
     .mobile-only {
         display: block;
     }
-
-    .rotate-img {
-        position: static;
-        transform: rotate(11deg);
-        width: 100%;
-        margin-top: 30px;
-        display: flex;
-    }
 }
 
 @media (max-height: 1180px) {
@@ -689,15 +683,6 @@ nav {
         height: 70vh;
         padding-left: 0px;
         gap: 50px;
-    }
-
-    .rotate-img {
-        position: static;
-        transform: rotate(11deg);
-        width: 40%;
-        margin-top: 30px;
-        padding-left: 20%;
-        display: flex;
     }
 
     nav {
@@ -729,15 +714,6 @@ nav {
         padding-left: 0px;
         gap: 50px;
     }
-
-    .rotate-img {
-        position: static;
-        transform: rotate(11deg);
-        width: 50%;
-        margin-top: 30px;
-        padding-left: 50px;
-        display: flex;
-    }
 }
 
 @media (max-height: 1024px) {
@@ -746,15 +722,6 @@ nav {
         height: 70vh;
         padding-left: 0px;
         gap: 60px;
-    }
-
-    .rotate-img {
-        position: static;
-        transform: rotate(11deg);
-        width: 40%;
-        margin-top: 30px;
-        padding-left: 20%;
-        display: flex;
     }
 
     nav {
@@ -776,11 +743,11 @@ nav {
 }
 
 @media (max-height: 970px) {
-    .rotate-img {
+/*     .rotate-img {
         width: 60%;
         margin-top: 50px;
         padding-left: 20%;
-    }
+    } */
 }
 
 @media (max-height: 932px) {
@@ -1026,3 +993,17 @@ nav {
         padding: 25px 25px 0px 25px;
     }
 }
+
+
+
+
+/* 
+.rotate-img {
+    transform: rotate(7deg);
+    transition: none !important;
+    pointer-events: none;
+    position: absolute;
+    width: 200px;
+    left: 550px;
+}
+ */
