@@ -1,44 +1,52 @@
 <div class="container">
     <form class="contact-form" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" novalidate>
 
-        <label for="name" class="form-label">Wie ist dein Name?</label>
+        <label for="name" class="form-label">
+            {{ texts[currentLang()].labelName }}
+        </label>
         <input class="form-input" [(ngModel)]="contactData.name" type="text" id="name" name="name" required
-            #name="ngModel" placeholder="Dein Name kommt hier rein" />
+            #name="ngModel" [placeholder]="texts[currentLang()].placeholderName" />
         <span *ngIf="name.invalid && name.touched" class="form-error">
-            Bitte gib deinen Namen ein.
+            {{ texts[currentLang()].errorName }}
         </span>
 
-        <label for="email" class="form-label">Wie ist deine E-Mail?</label>
+        <label for="email" class="form-label">
+            {{ texts[currentLang()].labelEmail }}
+        </label>
         <input class="form-input" [(ngModel)]="contactData.email" type="email" id="email" name="email" required
             pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" #email="ngModel"
-            placeholder="deineemail@email.com" />
+            [placeholder]="texts[currentLang()].placeholderEmail" />
         <span *ngIf="email.invalid && email.touched" class="form-error">
-            Bitte gib eine gültige E-Mail-Adresse ein.
+            {{ texts[currentLang()].errorEmail }}
         </span>
 
-        <label for="message" class="form-label">Wie kann ich dir helfen?</label>
+        <label for="message" class="form-label">
+            {{ texts[currentLang()].labelMessage }}
+        </label>
         <textarea class="form-input" [(ngModel)]="contactData.message" id="message" name="message" required
-            minlength="4" #message="ngModel" placeholder="Hallo Alpay, ich bin interessiert…">
+            minlength="4" #message="ngModel" [placeholder]="texts[currentLang()].placeholderMessage">
     </textarea>
         <span *ngIf="message.invalid && message.touched" class="form-error">
-            Bitte schreibe eine Nachricht (mind. 4 Zeichen).
+            {{ texts[currentLang()].errorMessage }}
         </span>
 
         <label class="privacy-checkbox">
             <input type="checkbox" name="accepted" [(ngModel)]="contactData.accepted" required #accepted="ngModel" />
             <span>
-                Ich habe die <a routerLink="/privacy-policy">Datenschutzerklärung</a> gelesen und stimme der
-                Verarbeitung meiner Daten zu.
+                {{ texts[currentLang()].privacyText_1 }}
+                <a routerLink="/privacy-policy">{{ texts[currentLang()].privacyLinkText }}</a>
+                {{ texts[currentLang()].privacyText_2 }}
             </span>
         </label>
         <span *ngIf="accepted.invalid && accepted.touched" class="form-error">
-            Du musst der Datenschutzerklärung zustimmen.
+            {{ texts[currentLang()].errorPrivacy }}
         </span>
 
-        <input class="submit-button" type="submit" [disabled]="contactForm.invalid" value="Send" />
+        <input class="submit-button" type="submit" [disabled]="contactForm.invalid || sending"
+            [value]="sending ? '...' : texts[currentLang()].submit" />
 
         <div *ngIf="formSubmitted" class="form-success">
-            ✅ Vielen Dank! Deine Nachricht wurde versendet.
+            {{ texts[currentLang()].success }}
         </div>
     </form>
 </div>

@@ -3,15 +3,11 @@
         <div class="left-part">
             <div>
                 <div>
-                    <h3>KONTAKTIERE MICH</h3>
-                    <h1>Bereit für eine Zusammenarbeit?</h1>
+                    <h3>{{ texts[currentLang()].kicker }}</h3>
+                    <h1>{{ texts[currentLang()].heading }}</h1>
                 </div>
                 <span>
-                    Du suchst jemanden, der nicht nur Code schreibt, sondern auch mitdenkt?
-                    Ich bin bereit, gemeinsam mit dir neue Ideen umzusetzen, Herausforderungen anzupacken
-                    und aus Visionen echte Projekte werden zu lassen.
-                    Ob für ein Teamprojekt, ein spannendes Startup oder ein persönliches Herzensprojekt –
-                    lass uns zusammen etwas schaffen, das wirklich begeistert.
+                    {{ texts[currentLang()].body }}
                 </span>
             </div>
         </div>
@@ -20,11 +16,11 @@
             <app-contactform></app-contactform>
         </div>
     </div>
+
     <div class="left-part-logo-sec">
-        <img src="/img/AK_logo.png" width="100px" height="100px">
-        <span>
-            © Alpay Karacabey 2025
-        </span>
+        <img src="/img/AK_logo.png" width="100" height="100" alt="AK Logo">
+        <span>{{ texts[currentLang()].copyright }}</span>
     </div>
+
     <app-footer></app-footer>
 </section>
