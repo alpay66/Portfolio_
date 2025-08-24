@@ -2,16 +2,19 @@ import { NgIf } from '@angular/common';
 import { HttpClientModule, HttpClient } from '@angular/common/http';
 import { Component, inject } from '@angular/core';
 import { FormsModule, NgForm } from '@angular/forms';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-contactform',
   standalone: true,
-  imports: [FormsModule, HttpClientModule, NgIf],
+  imports: [FormsModule, HttpClientModule, NgIf, RouterLink],
   templateUrl: './contactform.component.html',
   styleUrl: './contactform.component.scss'
 })
 export class ContactformComponent {
   http = inject(HttpClient);
+
+  private readonly endPoint = 'https://alpay-karacabey.de/sendMail.php';
 
   contactData = {
     name: '',
@@ -21,16 +24,13 @@ export class ContactformComponent {
   };
 
   formSubmitted = false;
-  mailTest = true;
+  mailTest = false;
 
   post = {
-    endPoint: 'https://deineDomain.de/sendMail.php',
+    endPoint: 'https://alpay-karacabey.de/sendMail.php',
     body: (payload: any) => JSON.stringify(payload),
     options: {
-      headers: {
-        'Content-Type': 'text/plain',
-        responseType: 'text',
-      },
+      headers: { 'Content-Type': 'application/json' },
     },
   };
 
@@ -52,7 +52,6 @@ export class ContactformComponent {
       ngForm.resetForm();
     }
 
-    // Erfolgsmeldung nach 4 Sekunden ausblenden
     setTimeout(() => {
       this.formSubmitted = false;
     }, 4000);
