@@ -107,88 +107,128 @@ h1 {
 }
 
 .reveal-button {
-    --handSize: 28px;
+    --handSize: 30px;
     --expandRight: 60px;
+    --expandDur: .6s;
+    --fadeDur: .5s;
+    --baseW: 180px;
 
     position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    height: 48px;
+    width: var(--baseW);
     border: 2px solid #fff;
-    background: transparent;
-    color: #fff;
     border-radius: 999px;
     padding: 12px 32px;
-    min-width: 180px;
-    height: 48px;
-    font-size: 16px;
-    font-weight: 600;
+    background: transparent;
+    color: #fff;
+    font: 600 16px/1 system-ui, -apple-system, Segoe UI, Roboto, sans-serif;
     cursor: pointer;
     overflow: visible;
-    transition: background .3s, color .3s, padding-right .35s;
+
+    transition:
+        width var(--expandDur) ease,
+        background var(--fadeDur) ease var(--expandDur),
+        color var(--fadeDur) ease var(--expandDur);
+}
+
+.reveal-button .label {
+    position: relative;
+    display: grid;
+    place-items: center;
 }
 
 .reveal-button .default-text,
 .reveal-button .hover-text {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    grid-area: 1/1;
     white-space: nowrap;
-    transition: transform .4s, opacity .4s;
+    transition: opacity var(--fadeDur) ease var(--expandDur);
+}
+
+.reveal-button .default-text {
+    opacity: 1;
 }
 
 .reveal-button .hover-text {
     opacity: 0;
-    transform: translate(-50%, 150%);
 }
 
 .reveal-button:hover {
+    width: calc(var(--baseW) + var(--expandRight));
     background: rgb(2, 27, 249);
     color: #000;
-    padding-right: calc(32px + var(--expandRight));
 }
 
 .reveal-button:hover .default-text {
     opacity: 0;
-    transform: translate(-50%, -150%);
 }
 
 .reveal-button:hover .hover-text {
     opacity: 1;
-    transform: translate(-50%, -50%);
+}
+
+.reveal-button.active {
+    background: rgb(2, 27, 249);
+    width: calc(var(--baseW) + var(--expandRight));
+    color: #000;
+    padding: 8px 32px;
+}
+
+.reveal-button.active .hover-text {
+    opacity: 1;
+}
+
+.reveal-button.active .default-text {
+    opacity: 0;
+}
+
+.reveal-button .hand-track {
+    position: absolute;
+    top: 0;
+    bottom: 0;
+    left: calc(100% - var(--handSize) - 6px - var(--expandRight));
+    width: var(--handSize);
+    pointer-events: none;
+    transform: translateX(0);
+    transition: transform var(--expandDur) ease-out;
 }
 
 .reveal-button .hand {
     position: absolute;
     top: -45px;
-    left: 55%;
     width: var(--handSize);
     height: var(--handSize);
     opacity: 0;
-    pointer-events: none;
+    transform-origin: 50% 50%;
 }
 
-.reveal-button .hand-icon {
-    width: var(--handSize);
-    height: var(--handSize);
+.reveal-button .hand img {
+    width: 100%;
+    height: 100%;
     display: block;
+}
+
+.reveal-button:hover .hand-track {
+    transform: translateX(var(--expandRight));
 }
 
 .reveal-button:hover .hand {
     opacity: 1;
-    animation: hand-roll 1.2s ease-out forwards;
+    animation: hand-spin var(--expandDur) ease-out forwards;
 }
 
-@keyframes hand-roll {
-    0% {
-        left: 55%;
+@keyframes hand-spin {
+    from {
         transform: rotate(0deg);
     }
 
-    100% {
-        left: calc(100% - var(--handSize) - 6px);
+    to {
         transform: rotate(360deg);
     }
 }
-
 
 .get-in-touch-btn {
     background-color: #111;
@@ -203,7 +243,6 @@ h1 {
     transition: all 0.2s ease;
     text-decoration: none;
     display: inline-block;
-
 }
 
 .get-in-touch-btn:hover {
@@ -291,8 +330,6 @@ footer {
     justify-content: space-between;
 }
 
-
-
 .overlay-nav {
     flex-direction: column;
     display: flex;
@@ -301,7 +338,6 @@ footer {
 }
 
 nav {
-
     a {
         text-decoration: none;
         color: white;
@@ -386,10 +422,6 @@ nav {
 
 .mobile-only {
     display: none;
-}
-
-@media (max-width: 1350px) {
-
 }
 
 @media (max-width: 1180px) {
@@ -581,62 +613,59 @@ nav {
     }
 }
 
-@media (max-width: 430px) {
-    .container {
-        padding: 20px 10%;
-    }
-
-    h1 {
-        font-size: 55px;
-    }
-
-    .hover-word {
-        height: 72px;
-    }
-
-    .hover-span {
-        height: 75px;
-    }
-
-    .letter-frontend-0 {
-        width: 30px;
-    }
-}
-
 @media (max-width: 414px) {
     .hover-word {
         span {
             width: 40px;
-            height: 60px;
+            height: 105px;
         }
     }
-}
 
-@media (max-width: 395px) {
-    .hero-section {
-        height: 60vh;
-    }
-
-    .hover-word {
-        span {
-            width: 32px;
-        }
+    .get-in-touch-btn {
+        margin-top: 90px
     }
 }
 
 @media (max-width: 375px) {
-    .hero-section {
-        height: 60vh;
+    .hover-word {
+        span {
+            width: 30px;
+            height: 85px;
+        }
     }
 
-    .hover-span {
-        font-size: clamp(43px, calc(3vw + 0.5rem), 32px);
+    .get-in-touch-btn {
+        margin-top: 35px
+    }
+}
+
+@media (max-width: 360px) {
+    .hover-word {
+        span {
+            width: 30px;
+            height: 65px;
+        }
+    }
+
+    .get-in-touch-btn {
+        margin-top: 20px
     }
 }
 
 @media (max-width: 340px) {
     .hero-section {
         height: 60vh;
+    }
+
+    .hover-word {
+        span {
+            width: 30px;
+            height: 65px;
+        }
+    }
+
+    .get-in-touch-btn {
+        margin-top: 0px
     }
 
     .hover-span {
@@ -720,7 +749,6 @@ nav {
 }
 
 @media (max-height: 1024px) {
-
     .mobile-overlay {
         height: 70vh;
         padding-left: 0px;
@@ -877,13 +905,11 @@ nav {
 
 @media (max-height: 667px) {
     .rotate-img {
-        width: 50%;
+        width: 40%;
         margin-top: 30px;
     }
 
     .mobile-overlay {
-        height: 70vh;
-        padding-left: 0px;
         gap: 30px;
     }
 }
@@ -983,17 +1009,3 @@ nav {
         padding: 25px 25px 0px 25px;
     }
 }
-
-
-
-
-/* 
-.rotate-img {
-    transform: rotate(7deg);
-    transition: none !important;
-    pointer-events: none;
-    position: absolute;
-    width: 200px;
-    left: 550px;
-}
- */

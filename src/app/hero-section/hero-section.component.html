@@ -8,16 +8,16 @@
     <div class="container">
         <div class="hero-content">
             <div class="hero-left">
-                <button class="reveal-button">
-                    <span class="default-text">{{ texts[currentLang()].helloWorld }}</span>
-                    <span class="hover-text">{{ texts[currentLang()].name }} <span class="wave"></span></span>
-
-                    <span class="hand">
-                        <span class="hand-icon">
-                            <img src="/img/waving_hand_hero.png">
+                <button class="reveal-button" [class.active]="isNameRevealed" (mouseenter)="isNameRevealed = true"
+                    (mouseleave)="isNameRevealed = false">
+                    <span class="default-text" *ngIf="!isNameRevealed">{{ texts[currentLang()].helloWorld }}</span>
+                    <span class="hover-text" *ngIf="isNameRevealed">{{ texts[currentLang()].name }} <span
+                            class="wave"></span></span>
+                    <span class="hand-track">
+                        <span class="hand">
+                            <img src="/img/waving_hand_hero.png" alt="👋" />
                         </span>
                     </span>
-
                 </button>
                 <div class="frontend-img-row">
                     <h1 class="hover-word">
@@ -62,7 +62,7 @@
 
         <div class="linked-up-buttons">
             <div class="circle-button">
-                <a href="">
+                <a href="https://www.linkedin.com/in/deinprofil" target="_blank">
                     <img src="/img/hero_linked_in.png" alt="LinkedIn">
                 </a>
             </div>
@@ -72,10 +72,11 @@
                 </a>
             </div>
             <div class="circle-button">
-                <img src="/img/hero_mail.png" alt="Mail">
+                <a href="mailto:alpay.karacabey@hotmail.com">
+                    <img src="/img/hero_mail.png" alt="Mail">
+                </a>
             </div>
         </div>
-
 
 
     </div>
@@ -98,13 +99,14 @@
 
 
     <div class="language-switch">
-        <span class="lang">EN</span>
+        <span class="lang en">EN</span>
         <label class="switch">
-            <input type="checkbox" (change)="switchLanguage()" [checked]="currentLang() === 'en'" />
+            <input type="checkbox" (change)="switchLanguage()" [checked]="currentLang() === 'en'">
             <span class="slider"></span>
         </label>
-        <span class="lang">DE</span>
+        <span class="lang de">DE</span>
     </div>
+
 
     <div class="linked-up-buttons-overlay">
         <div class="circle-button">

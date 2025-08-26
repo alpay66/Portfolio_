@@ -1,12 +1,12 @@
 import { Component, computed, inject } from '@angular/core';
 import { LanguageService } from '../services/language.service'; // ggf. Pfad anpassen
 import { HeaderBarComponent } from "./header-bar/header-bar.component";
-import { NgFor, NgStyle } from '@angular/common';
+import { NgFor, NgIf, NgStyle } from '@angular/common';
 
 @Component({
   selector: 'app-hero-section',
   standalone: true,
-  imports: [HeaderBarComponent, NgFor, NgStyle],
+  imports: [HeaderBarComponent, NgFor, NgStyle, NgIf],
   templateUrl: './hero-section.component.html',
   styleUrls: ['./hero-section.component.scss']
 })
@@ -15,6 +15,7 @@ export class HeroSectionComponent {
   currentLang = computed(() => this.langService.currentLang());
 
   menuOpen = false;
+  isNameRevealed = false;
 
   toggleMenu() {
     this.menuOpen = !this.menuOpen;
@@ -29,7 +30,7 @@ export class HeroSectionComponent {
   texts = {
     de: {
       helloWorld: 'Hallo Welt',
-      name: 'Alpay Karacabey',
+      name: 'Ich bin Alpay Karacabey',
       getInTouch: 'Kontakt aufnehmen',
       about: 'Über mich',
       skills: 'Fähigkeiten',
@@ -38,7 +39,7 @@ export class HeroSectionComponent {
     },
     en: {
       helloWorld: 'Hello World',
-      name: 'Alpay Karacabey',
+      name: 'Im Alpay Karacabey',
       getInTouch: 'Get in touch',
       about: 'About me',
       skills: 'Skills',
