@@ -12,6 +12,7 @@
         display: block;
         font-weight: bold;
         margin: 20px 0 5px;
+        font-size: 20px;
     }
 
     .form-input {
@@ -21,7 +22,7 @@
         border-bottom: 2px solid orange;
         color: white;
         padding: 8px 4px;
-        font-size: 14px;
+        font-size: 16px;
         outline: none;
 
         &::placeholder {
@@ -38,7 +39,7 @@
 
     .form-success {
         color: #4caf50;
-        font-size: 1rem;
+        font-size: 16px;
         margin-top: 12px;
         font-weight: bold;
     }
