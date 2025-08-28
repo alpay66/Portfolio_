@@ -90,11 +90,12 @@
 
     <div class="overlay-nav-container">
         <nav class="overlay-nav">
-            <a href="#about">{{ texts[currentLang()].about }}</a>
-            <a href="#skills">{{ texts[currentLang()].skills }}</a>
-            <a href="#projects">{{ texts[currentLang()].projects }}</a>
-            <a href="#contact">{{ texts[currentLang()].contact }}</a>
+            <a href="#about" (click)="toggleMenu()">{{ texts[currentLang()].about }}</a>
+            <a href="#skills" (click)="toggleMenu()">{{ texts[currentLang()].skills }}</a>
+            <a href="#projects" (click)="toggleMenu()">{{ texts[currentLang()].projects }}</a>
+            <a href="#contact" (click)="toggleMenu()">{{ texts[currentLang()].contact }}</a>
         </nav>
+
     </div>
 
 
