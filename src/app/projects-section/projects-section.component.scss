@@ -52,6 +52,7 @@ section {
     img {
         transition: transform 0.4s ease;
         display: block;
+        object-fit: cover;
     }
 
     .overlay {
@@ -160,8 +161,6 @@ section {
     max-height: 399px;
     width: 560px;
 }
-
-///////// width ////////////
 
 @media (max-width: 910px) {
     section {
