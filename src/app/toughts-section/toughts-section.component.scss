@@ -122,6 +122,38 @@ section {
     }
 }
 
+.thought-card {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+/* Hover-Overlay-Bild */
+.thought-card::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: url("/img/thoughts-section-card-hover.png") center/cover no-repeat;
+    border-radius: 12px;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+/* Bild einblenden */
+.thought-card:hover::after {
+    opacity: 1;
+}
+
+/* Textfarbe im Footer ändern */
+.thought-card:hover .card-footer a,
+.thought-card:hover .card-footer p {
+    color: #fff;
+    transition: color 0.3s ease;
+}
+
+
+
 .quote {
     font-family: 'Bricolage Grotesque', sans-serif;
     margin-bottom: 20px;
@@ -231,6 +263,7 @@ section {
     .quote {
         font-size: clamp(12px, 1.5vw, 17px);
     }
+
     .card-content.card-1 {
         top: -5px;
         left: 0px !important;
@@ -289,11 +322,11 @@ section {
                 z-index: auto;
             }
         }
-        
+
         .card-content {
             div {
                 img {
-                    top : -50px;
+                    top: -50px;
                 }
             }
         }
