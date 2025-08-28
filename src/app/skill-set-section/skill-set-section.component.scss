@@ -195,6 +195,26 @@ section {
         top: -84px;
         left: 42px;
     }
+
+    .skill-set-overlay {
+        font-size: 14px;
+    }
+
+    .skill-sett-img {
+        height: 120px;
+    }
+}
+
+@media (max-width: 390px) {
+    .skill-sett-img {
+        height: 100px;
+    }
+}
+
+@media (max-width: 375px)  {
+    .skill-sett-img {
+        height: 110px;
+    }
 }
 
 @media (max-width: 335px) {

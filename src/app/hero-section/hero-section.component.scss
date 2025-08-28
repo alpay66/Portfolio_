@@ -109,8 +109,8 @@ h1 {
 .reveal-button {
     --handSize: 30px;
     --expandRight: 60px;
-    --expandDur: .6s;
-    --fadeDur: .5s;
+    --expandDur: .6s; 
+    --fadeDur: .25s;    
     --baseW: 180px;
 
     position: relative;
@@ -131,8 +131,8 @@ h1 {
 
     transition:
         width var(--expandDur) ease,
-        background var(--fadeDur) ease var(--expandDur),
-        color var(--fadeDur) ease var(--expandDur);
+        background var(--fadeDur) ease,
+        color var(--fadeDur) ease;
 }
 
 .reveal-button .label {
@@ -146,6 +146,7 @@ h1 {
     grid-area: 1/1;
     white-space: nowrap;
     transition: opacity var(--fadeDur) ease var(--expandDur);
+    color: white;
 }
 
 .reveal-button .default-text {
