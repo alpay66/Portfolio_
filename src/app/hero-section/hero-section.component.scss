@@ -109,8 +109,8 @@ h1 {
 .reveal-button {
     --handSize: 30px;
     --expandRight: 60px;
-    --expandDur: .6s; 
-    --fadeDur: .25s;    
+    --expandDur: .6s;
+    --fadeDur: .25s;
     --baseW: 180px;
 
     position: relative;
@@ -300,6 +300,10 @@ footer {
 .burger-menu {
     display: none;
     cursor: pointer;
+}
+
+.burger-menu-img {
+    object-fit: contain;
 }
 
 .mobile-overlay {
