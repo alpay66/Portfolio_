@@ -44,11 +44,13 @@ section {
     .card-content.card-1 {
         top: -5px;
         left: 120px;
+
     }
 
     .card-content.card-2 {
         top: -5px;
         left: 120px;
+
     }
 
     .card-content.card-3 {
@@ -146,6 +148,8 @@ section {
     color: #fff;
     transition: color 0.3s ease;
 }
+
+
 
 .quote {
     font-family: 'Bricolage Grotesque', sans-serif;
@@ -280,6 +284,18 @@ section {
 
     .orange-cards {
         align-items: center;
+
+        div {
+            margin-left: 0;
+            margin-bottom: 20px;
+
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3) {
+                margin-left: 0;
+                z-index: auto;
+            }
+        }
     }
 
     .orange-cards {
@@ -359,6 +375,18 @@ section {
     .orange-cards {
         flex-direction: column;
         align-items: center;
+
+        div {
+            margin-left: 0;
+            margin-bottom: 20px;
+
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3) {
+                margin-left: 0;
+                z-index: auto;
+            }
+        }
 
         .card-content {
             div {
