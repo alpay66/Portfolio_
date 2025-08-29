@@ -166,12 +166,6 @@ section {
     transform: rotate(5deg);
 }
 
-.first-deg {}
-
-.second-deg {}
-
-.third-deg {}
-
 @media (max-width: 1365px) {
     .quote {
         font-size: clamp(12px, 1.5vw, 13px);
