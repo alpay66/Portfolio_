@@ -172,61 +172,6 @@ section {
     }
 }
 
-@media (max-height: 1200px) {
-    section {
-        margin: 100px 30px 50px 30px;
-
-        h1 {
-            font-size: clamp(30px, 5vw + 1rem, 50px);
-        }
-    }
-
-    .top-section {
-        text-align: center;
-    }
-
-    .orange-cards {
-        align-items: center;
-
-        div {
-            margin-left: 0;
-            margin-bottom: 20px;
-
-            &:nth-child(1),
-            &:nth-child(2),
-            &:nth-child(3) {
-                margin-left: 0;
-                z-index: auto;
-            }
-        }
-    }
-
-    .orange-cards {
-        .card-content.card-1 {
-            top: 0px;
-            left: 0px;
-        }
-
-        .card-content.card-2 {
-            top: 0px;
-            left: 0px;
-        }
-
-        .card-content.card-3 {
-            top: 0px;
-            left: 0px;
-        }
-    }
-
-    .orange-cards {
-        .card-footer {
-            left: 20px;
-            bottom: 20px;
-            text-align: center;
-        }
-    }
-}
-
 @media (max-width: 1150px) {
     .orange-cards {
         .card-footer {
@@ -300,6 +245,83 @@ section {
         left: 0px;
     }
 
+}
+
+@media (max-width: 433px) {
+    .orange-cards {
+        .card-footer {
+            left: 40px;
+            bottom: 0px;
+        }
+    }
+
+    .quote {
+        font-size: clamp(11px, 2.5vw, 16px);
+    }
+}
+
+@media (max-width: 375px) {
+    .quote {
+        padding: 10px 25px 25px 25px;
+    }
+
+    .orange-cards {
+        .card-footer {
+            left: 40px;
+            bottom: 0px;
+        }
+    }
+}
+
+@media (max-height: 1200px) {
+    section {
+        margin: 100px 30px 50px 30px;
+
+        h1 {
+            font-size: clamp(30px, 5vw + 1rem, 50px);
+        }
+    }
+
+    .orange-cards {
+        align-items: center;
+
+        div {
+            margin-left: 0;
+            margin-bottom: 20px;
+
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3) {
+                margin-left: 0;
+                z-index: auto;
+            }
+        }
+    }
+
+    .orange-cards {
+        .card-content.card-1 {
+            top: 0px;
+            left: 0px;
+        }
+
+        .card-content.card-2 {
+            top: 0px;
+            left: 0px;
+        }
+
+        .card-content.card-3 {
+            top: 0px;
+            left: 0px;
+        }
+    }
+
+    .orange-cards {
+        .card-footer {
+            left: 20px;
+            bottom: 20px;
+            text-align: center;
+        }
+    }
 }
 
 @media (max-height: 1024px) {
@@ -408,28 +430,3 @@ section {
     }
 }
 
-@media (max-width: 433px) {
-    .orange-cards {
-        .card-footer {
-            left: 40px;
-            bottom: 0px;
-        }
-    }
-
-    .quote {
-        font-size: clamp(11px, 2.5vw, 16px);
-    }
-}
-
-@media (max-width: 375px) {
-    .quote {
-        padding: 10px 25px 25px 25px;
-    }
-
-    .orange-cards {
-        .card-footer {
-            left: 40px;
-            bottom: 0px;
-        }
-    }
-}
