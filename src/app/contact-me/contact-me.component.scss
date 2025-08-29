@@ -70,9 +70,11 @@ section {
     }
 }
 
-@media (max-width: 410px) {
+@media (max-width: 414px) {
     .left-part-logo-sec {
         padding-top: 20px;
+        align-items: center;
+        padding-left: 0px;
     }
 
     .left-part {

@@ -333,7 +333,6 @@ section {
         div {
             margin-left: 0;
             margin-bottom: 20px;
-            width: 100%;
 
             &:nth-child(1),
             &:nth-child(2),
@@ -389,7 +388,7 @@ section {
     .orange-cards {
         .card-footer {
             left: 40px;
-            bottom: -10px;
+            bottom: 0px;
         }
     }
 
@@ -406,7 +405,7 @@ section {
     .orange-cards {
         .card-footer {
             left: 40px;
-            bottom: -18px;
+            bottom: 0px;
         }
     }
 }
