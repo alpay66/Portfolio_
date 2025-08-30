@@ -1,37 +1,42 @@
 <header class="container">
     <div class="header">
-        <img src="/img/AK_logo.png" class="logo" />
+        <img src="/img/AK_logo.png" class="logo" [routerLink]="['/']" />
 
         <nav class="navigation">
             <div class="nav-item">
-                <a href="#about" (click)="linkClicked.emit()">{{ texts[currentLang()].about }}</a>
+                <a [routerLink]="['/']" [fragment]="'about'" (click)="linkClicked.emit()">
+                    {{ texts[currentLang()].about }}
+                </a>
                 <img src="/img/about-me-hover.svg" class="hover-svg" alt="about hover" />
             </div>
+
             <div class="nav-item">
-                <a href="#skills" (click)="linkClicked.emit()">{{ texts[currentLang()].skills }}</a>
+                <a [routerLink]="['/']" [fragment]="'skills'" (click)="linkClicked.emit()">
+                    {{ texts[currentLang()].skills }}
+                </a>
                 <img src="/img/skills-hover.svg" class="hover-svg" alt="skills hover" />
             </div>
+
             <div class="nav-item">
-                <a href="#projects" (click)="linkClicked.emit()">{{ texts[currentLang()].projects }}</a>
+                <a [routerLink]="['/']" [fragment]="'projects'" (click)="linkClicked.emit()">
+                    {{ texts[currentLang()].projects }}
+                </a>
                 <img src="/img/contact-hover.svg" class="hover-svg" alt="projects hover" />
             </div>
+
             <div class="nav-item">
-                <a href="#contact" (click)="linkClicked.emit()">{{ texts[currentLang()].contact }}</a>
+                <a [routerLink]="['/']" [fragment]="'contact'" (click)="linkClicked.emit()">
+                    {{ texts[currentLang()].contact }}
+                </a>
                 <img src="/img/projects-hover.svg" class="hover-svg" alt="contact hover" />
             </div>
         </nav>
 
         <div class="language-switch">
             <input id="langToggle" type="checkbox" (change)="switchLanguage()" [checked]="currentLang() === 'de'" />
-
             <span class="lang en">EN</span>
-
-            <label class="switch" for="langToggle">
-                <span class="slider"></span>
-            </label>
-
+            <label class="switch" for="langToggle"><span class="slider"></span></label>
             <span class="lang de">DE</span>
         </div>
-
     </div>
 </header>

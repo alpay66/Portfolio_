@@ -1,13 +1,14 @@
 import { Component, computed, inject } from '@angular/core';
 import { LanguageService } from '../../services/language.service'; // Pfad ggf. anpassen
 import { Output, EventEmitter } from '@angular/core';
+import { RouterLink } from '@angular/router';
 
 type Lang = 'de' | 'en';
 
 @Component({
   selector: 'app-header-bar',
   standalone: true,
-  imports: [],
+  imports: [RouterLink],
   templateUrl: './header-bar.component.html',
   styleUrls: ['./header-bar.component.scss']
 })
