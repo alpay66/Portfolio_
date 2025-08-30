@@ -139,7 +139,7 @@ export class ProjectsSectionComponent {
         de: 'Dauer: 3 Wochen',
         en: 'Duration: 3 weeks',
       },
-      githubLink: 'https://github.com/deinGithubName/join',
+      githubLink: 'https://github.com/alpay66/Pokedex',
       liveLink: 'https://alpay-karacabey.de/Pokedex/index.html',
       skills: ['html', 'css', 'firebase']
     }

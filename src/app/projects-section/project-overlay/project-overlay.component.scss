@@ -3,9 +3,6 @@
     inset: 0;
     background: rgb(0, 0, 0);
     z-index: 9999;
-    /*     display: flex;
-    justify-content: center;
-    align-items: center; */
 }
 
 .overlay-background {
@@ -27,7 +24,6 @@
 .overlay-content {
     background-image: url(/img/project-details-overlay.png);
     background-size: cover;
-    /*     background-position: center; */
     background-color: rgb(29, 29, 29);
     width: 100%;
     position: relative;
@@ -69,6 +65,10 @@
     align-items: center;
     width: 90%;
     justify-content: space-between;
+}
+
+.burger-menu-img {
+    object-fit: contain;
 }
 
 .overlay-nav {
@@ -334,7 +334,6 @@ nav a:hover {
     .overlay-content {
         background-image: none;
         border-radius: 0;
-        padding: 20px;
         background-color: transparent;
     }
 
@@ -359,7 +358,7 @@ nav a:hover {
     }
 
     .logo {
-        width: 80px;
+        width: 50px;
     }
 
     .overlay-container {
@@ -465,7 +464,6 @@ nav a:hover {
     }
 
     .right-side-next-button {
-        padding-top: 50px;
         justify-content: space-around;
     }
 }
@@ -477,9 +475,5 @@ nav a:hover {
 
     .burger-menu-mobile {
         padding: 0px 40px 0px 30px;
-    }
-
-    .right-side-next-button {
-        padding-top: 30px;
     }
 }

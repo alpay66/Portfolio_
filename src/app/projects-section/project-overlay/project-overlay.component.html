@@ -18,21 +18,25 @@
                         {{ project.title }}
                     </h1>
 
-                    <h3>
-                        {{ texts[currentLang()].description }}
-                    </h3>
+                    <div>
+                        <h3>
+                            {{ texts[currentLang()].description }}
+                        </h3>
 
-                    <p>
-                        {{ project.description[currentLang()] }}
-                    </p>
+                        <p>
+                            {{ project.description[currentLang()] }}
+                        </p>
+                    </div>
 
-                    <h3>
-                        {{ texts[currentLang()].details }}
-                    </h3>
+                    <div>
+                        <h3>
+                            {{ texts[currentLang()].details }}
+                        </h3>
 
-                    <p>
-                        {{ project.details[currentLang()] }}
-                    </p>
+                        <p>
+                            {{ project.details[currentLang()] }}
+                        </p>
+                    </div>
 
                     <p>
                         {{ project.duration[currentLang()] }}
