@@ -91,3 +91,27 @@ section {
         font-size: 28px !important;
     }
 }
+
+@media (max-height: 1180px) {
+    .left-part-logo-sec {
+        padding-top: 50px;
+        align-items: center;
+        padding-left: 0px;
+    }
+}
+
+@media (max-height: 1024px) {
+    .left-part-logo-sec {
+        padding-top: 50px;
+        align-items: center;
+        padding-left: 0px;
+    }
+}
+
+@media (max-height: 360px) {
+        .left-part-logo-sec {
+        padding-top: 20px;
+        align-items: center;
+        padding-left: 0px;
+    }
+}

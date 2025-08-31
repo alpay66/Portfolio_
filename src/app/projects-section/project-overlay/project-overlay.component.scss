@@ -1,7 +1,7 @@
 .overlay {
     position: fixed;
     inset: 0;
-    background: rgb(0, 0, 0);
+    background: rgb(29, 29, 29);
     z-index: 9999;
 }
 
@@ -389,11 +389,11 @@ nav a:hover {
         }
 
         h3 {
-            font-size: clamp(12px, 2.5vw, 24px);
+            font-size: clamp(16px, 2.5vw, 24px);
         }
 
         p {
-            font-size: clamp(10px, 2.2vw, 18px);
+            font-size: clamp(16px, 2.2vw, 18px);
         }
     }
 
@@ -466,6 +466,8 @@ nav a:hover {
     .right-side-next-button {
         justify-content: space-around;
     }
+
+
 }
 
 @media (max-width: 390px) {

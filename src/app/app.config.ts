@@ -8,11 +8,9 @@ export const appConfig: ApplicationConfig = {
     provideRouter(
       routes,
       withInMemoryScrolling({
-        anchorScrolling: 'enabled',            // scrollt automatisch zu #fragment
-        scrollPositionRestoration: 'enabled',  // "Back" stellt Scrollposition wieder her             // optional: Platz für fixed Header
+        anchorScrolling: 'enabled',          
+        scrollPositionRestoration: 'enabled',    
       }),
-      // Optional: falls du mehrfach zum gleichen Fragment navigierst oder
-      // Fragment-Änderungen auf derselben URL erzwingen willst
       withRouterConfig({ onSameUrlNavigation: 'reload' })
     )
   ]
