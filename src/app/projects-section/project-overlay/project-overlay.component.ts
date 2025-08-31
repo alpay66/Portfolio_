@@ -89,4 +89,8 @@ export class ProjectOverlayComponent {
   ngOnDestroy(): void {
   }
 
+  onMobileNavClick() {
+    this.menuOpen = false; 
+    this.closeOverlay.emit();  
+  }
 }

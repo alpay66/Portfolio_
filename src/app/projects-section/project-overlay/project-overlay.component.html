@@ -80,7 +80,7 @@
         </div>
     </div>
 
-    <div class="mobile-overlay" [class.active]="menuOpen">
+    <div class="mobile-overlay" [class.active]="menuOpen" (click)="$event.stopPropagation()">
         <div class="overlay-header">
             <img src="/img/AK_logo.png" class="logo" />
             <img class="close-icon" (click)="toggleMenu()" src="/img/close-overlay.png" alt="close">
@@ -88,11 +88,12 @@
 
         <div class="overlay-nav-container">
             <nav class="overlay-nav">
-                <a href="#about">About me</a>
-                <a href="#skills">Skills</a>
-                <a href="#project">Projects</a>
-                <a href="#contact">Contact</a>
+                <a href="#about" (click)="onMobileNavClick()">About me</a>
+                <a href="#skills" (click)="onMobileNavClick()">Skills</a>
+                <a href="#project" (click)="onMobileNavClick()">Projects</a>
+                <a href="#contact" (click)="onMobileNavClick()">Contact</a>
             </nav>
+
         </div>
 
 
