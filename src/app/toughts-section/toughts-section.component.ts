@@ -18,19 +18,19 @@ export class ToughtsSectionComponent {
       subtitle: 'IN IHREN WORTEN:',
       quotes: [
         {
-          text: `Alpay war von Anfang an jemand, auf den man sich verlassen konnte. Egal wie chaotisch das Projekt wurde – er hat einen klaren Kopf bewahrt und unser Team motiviert. Seine strukturierte Herangehensweise und sein freundlicher Umgangston haben den Unterschied gemacht.`,
+          text: `Alpay war von Anfang an jemand, auf den man sich verlassen konnte. Egal wie chaotisch das Projekt wurde – er hat einen klaren Kopf bewahrt und unser Team motiviert.`,
           name: 'Emil Kilic',
           role: 'Frontend Developer',
           linkedin: 'https://www.linkedin.com/in/example'
         },
         {
-          text: `Es war eine echte Bereicherung, mit Alpay zu arbeiten. Er bringt nicht nur technisches Know-how mit, sondern auch echtes Verständnis für Zusammenarbeit. Seine lösungsorientierte Art hat uns immer wieder geholfen, schwierige Deadlines entspannt zu meistern.`,
+          text: `Es war eine echte Bereicherung, mit Alpay zu arbeiten. Er bringt nicht nur technisches Know-how mit, sondern auch echtes Verständnis für Zusammenarbeit.`,
           name: 'Gabriela Ströbl',
           role: 'Frontend Developer',
           linkedin: 'https://www.linkedin.com/in/example2'
         },
         {
-          text: `Was ich an Alpay besonders schätze, ist sein Blick fürs Detail und gleichzeitig der Fokus aufs große Ganze. Er denkt mit, bringt kreative Ideen ein und hat ein gutes Gespür für Design und Code. Ich würde jederzeit wieder mit ihm zusammenarbeiten.`,
+          text: `Was ich an Alpay besonders schätze, ist sein Blick fürs Detail und gleichzeitig der Fokus aufs große Ganze. Er denkt mit, bringt kreative Ideen ein und hat ein gutes Gespür für Design und Code.`,
           name: 'Özgür Taylan',
           role: 'Frontend Developer',
           linkedin: 'https://www.linkedin.com/in/example3'
