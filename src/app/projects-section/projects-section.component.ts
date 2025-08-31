@@ -102,7 +102,7 @@ export class ProjectsSectionComponent {
       },
       githubLink: 'https://github.com/alpay66/JOIN-PROJEKT',
       liveLink: 'https://alpay-karacabey.de/Join/index.html',
-      skills: ['html', 'css', 'firebase', 'angular', 'typescript']
+      skills: ['html', 'css', 'javascript',]
     },
     {
       title: 'El Pollo Loco',
