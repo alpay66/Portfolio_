@@ -60,6 +60,21 @@ require the written consent of the respective author or creator.`
     }
   };
 
+  _texts = {
+    de: {
+      about: 'Über mich',
+      skills: 'Fähigkeiten',
+      projects: 'Projekte',
+      contact: 'Kontakt'
+    },
+    en: {
+      about: 'About me',
+      skills: 'Skills',
+      projects: 'Projects',
+      contact: 'Contact'
+    }
+  };
+
   menuOpen = false;
 
   toggleMenu() {
@@ -78,7 +93,7 @@ require the written consent of the respective author or creator.`
     this.langService.switchLanguage();
   }
 
-    @HostListener('window:resize')
+  @HostListener('window:resize')
   onResize() {
     if (window.innerWidth >= 901 && this.menuOpen) {
       this.closeMenu();

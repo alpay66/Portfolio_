@@ -4,7 +4,7 @@
         <a routerLink="/">
             <img class="logo" src="/img/AK_logo.png" alt="AK_logo">
         </a>
-        <img class="burger-menu-img"  (click)="toggleMenu()" src="/img/hero-burger-menu-logo.svg" alt="menu" />
+        <img class="burger-menu-img" (click)="toggleMenu()" src="/img/hero-burger-menu-logo.svg" alt="menu" />
     </div>
 
 
@@ -45,23 +45,20 @@
     </div>
 
     <div class="overlay-nav-container">
-
         <nav class="overlay-nav">
-            <a routerLink="/" fragment="about" (click)="toggleMenu()">About</a>
-            <a routerLink="/" fragment="skills" (click)="toggleMenu()">Skills</a>
-            <a routerLink="/" fragment="projects" (click)="toggleMenu()">Projects</a>
-            <a routerLink="/" fragment="contact" (click)="toggleMenu()">Contact</a>
+            <a href="#about" (click)="toggleMenu()">{{ _texts[currentLang()].about }}</a>
+            <a href="#skills" (click)="toggleMenu()">{{ _texts[currentLang()].skills }}</a>
+            <a href="#projects" (click)="toggleMenu()">{{ _texts[currentLang()].projects }}</a>
+            <a href="#contact" (click)="toggleMenu()">{{ _texts[currentLang()].contact }}</a>
         </nav>
 
     </div>
 
 
     <div class="language-switch">
+        <input id="langToggle" type="checkbox" (change)="switchLanguage()" [checked]="currentLang() === 'de'" />
         <span class="lang en">EN</span>
-        <label class="switch">
-            <input type="checkbox" (change)="switchLanguage()" [checked]="currentLang() === 'en'">
-            <span class="slider"></span>
-        </label>
+        <label class="switch" for="langToggle"><span class="slider"></span></label>
         <span class="lang de">DE</span>
     </div>
 

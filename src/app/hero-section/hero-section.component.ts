@@ -1,4 +1,4 @@
-import { Component, computed, inject } from '@angular/core';
+import { Component, computed, HostListener, inject } from '@angular/core';
 import { LanguageService } from '../services/language.service'; // ggf. Pfad anpassen
 import { HeaderBarComponent } from "./header-bar/header-bar.component";
 import { NgFor, NgIf, NgStyle } from '@angular/common';
@@ -70,6 +70,19 @@ export class HeroSectionComponent {
     { upper: 'E', lower: 'e' },
     { upper: 'R', lower: 'r' }
   ];
+
+  closeMenu() {
+    this.menuOpen = false;
+    document.body.classList.remove('no-scroll');
+    document.documentElement.classList.remove('no-scroll');
+  }
+
+  @HostListener('window:resize')
+  onResize() {
+    if (window.innerWidth >= 901 && this.menuOpen) {
+      this.closeMenu();
+    }
+  }
 
   hoveredFrontendIndex: number | null = null;
   hoveredDeveloperIndex: number | null = null;

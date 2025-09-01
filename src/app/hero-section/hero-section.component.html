@@ -99,14 +99,12 @@
     </div>
 
 
-    <div class="language-switch">
-        <span class="lang en">EN</span>
-        <label class="switch">
-            <input type="checkbox" (change)="switchLanguage()" [checked]="currentLang() === 'en'">
-            <span class="slider"></span>
-        </label>
-        <span class="lang de">DE</span>
-    </div>
+        <div class="language-switch">
+            <input id="langToggle" type="checkbox" (change)="switchLanguage()" [checked]="currentLang() === 'de'" />
+            <span class="lang en">EN</span>
+            <label class="switch" for="langToggle"><span class="slider"></span></label>
+            <span class="lang de">DE</span>
+        </div>
 
 
     <div class="linked-up-buttons-overlay">
