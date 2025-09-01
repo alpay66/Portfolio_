@@ -10,7 +10,8 @@ section {
     display: flex;
     flex-direction: column;
     text-align: end;
-    width: 90%;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .orange-cards {

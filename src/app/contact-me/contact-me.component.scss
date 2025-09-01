@@ -7,11 +7,11 @@ section {
         color: white;
 
         h1 {
-            font-size: clamp(28px, 5vw, 56px); 
+            font-size: clamp(28px, 5vw, 56px);
         }
 
         h3 {
-            font-size: clamp(18px, 3.5vw, 32px); 
+            font-size: clamp(18px, 3.5vw, 32px);
         }
 
         span,
@@ -37,7 +37,8 @@ section {
 .left-part-logo-sec {
     display: flex;
     flex-direction: column;
-    padding-left: 150px;
+    max-width: 1165px;
+    margin: 0 auto;
 }
 
 .right-part {
@@ -109,7 +110,7 @@ section {
 }
 
 @media (max-height: 360px) {
-        .left-part-logo-sec {
+    .left-part-logo-sec {
         padding-top: 20px;
         align-items: center;
         padding-left: 0px;

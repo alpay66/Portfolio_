@@ -1,6 +1,5 @@
 <div class="privacy-body">
     <app-header-bar class="header"></app-header-bar>
-
     <div class="burger-menu">
         <a routerLink="/">
             <img class="logo" src="/img/AK_logo.png" alt="AK_logo" />
@@ -70,12 +69,12 @@
         </nav>
     </div>
 
-        <div class="language-switch">
-            <input id="langToggle" type="checkbox" (change)="switchLanguage()" [checked]="currentLang() === 'de'" />
-            <span class="lang en">EN</span>
-            <label class="switch" for="langToggle"><span class="slider"></span></label>
-            <span class="lang de">DE</span>
-        </div>
+    <div class="language-switch">
+        <input id="langToggle" type="checkbox" (change)="switchLanguage()" [checked]="currentLang() === 'de'" />
+        <span class="lang en">EN</span>
+        <label class="switch" for="langToggle"><span class="slider"></span></label>
+        <span class="lang de">DE</span>
+    </div>
 
     <div class="linked-up-buttons-overlay">
         <div class="circle-button">

@@ -20,18 +20,12 @@ export class PrivacyPolicyComponent {
 
     _texts = {
     de: {
-      helloWorld: 'Hallo Welt',
-      name: 'Ich bin Alpay Karacabey',
-      getInTouch: 'Kontakt aufnehmen',
       about: 'Über mich',
       skills: 'Fähigkeiten',
       projects: 'Projekte',
       contact: 'Kontakt'
     },
     en: {
-      helloWorld: 'Hello World',
-      name: 'Im Alpay Karacabey',
-      getInTouch: 'Get in touch',
       about: 'About me',
       skills: 'Skills',
       projects: 'Projects',
@@ -69,7 +63,7 @@ export class PrivacyPolicyComponent {
       section1: '1. Verantwortlicher',
       name: 'Name: Alpay Karacabey',
       address: 'Adresse: Paulckestr.7, 80933 München',
-      email: 'E-Mail: alpay.karacabey@hotmail.de',
+      email: 'E-Mail: alpay.karacabey@hotmail.com',
       section2: '2. Erhebung und Speicherung personenbezogener Daten',
       section2Text: 'Beim Besuch dieser Website speichern unsere Server standardmäßig folgende Daten:',
       data: ['IP-Adresse', 'Datum und Uhrzeit der Anfrage', 'Browsertyp und -version', 'Betriebssystem', 'Referrer-URL'],

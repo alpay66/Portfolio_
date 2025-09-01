@@ -22,7 +22,7 @@ export class LegalNoticeComponent {
       address: 'Alpay Karacabey\nPaulckestr. 7\n80933 München',
       section2: 'Kontakt',
       phone: 'Telefon: +491745986666',
-      email: 'E-Mail: alpay.karacabey@hotmail.de',
+      email: 'E-Mail: alpay.karacabey@hotmail.com',
       section3: 'Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV',
       section4: 'Haftung für Inhalte',
       section4Text: `Als Diensteanbieter sind wir gemäß § 7 Abs.1 TMG für eigene Inhalte auf diesen Seiten nach den allgemeinen Gesetzen verantwortlich. 
