@@ -1,6 +1,8 @@
-@media (max-width: 1180px) {
+@media (max-width: 1300px) {
     .container {
         padding: 124px 146px 0px 100px;
+        display: flex;
+        justify-content: center;
     }
 
     .hero-content {
@@ -19,7 +21,7 @@
 
     .rotate-img {
         transform: rotate(11deg);
-        width: 35%;
+        width: 30%;
         margin-top: 30px;
         display: flex;
         left: 25%;
