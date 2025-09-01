@@ -1,18 +1,19 @@
-import { Component, computed, inject } from '@angular/core';
+import { Component, computed, HostListener, inject } from '@angular/core';
 import { HeaderBarComponent } from '../hero-section/header-bar/header-bar.component';
 import { FooterComponent } from '../footer/footer.component';
 import { LanguageService } from '../services/language.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-legal-notice',
   standalone: true,
-  imports: [HeaderBarComponent, FooterComponent],
+  imports: [HeaderBarComponent, FooterComponent, RouterLink],
   templateUrl: './legal-notice.component.html',
   styleUrls: ['./legal-notice.component.scss']
 })
 export class LegalNoticeComponent {
-  private languageService = inject(LanguageService);
-  currentLang = computed(() => this.languageService.currentLang());
+  private langService = inject(LanguageService);
+  currentLang = computed(() => this.langService.currentLang());
 
   texts = {
     de: {
@@ -66,4 +67,22 @@ require the written consent of the respective author or creator.`
     document.body.classList.toggle('no-scroll', this.menuOpen);
     document.documentElement.classList.toggle('no-scroll', this.menuOpen);
   }
+
+  closeMenu() {
+    this.menuOpen = false;
+    document.body.classList.remove('no-scroll');
+    document.documentElement.classList.remove('no-scroll');
+  }
+
+  switchLanguage() {
+    this.langService.switchLanguage();
+  }
+
+    @HostListener('window:resize')
+  onResize() {
+    if (window.innerWidth >= 901 && this.menuOpen) {
+      this.closeMenu();
+    }
+  }
+
 }
