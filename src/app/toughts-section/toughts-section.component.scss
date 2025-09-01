@@ -34,7 +34,7 @@ section {
 
         img {
             position: absolute;
-            top: -35px;
+            top: -55px;
             left: 70%;
             width: 20%;
             height: auto;
@@ -149,8 +149,6 @@ section {
     transition: color 0.3s ease;
 }
 
-
-
 .quote {
     font-family: 'Bricolage Grotesque', sans-serif;
     margin-bottom: 20px;
@@ -168,7 +166,7 @@ section {
 
 @media (max-width: 1365px) {
     .quote {
-        font-size: clamp(12px, 1.5vw, 13px);
+        font-size: clamp(16px, 1.5vw, 16px);
     }
 }
 
@@ -261,6 +259,12 @@ section {
             left: 40px;
             bottom: 0px;
         }
+
+        div {
+            img {
+                height: 250px;
+            }
+        }
     }
 
     .quote {
@@ -272,6 +276,12 @@ section {
     .orange-cards {
         .card-footer {
             bottom: -10px !important;
+        }
+
+        div {
+            img {
+                height: 250px;
+            }
         }
     }
 
@@ -290,6 +300,12 @@ section {
             left: 40px;
             bottom: 0px;
         }
+    }
+}
+
+@media (max-width: 320px) {
+    .quote {
+        padding: 10px 0px 25px 15px;
     }
 }
 
@@ -464,5 +480,3 @@ section {
         }
     }
 }
-
-

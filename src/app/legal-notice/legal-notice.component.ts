@@ -59,4 +59,11 @@ require the written consent of the respective author or creator.`
     }
   };
 
+  menuOpen = false;
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+    document.body.classList.toggle('no-scroll', this.menuOpen);
+    document.documentElement.classList.toggle('no-scroll', this.menuOpen);
+  }
 }
