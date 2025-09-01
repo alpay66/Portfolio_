@@ -1,5 +1,12 @@
 <div class="privacy-body">
-    <app-header-bar></app-header-bar>
+    <app-header-bar class="header"></app-header-bar>
+
+    <div class="burger-menu">
+        <a routerLink="/">
+            <img class="logo" src="/img/AK_logo.png" alt="AK_logo" />
+        </a>
+        <img class="burger-menu-img" src="/img/hero-burger-menu-logo.svg" alt="menu" (click)="toggleMenu()" />
+    </div>
 
     <section class="privacy-wrapper">
         <div class="privacy">
@@ -46,4 +53,49 @@
     </section>
 
     <app-footer></app-footer>
+</div>
+
+<div class="mobile-overlay" [class.active]="menuOpen">
+    <div class="overlay-header">
+        <img routerLink="/" src="/img/AK_logo.png" class="logo" />
+        <img class="close-icon" (click)="toggleMenu()" src="/img/close-overlay.png" alt="close" />
+    </div>
+
+    <div class="overlay-nav-container">
+        <nav class="overlay-nav">
+            <a href="#about" (click)="toggleMenu()">{{ _texts[currentLang()].about }}</a>
+            <a href="#skills" (click)="toggleMenu()">{{ _texts[currentLang()].skills }}</a>
+            <a href="#projects" (click)="toggleMenu()">{{ _texts[currentLang()].projects }}</a>
+            <a href="#contact" (click)="toggleMenu()">{{ _texts[currentLang()].contact }}</a>
+        </nav>
+    </div>
+
+    <div class="language-switch">
+        <span class="lang en">EN</span>
+        <label class="switch">
+            <input type="checkbox" (change)="switchLanguage()" [checked]="currentLang() === 'en'" />
+            <span class="slider"></span>
+        </label>
+        <span class="lang de">DE</span>
+    </div>
+
+    <div class="linked-up-buttons-overlay">
+        <div class="circle-button">
+            <a href="https://www.linkedin.com/feed/">
+                <img src="/img/hero_linked_in.png" alt="LinkedIn" />
+            </a>
+        </div>
+
+        <div class="circle-button">
+            <a href="https://github.com/alpay66" target="_blank">
+                <img src="/img/hero_github.png" alt="GitHub" />
+            </a>
+        </div>
+
+        <div class="circle-button">
+            <a href="mailto:alpay.karacabey@hotmail.com">
+                <img src="/img/hero_mail.png" alt="Mail" />
+            </a>
+        </div>
+    </div>
 </div>

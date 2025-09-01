@@ -1,19 +1,66 @@
-import { Component, computed, inject } from '@angular/core';
+import { Component, computed, HostListener, inject } from '@angular/core';
 import { HeaderBarComponent } from '../hero-section/header-bar/header-bar.component';
 import { FooterComponent } from '../footer/footer.component';
 import { LanguageService } from '../services/language.service';
 import { NgFor } from '@angular/common';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-privacy-policy',
   standalone: true,
-  imports: [HeaderBarComponent, FooterComponent, NgFor],
+  imports: [HeaderBarComponent, FooterComponent, NgFor, RouterLink],
   templateUrl: './privacy-policy.component.html',
   styleUrls: ['./privacy-policy.component.scss']
 })
 export class PrivacyPolicyComponent {
   private languageService = inject(LanguageService);
   currentLang = computed(() => this.languageService.currentLang());
+
+  menuOpen = false;
+
+    _texts = {
+    de: {
+      helloWorld: 'Hallo Welt',
+      name: 'Ich bin Alpay Karacabey',
+      getInTouch: 'Kontakt aufnehmen',
+      about: 'Über mich',
+      skills: 'Fähigkeiten',
+      projects: 'Projekte',
+      contact: 'Kontakt'
+    },
+    en: {
+      helloWorld: 'Hello World',
+      name: 'Im Alpay Karacabey',
+      getInTouch: 'Get in touch',
+      about: 'About me',
+      skills: 'Skills',
+      projects: 'Projects',
+      contact: 'Contact'
+    }
+  };
+
+  toggleMenu() {
+    this.menuOpen = !this.menuOpen;
+    document.body.classList.toggle('no-scroll', this.menuOpen);
+    document.documentElement.classList.toggle('no-scroll', this.menuOpen);
+  }
+
+  closeMenu() {
+    this.menuOpen = false;
+    document.body.classList.remove('no-scroll');
+    document.documentElement.classList.remove('no-scroll');
+  }
+
+  switchLanguage() {
+    this.languageService.switchLanguage();
+  }
+
+  @HostListener('window:resize')
+  onResize() {
+    if (window.innerWidth >= 901 && this.menuOpen) {
+      this.closeMenu();
+    }
+  }
 
   texts = {
     de: {
