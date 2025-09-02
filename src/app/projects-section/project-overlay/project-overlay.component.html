@@ -90,10 +90,10 @@
 
         <div class="overlay-nav-container">
             <nav class="overlay-nav">
-                <a href="#about" (click)="toggleMenu()">{{ _texts[currentLang()].about }}</a>
-                <a href="#skills" (click)="toggleMenu()">{{ _texts[currentLang()].skills }}</a>
-                <a href="#projects" (click)="toggleMenu()">{{ _texts[currentLang()].projects }}</a>
-                <a href="#contact" (click)="toggleMenu()">{{ _texts[currentLang()].contact }}</a>
+                <a href="#about" (click)="onMobileNavClick()">{{ _texts[currentLang()].about }}</a>
+                <a href="#skills" (click)="onMobileNavClick()">{{ _texts[currentLang()].skills }}</a>
+                <a href="#projects" (click)="onMobileNavClick()">{{ _texts[currentLang()].projects }}</a>
+                <a href="#contact" (click)="onMobileNavClick()">{{ _texts[currentLang()].contact }}</a>
             </nav>
         </div>
 
