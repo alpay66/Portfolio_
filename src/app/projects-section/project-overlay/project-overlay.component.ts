@@ -2,10 +2,11 @@ import { Component, computed, EventEmitter, HostListener, inject, Input, Output 
 import { HeaderBarComponent } from '../../hero-section/header-bar/header-bar.component';
 import { NgFor } from '@angular/common';
 import { LanguageService } from '../../services/language.service';
+import { RouterLink } from '@angular/router';
 
 @Component({
   selector: 'app-project-overlay',
-  imports: [HeaderBarComponent, NgFor],
+  imports: [HeaderBarComponent, NgFor, RouterLink],
   templateUrl: './project-overlay.component.html',
   styleUrl: './project-overlay.component.scss'
 })

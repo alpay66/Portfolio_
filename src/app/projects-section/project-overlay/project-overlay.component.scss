@@ -1,8 +1,8 @@
 .overlay {
     position: fixed;
     inset: 0;
-    background: rgb(29, 29, 29);
     z-index: 9999;
+    background: rgb(29, 29, 29) url(/img/project-details-overlay.png) center / cover no-repeat;
 }
 
 .overlay-background {
@@ -22,14 +22,9 @@
 }
 
 .overlay-content {
-    background-image: url(/img/project-details-overlay.png);
-    background-size: cover;
-    background-color: rgb(29, 29, 29);
-    width: 100%;
-    position: relative;
-    max-height: 100vh;
+    background: transparent;
+    min-height: 100vh;
     overflow-y: auto;
-    -webkit-overflow-scrolling: touch;
 }
 
 .overlay-container {
@@ -317,6 +312,11 @@ nav a:hover {
     display: none;
 }
 
+.overlay {
+    --header-link-color: black;
+}
+
+
 
 @media (max-width: 1024px) {
     .overlay-content {
@@ -331,6 +331,26 @@ nav a:hover {
 
     .right-side-image {
         width: 80%;
+    }
+}
+
+@media (min-width: 930px) {
+    .overlay-content {
+        background-image: url(/img/project-details-overlay.png);
+        background-size: cover;
+        background-color: rgb(29, 29, 29);
+        width: 100%;
+        position: relative;
+        max-height: 100vh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+    }
+
+    .overlay {
+        position: fixed;
+        inset: 0;
+        background: rgb(29, 29, 29);
+        z-index: 9999;
     }
 }
 
@@ -351,7 +371,6 @@ nav a:hover {
 
     .burger-menu-mobile {
         display: block;
-        cursor: pointer;
         display: flex;
         justify-content: space-between;
         padding: 25px;
@@ -368,18 +387,6 @@ nav a:hover {
     .overlay-container {
         flex-direction: column;
         align-items: center;
-    }
-
-    .overlay-background::before {
-        display: block;
-        background-image: url(/img/project-details-overlay.png);
-        background-size: cover;
-        background-position: center;
-        rotate: 90deg;
-        width: 350%;
-        height: 250%;
-        top: -50%;
-        left: -50%;
     }
 
     .left-side {
@@ -488,11 +495,30 @@ nav a:hover {
 }
 
 @media (min-width: 3000px) {
+
     .close-btn {
         left: 985px;
     }
 
     .right-side {
         gap: 3%;
+
+        a {
+            color: white;
+        }
+    }
+}
+
+@media (min-width: 1024px) {
+    .overlay-container {
+        padding: 250px 100px;
+    }
+
+    .right-side {
+        gap: 10%;
+
+        a {
+            color: #111;
+        }
     }
 }

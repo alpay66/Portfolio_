@@ -13,6 +13,11 @@
     max-width: 1440px;
 }
 
+:host,
+.hero-section {
+    --header-link-color: white;
+}
+
 h1 {
     font-size: clamp(40px, calc(10vw + 1rem), 150px);
     margin: 0;
