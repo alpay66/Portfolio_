@@ -36,6 +36,8 @@
     display: flex;
     justify-content: space-evenly;
     padding: 200px 0px 0px 0px;
+    max-width: 1440px;
+    margin: 0 auto;
 }
 
 .right-side-image {
@@ -238,7 +240,6 @@ nav a:hover {
 .right-side {
     display: flex;
     flex-direction: column;
-    gap: 15%;
 }
 
 .right-side-buttons {
@@ -294,6 +295,7 @@ nav a:hover {
     display: flex;
     justify-content: end;
     align-items: center;
+    color: white;
     gap: 15px;
     font-weight: 800;
     cursor: pointer;
@@ -399,6 +401,9 @@ nav a:hover {
         }
     }
 
+    .right-side {
+        gap: 40px;
+    }
 
     .right-side-image-container {
         display: flex;
@@ -452,11 +457,11 @@ nav a:hover {
     }
 
     .right-side {
-        gap: 10px;
+        gap: 20px;
     }
 
     .right-side-image {
-        width: 85%;
+        width: 60%;
     }
 }
 
@@ -479,5 +484,15 @@ nav a:hover {
 
     .burger-menu-mobile {
         padding: 0px 40px 0px 30px;
+    }
+}
+
+@media (min-width: 3000px) {
+    .close-btn {
+        left: 985px;
+    }
+
+    .right-side {
+        gap: 3%;
     }
 }
