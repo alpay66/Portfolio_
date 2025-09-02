@@ -5,7 +5,7 @@
                 <a class="close-btn" (click)="close()">
                     <img src="/img/go-back-arrow.png"> {{ texts[currentLang()].back }}</a>
             </p>
-            
+
             <app-header-bar (linkClicked)="close()"></app-header-bar>
             <div class="burger-menu-mobile">
                 <a routerLink="/" (click)="close()">
@@ -90,22 +90,18 @@
 
         <div class="overlay-nav-container">
             <nav class="overlay-nav">
-                <a href="#about" (click)="onMobileNavClick()">About me</a>
-                <a href="#skills" (click)="onMobileNavClick()">Skills</a>
-                <a href="#project" (click)="onMobileNavClick()">Projects</a>
-                <a href="#contact" (click)="onMobileNavClick()">Contact</a>
+                <a href="#about" (click)="toggleMenu()">{{ _texts[currentLang()].about }}</a>
+                <a href="#skills" (click)="toggleMenu()">{{ _texts[currentLang()].skills }}</a>
+                <a href="#projects" (click)="toggleMenu()">{{ _texts[currentLang()].projects }}</a>
+                <a href="#contact" (click)="toggleMenu()">{{ _texts[currentLang()].contact }}</a>
             </nav>
-
         </div>
 
-
         <div class="language-switch">
-            <span class="lang">EN</span>
-            <label class="switch">
-                <input type="checkbox" id="langToggle">
-                <span class="slider"></span>
-            </label>
-            <span class="lang">DE</span>
+            <input id="langToggle" type="checkbox" (change)="switchLanguage()" [checked]="currentLang() === 'de'" />
+            <span class="lang en">EN</span>
+            <label class="switch" for="langToggle"><span class="slider"></span></label>
+            <span class="lang de">DE</span>
         </div>
 
         <div class="linked-up-buttons-overlay">

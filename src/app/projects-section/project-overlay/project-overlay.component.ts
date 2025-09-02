@@ -14,6 +14,20 @@ export class ProjectOverlayComponent {
   private langService = inject(LanguageService);
   currentLang = computed(() => this.langService.currentLang());
 
+      _texts = {
+    de: {
+      about: 'Über mich',
+      skills: 'Fähigkeiten',
+      projects: 'Projekte',
+      contact: 'Kontakt'
+    },
+    en: {
+      about: 'About me',
+      skills: 'Skills',
+      projects: 'Projects',
+      contact: 'Contact'
+    }
+  };
 
   texts: Record<'de' | 'en', {
     back: string;
@@ -93,5 +107,9 @@ export class ProjectOverlayComponent {
   onMobileNavClick() {
     this.menuOpen = false; 
     this.closeOverlay.emit();  
+  }
+
+    switchLanguage() {
+    this.langService.switchLanguage();
   }
 }
