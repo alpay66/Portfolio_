@@ -2,7 +2,8 @@
     position: fixed;
     inset: 0;
     z-index: 9999;
-    background: rgb(29, 29, 29) url(/img/project-details-overlay.png) center / cover no-repeat;
+    background: rgb(29, 29, 29) url(/img/project-details-overlay-mobile.png) center / cover no-repeat;
+    height: 130vh;
 }
 
 .overlay-background {
@@ -316,11 +317,9 @@ nav a:hover {
     --header-link-color: black;
 }
 
-
-
 @media (max-width: 1024px) {
     .overlay-content {
-        height: 55%;
+        max-height: 100dvh;
     }
 
     .right-side-image-container {
@@ -511,7 +510,7 @@ nav a:hover {
 
 @media (min-width: 1024px) {
     .overlay-container {
-        padding: 250px 100px;
+        padding: 250px 45px;
     }
 
     .right-side {

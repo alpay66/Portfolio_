@@ -45,6 +45,12 @@ section {
     padding-top: 10%;
 }
 
+@media (max-width: 1024px) {
+    .left-part-logo-sec {
+        max-width: 900px;
+    }
+}
+
 
 @media (max-width: 910px) {
     section {
