@@ -2,7 +2,7 @@
     position: fixed;
     inset: 0;
     z-index: 9999;
-    background: rgb(29, 29, 29) url(/img/project-details-overlay-mobile.png) center / cover no-repeat;
+    background: rgb(79, 68, 68, 1) url(/img/project-details-overlay-mobile.png) center / cover no-repeat;
     height: 130vh;
 }
 
@@ -365,7 +365,7 @@ nav a:hover {
     .overlay-content {
         background-image: url(/img/project-details-overlay.png);
         background-size: cover;
-        background-color: rgb(29, 29, 29);
+        background-color: rgb(79, 68, 68, 1);
         width: 100%;
         position: relative;
         max-height: 100vh;
