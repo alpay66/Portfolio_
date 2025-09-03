@@ -31,7 +31,7 @@
 
             a {
                 text-decoration: none;
-                color: var(--header-link-color, white); 
+                color: var(--header-link-color, white);
                 font-weight: 600;
                 font-size: 16px;
                 position: relative;
@@ -151,5 +151,19 @@
             transform: translate(calc(var(--track-w) - var(--knob-size)),
                     -50%);
         }
+    }
+}
+
+@media (min-width: 1560px) {
+
+    .navigation a.nav-3,
+    .navigation a.nav-4 {
+        color: #fff !important;
+    }
+}
+
+@media (min-width: 1240px){
+    .navigation a.nav-4 {
+        color: #fff !important;
     }
 }

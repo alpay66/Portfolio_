@@ -4,28 +4,28 @@
 
         <nav class="navigation">
             <div class="nav-item">
-                <a [routerLink]="['/']" [fragment]="'about'" (click)="linkClicked.emit()">
+                <a [routerLink]="['/']" [fragment]="'about'" class="nav-1" (click)="linkClicked.emit()">
                     {{ texts[currentLang()].about }}
                 </a>
                 <img src="/img/about-me-hover.svg" class="hover-svg" alt="about hover" />
             </div>
 
             <div class="nav-item">
-                <a [routerLink]="['/']" [fragment]="'skills'" (click)="linkClicked.emit()">
+                <a [routerLink]="['/']" [fragment]="'skills'" class="nav-2" (click)="linkClicked.emit()">
                     {{ texts[currentLang()].skills }}
                 </a>
                 <img src="/img/skills-hover.svg" class="hover-svg" alt="skills hover" />
             </div>
 
             <div class="nav-item">
-                <a [routerLink]="['/']" [fragment]="'projects'" (click)="linkClicked.emit()">
+                <a [routerLink]="['/']" [fragment]="'projects'" class="nav-3" (click)="linkClicked.emit()">
                     {{ texts[currentLang()].projects }}
                 </a>
                 <img src="/img/contact-hover.svg" class="hover-svg" alt="projects hover" />
             </div>
 
             <div class="nav-item">
-                <a [routerLink]="['/']" [fragment]="'contact'" (click)="linkClicked.emit()">
+                <a [routerLink]="['/']" [fragment]="'contact'" class="nav-4" (click)="linkClicked.emit()">
                     {{ texts[currentLang()].contact }}
                 </a>
                 <img src="/img/projects-hover.svg" class="hover-svg" alt="contact hover" />

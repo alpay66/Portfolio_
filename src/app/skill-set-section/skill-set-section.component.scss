@@ -205,15 +205,29 @@ section {
     }
 }
 
+@media (max-width: 430px) {
+    .container {
+        height: 110vh
+    }
+}
+
 @media (max-width: 390px) {
     .skill-sett-img {
         height: 100px;
+    }
+
+    .container {
+        height: 120vh;
     }
 }
 
 @media (max-width: 375px)  {
     .skill-sett-img {
         height: 110px;
+    }
+
+    .container {
+        height: 150vh;
     }
 }
 
@@ -223,6 +237,12 @@ section {
         div {
             gap: 15px;
         }
+    }
+}
+
+@media (max-width: 320px) {
+    .container {
+        height: 135vh;
     }
 }
 
