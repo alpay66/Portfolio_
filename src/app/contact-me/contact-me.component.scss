@@ -45,9 +45,25 @@ section {
     padding-top: 10%;
 }
 
+@media (max-width: 1400px) {
+    .left-part-logo-sec {
+        padding: 0% 8%;
+    }
+
+
+}
+
 @media (max-width: 1024px) {
     .left-part-logo-sec {
         max-width: 900px;
+    }
+
+    section {
+        div {
+            h1 {
+                font-size: clamp(24px, 6vw, 42px);
+            }
+        }
     }
 }
 
