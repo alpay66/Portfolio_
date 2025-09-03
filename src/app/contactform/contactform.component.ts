@@ -20,9 +20,9 @@ interface ContactTexts {
   placeholderMessage: string;
   errorMessage: string;
 
-  privacyText_1: string; // Text vor dem Link
+  privacyText_1: string; 
   privacyLinkText: string;
-  privacyText_2: string; // Text nach dem Link
+  privacyText_2: string; 
   errorPrivacy: string;
 
   submit: string;
@@ -42,7 +42,6 @@ export class ContactformComponent {
 
   currentLang = computed<LangKey>(() => this.langService.currentLang() as LangKey);
 
-  // === Texte im TS (wie bei dir in AboutMe): ===
   texts: Record<LangKey, ContactTexts> = {
     de: {
       labelName: 'Wie ist dein Name?',
@@ -88,7 +87,6 @@ export class ContactformComponent {
     }
   };
 
-  // === Form-Model ===
   contactData = {
     name: '',
     email: '',
@@ -99,11 +97,9 @@ export class ContactformComponent {
   formSubmitted = false;
   sending = false;
 
-  // Passe die URL an dein Setup an (dein funktionierendes PHP-Endpoint):
   private readonly SEND_ENDPOINT = 'https://alpay-karacabey.de/sendMail.php';
 
   onSubmit(form: NgForm) {
-    // Falls invalid: alle Felder "touched" markieren
     if (form.invalid) {
       Object.values(form.controls).forEach(c => c.markAsTouched());
       return;
@@ -126,7 +122,6 @@ export class ContactformComponent {
       },
       error: () => {
         this.sending = false;
-        // Optional: zeige Fehler-Toast oder setze formSubmitted auf false
       }
     });
   }
