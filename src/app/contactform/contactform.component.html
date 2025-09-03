@@ -1,35 +1,40 @@
-<div class="container">
-    <form class="contact-form" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" novalidate>
+<form class="contact-form" (ngSubmit)="onSubmit(contactForm)" #contactForm="ngForm" novalidate>
 
-        <label for="name" class="form-label">
-            {{ texts[currentLang()].labelName }}
-        </label>
+    <div class="field">
+        <label for="name" class="form-label">{{ texts[currentLang()].labelName }}</label>
         <input class="form-input" [(ngModel)]="contactData.name" type="text" id="name" name="name" required
             #name="ngModel" [placeholder]="texts[currentLang()].placeholderName" />
-        <span *ngIf="name.invalid && name.touched" class="form-error">
-            {{ texts[currentLang()].errorName }}
-        </span>
+        <div class="error-slot">
+            <span *ngIf="name.invalid && name.touched" class="form-error">
+                {{ texts[currentLang()].errorName }}
+            </span>
+        </div>
+    </div>
 
-        <label for="email" class="form-label">
-            {{ texts[currentLang()].labelEmail }}
-        </label>
+    <div class="field">
+        <label for="email" class="form-label">{{ texts[currentLang()].labelEmail }}</label>
         <input class="form-input" [(ngModel)]="contactData.email" type="email" id="email" name="email" required
             pattern="[a-zA-Z0-9._%+\-]+@[a-zA-Z0-9.\-]+\.[a-zA-Z]{2,}" #email="ngModel"
             [placeholder]="texts[currentLang()].placeholderEmail" />
-        <span *ngIf="email.invalid && email.touched" class="form-error">
-            {{ texts[currentLang()].errorEmail }}
-        </span>
+        <div class="error-slot">
+            <span *ngIf="email.invalid && email.touched" class="form-error">
+                {{ texts[currentLang()].errorEmail }}
+            </span>
+        </div>
+    </div>
 
-        <label for="message" class="form-label">
-            {{ texts[currentLang()].labelMessage }}
-        </label>
+    <div class="field">
+        <label for="message" class="form-label">{{ texts[currentLang()].labelMessage }}</label>
         <textarea class="form-input" [(ngModel)]="contactData.message" id="message" name="message" required
-            minlength="4" #message="ngModel" [placeholder]="texts[currentLang()].placeholderMessage">
-    </textarea>
-        <span *ngIf="message.invalid && message.touched" class="form-error">
-            {{ texts[currentLang()].errorMessage }}
-        </span>
+            minlength="4" #message="ngModel" [placeholder]="texts[currentLang()].placeholderMessage"></textarea>
+        <div class="error-slot">
+            <span *ngIf="message.invalid && message.touched" class="form-error">
+                {{ texts[currentLang()].errorMessage }}
+            </span>
+        </div>
+    </div>
 
+    <div class="field">
         <label class="privacy-checkbox">
             <input type="checkbox" name="accepted" [(ngModel)]="contactData.accepted" required #accepted="ngModel" />
             <span>
@@ -38,15 +43,19 @@
                 {{ texts[currentLang()].privacyText_2 }}
             </span>
         </label>
-        <span *ngIf="accepted.invalid && accepted.touched" class="form-error">
-            {{ texts[currentLang()].errorPrivacy }}
-        </span>
+        <div class="error-slot">
+            <span *ngIf="accepted.invalid && accepted.touched" class="form-error">
+                {{ texts[currentLang()].errorPrivacy }}
+            </span>
+        </div>
+    </div>
 
-        <input class="submit-button" type="submit" [disabled]="contactForm.invalid || sending"
-            [value]="sending ? '...' : texts[currentLang()].submit" />
+    <input class="submit-button" type="submit" [disabled]="contactForm.invalid || sending"
+        [value]="sending ? '...' : texts[currentLang()].submit" />
 
+    <div class="success-slot">
         <div *ngIf="formSubmitted" class="form-success">
             {{ texts[currentLang()].success }}
         </div>
-    </form>
-</div>
+    </div>
+</form>
