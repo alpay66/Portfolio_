@@ -2,8 +2,10 @@
     position: fixed;
     inset: 0;
     z-index: 9999;
-    background: rgb(0, 0, 0) url(/img/project-details-overlay-mobile.png) center / cover no-repeat;
-    height: 130vh;
+    background: rgb(29, 29, 29);
+    /* Desktop-Grundfarbe, kein Mobile-BG hier */
+    overflow: hidden;
+    /* verhindert Body-Scroll dahinter */
 }
 
 .overlay-background {
@@ -361,29 +363,47 @@ nav a:hover {
     }
 }
 
+@media (max-width: 929px) {
+    .overlay {
+        background: rgb(0, 0, 0);
+    }
+
+    .overlay-content {
+        background: rgb(0, 0, 0) url('/img/project-details-overlay-mobile.png') center / cover no-repeat;
+        background-attachment: local;
+        max-height: 100dvh;
+        overflow-y: auto;
+        -webkit-overflow-scrolling: touch;
+        min-height: 100%;
+    }
+
+    .overlay-background {
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-start;
+        align-items: stretch;
+    }
+}
+
 @media (min-width: 930px) {
     .overlay-content {
-        background-image: url(/img/project-details-overlay.png);
+        background-image: url('/img/project-details-overlay.png');
         background-size: cover;
         background-color: rgb(29, 29, 29);
         width: 100%;
         position: relative;
-        max-height: 100vh;
+        max-height: 100dvh;
         overflow-y: auto;
         -webkit-overflow-scrolling: touch;
     }
 
     .overlay {
-        position: fixed;
-        inset: 0;
         background: rgb(29, 29, 29);
-        z-index: 9999;
     }
 }
 
 @media (max-width: 820px) {
     .overlay-content {
-        background-image: none;
         border-radius: 0;
         background-color: transparent;
     }
@@ -545,7 +565,7 @@ nav a:hover {
         gap: 10%;
 
         a {
-            color: #ffffff;
+            color: #000000;
         }
     }
 }
