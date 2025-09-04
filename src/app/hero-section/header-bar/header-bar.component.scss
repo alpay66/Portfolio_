@@ -153,3 +153,20 @@
         }
     }
 }
+
+@media (min-width: 1400px) and (max-width: 2999.98px) {
+
+    .navigation a.nav-3,
+    .navigation a.nav-4 {
+        color: #fff !important;
+    }
+}
+
+@media (min-width: 3000px) and (max-width: 4000px) {
+
+    .navigation a.nav-2,
+    .navigation a.nav-3,
+    .navigation a.nav-4 {
+        color: #fff!important;
+    }
+}
