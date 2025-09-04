@@ -4,13 +4,11 @@ header("Access-Control-Allow-Origin: https://alpay-karacabey.de");
 header("Access-Control-Allow-Methods: POST, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type");
 
-// Preflight beantworten
 if ($_SERVER['REQUEST_METHOD'] === 'OPTIONS') {
     http_response_code(204);
     exit;
 }
 
-// Nur POST zulassen
 if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     header("Allow: POST, OPTIONS", true, 405);
     header('Content-Type: application/json; charset=utf-8');
@@ -18,7 +16,6 @@ if ($_SERVER['REQUEST_METHOD'] !== 'POST') {
     exit;
 }
 
-// ==== JSON einlesen & validieren ====
 $raw = file_get_contents('php://input');
 $data = json_decode($raw, true);
 
@@ -33,7 +30,6 @@ if ($name === '' || !filter_var($email, FILTER_VALIDATE_EMAIL) || $message === '
     exit;
 }
 
-// ==== PHPMailer laden ====
 require __DIR__ . '/vendor/PHPMailer/src/PHPMailer.php';
 require __DIR__ . '/vendor/PHPMailer/src/SMTP.php';
 require __DIR__ . '/vendor/PHPMailer/src/Exception.php';
@@ -44,7 +40,6 @@ use PHPMailer\PHPMailer\Exception;
 $mail = new PHPMailer(true);
 
 try {
-    // ==== SMTP (ALL-INKL) ====
     $mail->isSMTP();
     $mail->Host       = 'w02085b7.kasserver.com';
     $mail->SMTPAuth   = true;
@@ -54,12 +49,10 @@ try {
     $mail->Port       = 587;                           
     $mail->CharSet    = 'UTF-8';
 
-    // ==== Absender/Empfänger ====
     $mail->setFrom('noreply@alpay-karacabey.de', 'Kontaktformular');
     $mail->addAddress('alpay.karacabey@hotmail.com');       
     $mail->addReplyTo($email, $name);                       
 
-    // ==== Inhalt ====
     $mail->isHTML(true);
     $mail->Subject = "Kontaktformular von {$name} <{$email}>";
     $mail->Body    = "<h3>Neue Kontaktanfrage</h3>"

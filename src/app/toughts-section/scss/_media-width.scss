@@ -1,0 +1,144 @@
+@media (max-width: 1365px) {
+    .quote {
+        font-size: clamp(16px, 1.5vw, 16px);
+    }
+}
+
+@media (max-width: 1150px) {
+    .orange-cards {
+        .card-footer {
+            bottom: 30px;
+        }
+    }
+}
+
+@media (max-width: 1010px) {
+    .quote {
+        font-size: clamp(8px, 1.5vw, 12px);
+    }
+}
+
+@media (max-width: 910px) {
+    section {
+        margin: 80px 20px 50px 20px;
+
+        h1 {
+            font-size: clamp(30px, 5vw + 1rem, 50px);
+        }
+    }
+
+    .orange-cards {
+        .card-content {
+            img {
+                top: -60px;
+            }
+        }
+    }
+
+    .quote {
+        font-size: clamp(16px, 2.5vw, 18px);
+    }
+
+    .top-section {
+        text-align: center;
+    }
+
+    .orange-cards {
+        flex-direction: column;
+        align-items: center;
+
+        div {
+            margin-left: 0;
+            margin-bottom: 20px;
+
+            &:nth-child(1),
+            &:nth-child(2),
+            &:nth-child(3) {
+                margin-left: 0;
+                z-index: auto;
+
+            }
+        }
+
+        .card-footer {
+            left: 56px;
+            bottom: 14px;
+        }
+    }
+
+    .card-content.card-1 {
+        top: -5px;
+        left: 0 !important;
+    }
+
+    .card-content.card-2 {
+        top: -5px;
+        left: 0 !important;
+    }
+
+    .card-content.card-3 {
+        top: -5px;
+        left: 0 !important;
+    }
+
+    .card-footer {
+        left: 0px;
+    }
+
+}
+
+@media (max-width: 433px) {
+    .orange-cards {
+        .card-footer {
+            left: 40px;
+            bottom: 0px;
+        }
+
+        div {
+            img {
+                height: 250px;
+            }
+        }
+    }
+
+    .quote {
+        font-size: clamp(11px, 2.5vw, 16px);
+    }
+}
+
+@media (max-width: 390px) {
+    .orange-cards {
+        .card-footer {
+            bottom: -10px !important;
+        }
+
+        div {
+            img {
+                height: 250px;
+            }
+        }
+    }
+
+    .quote {
+        padding: 15px;
+    }
+}
+
+@media (max-width: 375px) {
+    .quote {
+        padding: 10px 5px 25px 25px;
+    }
+
+    .orange-cards {
+        .card-footer {
+            left: 40px;
+            bottom: 0px;
+        }
+    }
+}
+
+@media (max-width: 320px) {
+    .quote {
+        padding: 10px 0px 25px 15px;
+    }
+}

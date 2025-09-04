@@ -10,7 +10,6 @@ export class AboutMeSectionComponent implements OnInit {
   private langService = inject(LanguageService);
   currentLang = computed(() => this.langService.currentLang());
 
-
   texts = {
     de: {
       yellow: 'Lebe in München',
