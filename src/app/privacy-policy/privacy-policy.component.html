@@ -62,12 +62,14 @@
 
     <div class="overlay-nav-container">
         <nav class="overlay-nav">
-            <a href="#about" (click)="toggleMenu()">{{ _texts[currentLang()].about }}</a>
-            <a href="#skills" (click)="toggleMenu()">{{ _texts[currentLang()].skills }}</a>
-            <a href="#projects" (click)="toggleMenu()">{{ _texts[currentLang()].projects }}</a>
-            <a href="#contact" (click)="toggleMenu()">{{ _texts[currentLang()].contact }}</a>
+            <a [routerLink]="'/'" [fragment]="'about'" (click)="toggleMenu()">{{ _texts[currentLang()].about }}</a>
+            <a [routerLink]="'/'" [fragment]="'skills'" (click)="toggleMenu()">{{ _texts[currentLang()].skills }}</a>
+            <a [routerLink]="'/'" [fragment]="'projects'" (click)="toggleMenu()">{{ _texts[currentLang()].projects
+                }}</a>
+            <a [routerLink]="'/'" [fragment]="'contact'" (click)="toggleMenu()">{{ _texts[currentLang()].contact }}</a>
         </nav>
     </div>
+
 
     <div class="language-switch">
         <input id="langToggle" type="checkbox" (change)="switchLanguage()" [checked]="currentLang() === 'de'" />
