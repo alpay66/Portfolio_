@@ -178,6 +178,13 @@
     }
 }
 
+@media (max-height: 800px) {
+    .rotate-img {
+        width: 25%;
+        padding-left: 5%;
+    }
+}
+
 @media (max-height: 768px) {
     .container {
         padding: 0px 20px;

@@ -263,3 +263,19 @@
         margin: -105px;
     }
 }
+
+@media (max-height: 820px) {
+    .yellow-location {
+        margin: -60px;
+        height: 50%;
+    }
+
+    .orange-location {
+        height: 50%;
+        margin: -50px;
+    }
+
+    .blue-location {
+        height: 40%;
+    }
+}
